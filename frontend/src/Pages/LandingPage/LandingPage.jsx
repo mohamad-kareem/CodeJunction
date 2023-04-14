@@ -11,7 +11,10 @@ const LandingPage = () => {
       <Navbar/>
       <div className='intro-section'><LandingIntro/></div>
       <div className='anime-section'><Anime/></div>
-      <div className="parallax-image" ><Parallax backgroundImage={parallaxImage}/>bgbbgdc</div>
+      <div className="parallax-image" ><Parallax backgroundImage={parallaxImage}>
+      test
+        </Parallax>
+    </div>
       <Footer/>
       
     </div>
