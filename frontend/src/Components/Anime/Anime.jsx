@@ -21,7 +21,7 @@ const Anime = () => {
       </motion.div>
 
     <div>
-      <img src={middleComputer} alt='middle-image' />
+      <img src={middleComputer} alt='middle-pic' />
     </div>
 
     <motion.div 
