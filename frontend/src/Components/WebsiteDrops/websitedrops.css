@@ -47,3 +47,25 @@
     padding: 40px;
     gap: 15px;
   }
+
+.container .drop .content h2{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color:  #2d2254;
+    box-shadow:12px 10px 12px rgba(47, 46, 46, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+.container .drop::before{
+    content: " ";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius:50%;
+    opacity: 0.9;
+  }
