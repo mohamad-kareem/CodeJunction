@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import "../Css/signInOut.css"
 import { faUserSecret,faEnvelope,faKey} from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import registerImage from "../../assets/gif.gif" ;
 const Register = () => {
 
     const [username,setUserName]=useState("");
@@ -55,6 +56,9 @@ const Register = () => {
 
   return (
     <div className='wrapper'>
+       <div className='image-container'>
+                <img src={registerImage} alt='registration' />
+        </div>
      <div className='sign-in-up-container'>
         <form className='sign-in-out-inner-form'>
             <h2 className='header'>Create account</h2>
