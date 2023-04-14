@@ -14,7 +14,10 @@
 .partLogo{
     color:yellow;
     font-size: 1.2rem;
-    margin-top: -14px;
+    margin-top:-14px;
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
   }
 
 .links {
