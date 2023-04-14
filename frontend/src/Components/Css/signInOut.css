@@ -18,3 +18,11 @@
     align-items: center;
 
 }
+.sign-in-out-inner-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    gap: 25px;
+}

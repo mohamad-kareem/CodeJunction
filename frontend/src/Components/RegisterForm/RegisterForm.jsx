@@ -11,7 +11,8 @@ const Register = () => {
     }
   return (
     <div className='wrapper'>
-        <div className='sign-in-up-container'>
+     <div className='sign-in-up-container'>
+        <form className='sign-in-out-inner-form'>
             <h2 className='header'>Create account</h2>
             <InputForm
                 label="username"
@@ -26,7 +27,8 @@ const Register = () => {
                 name="password"
                 value={password}/>
             <ButtonComponent color="yellow"size="15px" onClick={handleSubmit}>Register</ButtonComponent> 
-        </div>
+        </form>
+    </div>
       
     </div>
   )
