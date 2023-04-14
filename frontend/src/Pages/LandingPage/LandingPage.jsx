@@ -21,7 +21,7 @@ const LandingPage = () => {
         </Parallax>
     </div>
       <Footer/>
-      
+      <br /><br /><br />
     </div>
   )
 }

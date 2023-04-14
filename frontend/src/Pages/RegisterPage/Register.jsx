@@ -1,11 +1,13 @@
 import React from 'react'
 import Register from '../../Components/RegisterForm/RegisterForm'
 import Navbar from '../../Components/Navbar/Navbar'
+import CopyRights from '../../Components/CopyRight/CopyRight'
 const RegisterPage = () => {
   return (
     <div>
       <Navbar/>
-     <Register/> 
+     <Register/>
+     <CopyRights marginTop={30}/>
     </div>
   )
 }
