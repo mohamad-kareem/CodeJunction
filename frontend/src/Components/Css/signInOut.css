@@ -44,3 +44,16 @@
     border-radius: 25px;
     font-size: 15px;
 }
+
+span{
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    color: white;
+    pointer-events: none;
+    font-size: 15px;
+    font-weight: 300;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.5);
+}
