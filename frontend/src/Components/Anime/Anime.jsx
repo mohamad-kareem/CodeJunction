@@ -13,6 +13,7 @@ const Anime = () => {
     <motion.div
      initial={{x: -400}}
      animate={{x:move?-40:80}} 
+     onClick={()=>{setMove(!move);}}
      >
       <img src={rightPerson} alt='registration' />
       </motion.div>
@@ -24,6 +25,7 @@ const Anime = () => {
     <motion.div 
     initial={{x: 850}}
     animate={{x:move?600:-70}} 
+    onClick={()=>{setMove(!move);}}
     >
       <img src={leftPerson} alt='registration' />
       </motion.div>
