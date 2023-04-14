@@ -1,0 +1,10 @@
+.info{
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 1px solid #5B466A;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+  }

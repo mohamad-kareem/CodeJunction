@@ -3,6 +3,7 @@ import Facbook from "../../icons/fb.png";
 import  GitHub from "../../icons/git.png";
 import Instagram from "../../icons/twit.png";
 import Twitter from  "../../icons/twit.png";
+import "./footer.css"
 
 const Footer = () => {
   return (
