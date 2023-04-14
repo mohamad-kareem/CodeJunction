@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import "./navbar.css"
+import ButtonComponent from '../Button/ButtonComponent';
 const Navbar = () => {
 
 
@@ -22,7 +23,7 @@ const Navbar = () => {
                 <Link to="/dashboard" className="linking">
 					DashBoard
 				</Link>
-			
+			    <ButtonComponent id="logout" className="linking" > LogOut</ButtonComponent>
 			</div>
 		</div>
   )

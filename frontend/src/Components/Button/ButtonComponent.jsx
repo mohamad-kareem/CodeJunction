@@ -1,11 +1,16 @@
 import React from 'react'
 
-const ButtonComponent = ({color="yellow",size,children,onClick}) => {
+const ButtonComponent = ({color="yellow",size,width="300px",margin,children,onClick}) => {
   const styles = {
     backgroundColor: color,
     fontSize: size,
     borderRadius: '15px',
-  
+    padding: '10px',
+    outline: 'none',
+    border: '1px solid yellow',
+    width: width,
+    margin:margin,
+    cursor: 'pointer' 
   }
 
   return (
