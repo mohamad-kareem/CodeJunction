@@ -73,3 +73,14 @@
     border-radius:50%;
     opacity: 0.9;
   }
+.container .drop::after{
+    content: " ";
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius:50%;
+    opacity: 0.9;
+  }
