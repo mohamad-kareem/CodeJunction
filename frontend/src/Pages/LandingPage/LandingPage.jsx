@@ -5,6 +5,7 @@ import Anime from '../../Components/Anime/Anime'
 import Footer from '../../Components/Footer/Footer'
 import Parallax from '../../Components/Parallax/Parallax'
 import parallaxImage from "../../assets/community.png"
+import WebsiteDrops from '../../Components/WebsiteDrops/WebsiteDrops'
 import "./landingpage.css"
 const LandingPage = () => {
   return (
@@ -20,6 +21,9 @@ const LandingPage = () => {
         </div>
         </Parallax>
     </div>
+    <br /><br /><br />
+    <WebsiteDrops/>
+    <br /><br /><br />
       <Footer/>
       <br /><br /><br />
     </div>
