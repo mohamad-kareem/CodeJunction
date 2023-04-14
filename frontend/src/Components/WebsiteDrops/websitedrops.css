@@ -1,4 +1,4 @@
-.wrapper{
+.drop-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,4 +22,8 @@
     25px 35px 20px rgba(228, 225, 225, 0.05),
     25px 30px 30px rgba(228, 225, 225, 0.05),
     inset -20px -20px 25px rgba(195, 224, 7, 0.9);
+  }
+
+  .container .drop:nth-child(1){
+    border-radius: 57% 43% 43% 57% / 43% 43% 57% 57%;
   }

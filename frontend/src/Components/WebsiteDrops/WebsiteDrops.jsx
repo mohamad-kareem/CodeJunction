@@ -2,7 +2,7 @@ import React from 'react'
 import "./websitedrops.css"
 const WebsiteDrops = () => {
   return (
-     <div className="wrapper">
+     <div className="drop-wrapper">
     <div className="container">
       <div className="drop">
         <div className="content">
