@@ -4,19 +4,30 @@ import ButtonComponent from '../Button/ButtonComponent';
 import { Link } from 'react-router-dom';
 import "../Css/signInOut.css"
 import { faUserSecret,faEnvelope,faKey} from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 const Register = () => {
 
     const [username,setUserName]=useState("");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
+    const[error,setError]=useState("");
+
 
     const HandleUserNameChange=(e)=>setUserName(e.target.value);
     const HandleEmailChange=(e)=>setEmail(e.target.value);
     const HandlePasswordChange=(e)=>setPassword(e.target.value);
-console.log(HandleEmailChange)
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
+    console.log(HandleEmailChange,HandlePasswordChange,HandleUserNameChange)
+
+    const validateEmail=(email) =>{
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);}
+
+    const validatePassword=(password)=> {
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        return passwordRegex.test(password);
+      }
+
+
   return (
     <div className='wrapper'>
      <div className='sign-in-up-container'>
@@ -41,7 +52,9 @@ console.log(HandleEmailChange)
                 value={password}
                 icon={faKey}
                 onChange={HandlePasswordChange}/>
-            <ButtonComponent color="yellow"size="15px" onClick={handleSubmit}>Register</ButtonComponent> 
+
+            <div className = "error">{error}</div>
+            <ButtonComponent color="yellow"size="15px">Register</ButtonComponent> 
             <div className="register-direct">Already have an account?  <Link to="/login">Log in</Link></div>
         </form>
     </div>
