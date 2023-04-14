@@ -37,3 +37,13 @@
 .container .drop:nth-child(4){
     border-radius: 57% 43% 43% 57% / 43% 43% 57% 57%;
   }
+.container .drop .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    gap: 15px;
+  }
