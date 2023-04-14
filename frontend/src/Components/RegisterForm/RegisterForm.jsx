@@ -27,6 +27,31 @@ const Register = () => {
         return passwordRegex.test(password);
       }
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (validateEmail(email)){
+          if(validatePassword(password)){
+            const data = {
+              username:username,
+              email: email,
+              password: password
+            };
+    
+              axios.post("",data,{
+              headers: {
+                'Content-Type': 'application/json'
+              }
+              })
+              .then((res) => {
+                  console.log(res)
+                  window.location.href="../../Pages/LandingPage/LandingPage.jsx"  
+            }
+              ).catch((err) => {
+                  console.log(err);
+              })
+    }else(setError("Your password is malformed"))
+    }else(setError("Your email is malformed"))
+    }
 
   return (
     <div className='wrapper'>
@@ -54,7 +79,7 @@ const Register = () => {
                 onChange={HandlePasswordChange}/>
 
             <div className = "error">{error}</div>
-            <ButtonComponent color="yellow"size="15px">Register</ButtonComponent> 
+            <ButtonComponent color="yellow"size="15px" onClick={handleSubmit}>Register</ButtonComponent> 
             <div className="register-direct">Already have an account?  <Link to="/login">Log in</Link></div>
         </form>
     </div>
