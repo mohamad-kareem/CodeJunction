@@ -1,0 +1,10 @@
+.trigger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trigger-content{
+    font-size: 40px;
+    color: yellow;
+    margin-top: 120px;
+}

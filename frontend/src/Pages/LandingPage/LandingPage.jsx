@@ -5,6 +5,7 @@ import Anime from '../../Components/Anime/Anime'
 import Footer from '../../Components/Footer/Footer'
 import Parallax from '../../Components/Parallax/Parallax'
 import parallaxImage from "../../assets/community.png"
+import "./landingpage.css"
 const LandingPage = () => {
   return (
     <div>
