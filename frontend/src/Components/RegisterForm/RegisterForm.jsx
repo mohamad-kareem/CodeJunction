@@ -4,7 +4,7 @@ const Register = () => {
   return (
     <div className='wrapper'>
         <div className='sign-in-up-container'>
-            <h2 className='header'Create account></h2>
+            <h2 className='header'Create account>test</h2>
         </div>
       
     </div>
