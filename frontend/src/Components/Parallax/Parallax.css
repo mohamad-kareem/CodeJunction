@@ -26,3 +26,9 @@ transform: translateZ(-1px) scale(2);
       background-attachment: scroll;
     }
   }
+@media screen and (max-width: 480px) {
+    .parallax {
+      height: 200px;
+      width: 100%;
+    }
+  }

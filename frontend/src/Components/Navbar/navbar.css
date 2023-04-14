@@ -38,31 +38,24 @@
       justify-content: center;
       align-items: center;
     }
-
     .logo {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-  
     .links {
       flex-direction: column;
       gap: 1rem;
     }
-
   }
   
 @media only screen and (max-width: 200px) {
     .navbar {
       padding: 1rem;
     }
-  
     .logo {
       font-size: 1.5rem;
     }
-  
     .links {
       display: none;
     }
-  
-    
   }
