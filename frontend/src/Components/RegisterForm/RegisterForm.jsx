@@ -10,6 +10,14 @@ const Register = () => {
                 label="username"
                 name="username"
                 value={username}/>
+            <InputForm
+                label="username"
+                name="username"
+                value={username}/>
+            <InputForm
+                label="username"
+                name="username"
+                value={username}/>
             
         </div>
       
