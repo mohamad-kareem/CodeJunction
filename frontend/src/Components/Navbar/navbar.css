@@ -23,3 +23,12 @@
     text-align: center;
     align-items: center;
   }
+.linking {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+.linking:hover{
+    color: yellow;
+    transform: scale(1.1);
+  }
