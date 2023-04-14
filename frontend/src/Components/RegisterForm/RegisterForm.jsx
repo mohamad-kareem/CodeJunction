@@ -3,6 +3,7 @@ import InputForm from '../InputForm/InputForm'
 import ButtonComponent from '../Button/ButtonComponent';
 import { Link } from 'react-router-dom';
 import "../Css/signInOut.css"
+import { faUserSecret,faEnvelope,faKey} from '@fortawesome/free-solid-svg-icons';
 const Register = () => {
     const [username,setUserName]=useState("");
     const [email,setEmail]=useState("");
@@ -18,15 +19,19 @@ const Register = () => {
             <InputForm
                 label="username"
                 name="username"
-                value={username}/>
+                value={username}
+                icon={faUserSecret}/>
             <InputForm
                 label="email"
                 name="email"
-                value={email}/>
+                value={email}
+                icon={faEnvelope}
+                />
             <InputForm
                 label="password"
                 name="password"
-                value={password}/>
+                value={password}
+                icon={faKey}/>
             <ButtonComponent color="yellow"size="15px" onClick={handleSubmit}>Register</ButtonComponent> 
             <div className="register-direct">Already have an account?  <Link to="/login">Log in</Link></div>
         </form>

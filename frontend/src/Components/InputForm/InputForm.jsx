@@ -1,5 +1,7 @@
 import React from 'react';
-const InputForm = ({ label, name, value }) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+const InputForm = ({ label, name, value, icon }) => {
   return (
     <div className='inputBox'>
       <input 
@@ -8,7 +10,7 @@ const InputForm = ({ label, name, value }) => {
         name={name}
         value={value} 
       />
-     
+      <FontAwesomeIcon icon={icon} className="inputBox-icon" />
       <span>{label}</span>
     </div>
   );
