@@ -1,5 +1,5 @@
 import React from 'react';
-const InputBox = ({ label, name, value }) => {
+const InputForm = ({ label, name, value }) => {
   return (
     <div className='inputBox'>
       <input 
@@ -8,9 +8,10 @@ const InputBox = ({ label, name, value }) => {
         name={name}
         value={value} 
       />
+     
       <span>{label}</span>
     </div>
   );
 };
 
-export default InputBox;
+export default InputForm;
