@@ -8,3 +8,17 @@
     margin-top: 3rem;
     padding-bottom: 2rem;
   }
+
+.icons-container{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-left: 2.8rem;
+  }
+.icons{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  

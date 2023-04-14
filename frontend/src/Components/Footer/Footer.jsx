@@ -17,11 +17,11 @@ const Footer = () => {
     <a href="https://CodeJunction/resources"><p className='info-details'>Resources</p></a>
     </div>
     <div className="connect">
-        <div className="icons">
-            <img className="sm_icons" src={Facbook} alt="facebook.png" />
-            <img className="sm_icons" src={Instagram} alt="instagram.png"/>
-            <img className="sm_icons" src={Twitter} alt="twitter.png"/>
-            <img className="sm_icons" src={GitHub} alt="github.png"/>
+        <div className="icons-container">
+            <img className="icons" src={Facbook} alt="facebook.png" />
+            <img className="icons" src={Instagram} alt="instagram.png"/>
+            <img className="icons" src={Twitter} alt="twitter.png"/>
+            <img className="icons" src={GitHub} alt="github.png"/>
             
         </div>
     </div>
