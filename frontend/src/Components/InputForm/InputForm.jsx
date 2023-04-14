@@ -10,6 +10,7 @@ const InputForm = ({ label, name, value, icon,onChange }) => {
         name={name}
         value={value} 
         onChange={onChange}
+        required={true}
       />
       <FontAwesomeIcon icon={icon} className="inputBox-icon" />
       <span>{label}</span>
