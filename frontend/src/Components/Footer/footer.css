@@ -21,4 +21,16 @@
     width: 2.5rem;
     height: 2.5rem;
   }
-  
+
+.footer-details{
+    display: flex;
+  }
+.footer-details:hover{
+    color: yellow;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+a{
+    text-decoration: none;
+    color: white;
+  }
