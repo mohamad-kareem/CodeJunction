@@ -1,4 +1,5 @@
 import React from 'react'
+import "./buttoncomponent.css"
 
 const ButtonComponent = ({color="yellow",size,width="300px",margin,children,onClick}) => {
   const styles = {
