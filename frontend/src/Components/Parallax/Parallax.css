@@ -1,0 +1,11 @@
+.parallax {
+    position: relative;
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    perspective: 1px;
+    transform-style: preserve-3d;
+
+}
