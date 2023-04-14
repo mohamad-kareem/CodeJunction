@@ -1,0 +1,7 @@
+.copyrights{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
