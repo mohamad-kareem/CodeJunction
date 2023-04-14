@@ -4,7 +4,7 @@ import  GitHub from "../../icons/git.png";
 import Instagram from "../../icons/twit.png";
 import Twitter from  "../../icons/twit.png";
 import "./footer.css"
-
+import CopyRight from '../CopyRight/CopyRight';
 const Footer = () => {
   return (
     <div className="footer">
@@ -22,7 +22,7 @@ const Footer = () => {
             <img className="icons" src={Instagram} alt="instagram.png"/>
             <img className="icons" src={Twitter} alt="twitter.png"/>
             <img className="icons" src={GitHub} alt="github.png"/>
-            
+            <CopyRight/>
         </div>
     </div>
 </div>
