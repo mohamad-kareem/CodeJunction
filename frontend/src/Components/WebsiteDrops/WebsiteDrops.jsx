@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./websitedrops.css"
 const WebsiteDrops = () => {
   return (
      <div className="wrapper">
