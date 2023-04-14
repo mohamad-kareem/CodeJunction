@@ -34,3 +34,20 @@ a{
     text-decoration: none;
     color: white;
   }
+@media screen and (max-width: 768px) {
+    .info {
+      flex-direction: column;
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .icons {
+      margin-left: 0;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .footer-details:hover {
+      transform: none;
+    }
+  }
