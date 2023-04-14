@@ -6,6 +6,13 @@ import { Link } from 'react-router-dom';
 import loginImage from "../../assets/ezgif.com-resize.gif"
 
 const LoginForm = () => {
+
+    const [email,setEmail]=useState("");
+    const [password,setPassword]=useState("");
+
+    const HandleEmailChange=(e)=>setEmail(e.target.value);
+    const HandlePasswordChange=(e)=>setPassword(e.target.value);
+    
   return (
     <div className='wrapper'>
     <div className='image-container'>
