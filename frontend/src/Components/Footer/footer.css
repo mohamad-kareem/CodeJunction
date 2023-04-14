@@ -30,9 +30,12 @@
     transform: scale(1.1);
     cursor: pointer;
   }
+.footer-details{
+    color: white;
+  }
 a{
     text-decoration: none;
-    color: white;
+   
   }
 @media screen and (max-width: 768px) {
     .info {
