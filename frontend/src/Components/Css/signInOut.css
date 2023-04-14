@@ -47,6 +47,10 @@
     font-weight: 300;
     border-radius: 25px;
     font-size: 15px;
+    box-shadow: -5px -5px 15px rgba(225, 225, 225, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+    outline: none;
 }
 
 span{
@@ -70,4 +74,14 @@ span{
     padding: 2px 0;
     color:yellow;
     border-right: 1px solid yellow;
+}
+a{
+    color:yellow;
+}
+.forget-password{
+    margin-left: 190px;
+
+}
+.error{
+    color:yellow
 }
