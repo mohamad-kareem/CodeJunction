@@ -25,4 +25,22 @@
     flex-direction: column;
     padding: 40px;
     gap: 25px;
+    border: 8px solid #2d2254;
+    border-radius: 20px;
+}
+.inputBox{
+    position: relative;
+    width: 300px;
+}
+
+.inner-input{
+    padding: 12px 10px 12px 48px;
+    border: none;
+    width: 100%;
+    background-color:  rgb(65, 54, 93);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: yellow;
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 15px;
 }

@@ -1,6 +1,7 @@
 import React, {useState}  from 'react'
 import InputForm from '../InputForm/InputForm'
 import ButtonComponent from '../Button/ButtonComponent';
+import { Link } from 'react-router-dom';
 import "../Css/signInOut.css"
 const Register = () => {
     const [username,setUserName]=useState("");
@@ -27,6 +28,7 @@ const Register = () => {
                 name="password"
                 value={password}/>
             <ButtonComponent color="yellow"size="15px" onClick={handleSubmit}>Register</ButtonComponent> 
+            <div className="register-direct">Already have an account?  <Link to="/login">Log in</Link></div>
         </form>
     </div>
       
