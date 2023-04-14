@@ -1,11 +1,14 @@
 import React, {useState}  from 'react'
 import InputForm from '../InputForm/InputForm'
 import ButtonComponent from '../Button/ButtonComponent';
+import "../Css/signInOut.css"
 const Register = () => {
     const [username,setUserName]=useState("");
-
+    const [email,setEmail]=useState("");
+    const [password,setPassword]=useState("");
     const handleSubmit = (e) => {
-        e.preventDefault()}
+        e.preventDefault()
+    }
   return (
     <div className='wrapper'>
         <div className='sign-in-up-container'>
@@ -15,13 +18,13 @@ const Register = () => {
                 name="username"
                 value={username}/>
             <InputForm
-                label="username"
-                name="username"
-                value={username}/>
+                label="email"
+                name="email"
+                value={email}/>
             <InputForm
-                label="username"
-                name="username"
-                value={username}/>
+                label="password"
+                name="password"
+                value={password}/>
             <ButtonComponent color="yellow"size="15px" onClick={handleSubmit}>Register</ButtonComponent> 
         </div>
       
