@@ -23,7 +23,6 @@ const Navbar = () => {
 					DashBoard
 				</Link>
 			
-                <ButtonComponent id="logout" className="linking" width='80px'> LogOut</ButtonComponent>
 			</div>
 		</div>
   )
