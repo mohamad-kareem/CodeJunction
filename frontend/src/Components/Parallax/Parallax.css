@@ -19,3 +19,10 @@ height: 100%;
 z-index: -1;
 transform: translateZ(-1px) scale(2);
 }
+@media screen and (max-width: 768px) {
+    .parallax {
+      height: 300px;
+      width: 100%;
+      background-attachment: scroll;
+    }
+  }
