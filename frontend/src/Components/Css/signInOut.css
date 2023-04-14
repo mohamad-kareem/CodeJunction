@@ -27,6 +27,10 @@
     gap: 25px;
     border: 8px solid #2d2254;
     border-radius: 20px;
+    box-shadow: -5px -5px 15px rgba(225, 225, 225, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px  rgba(225, 225, 225, 0.1),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 .inputBox{
     position: relative;
