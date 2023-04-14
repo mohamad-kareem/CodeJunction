@@ -24,6 +24,16 @@
     inset -20px -20px 25px rgba(195, 224, 7, 0.9);
   }
 
-  .container .drop:nth-child(1){
+.container .drop:nth-child(1){
+    border-radius: 57% 43% 43% 57% / 43% 43% 57% 57%;
+  }
+
+.container .drop:nth-child(2){
+    border-radius: 93% 17% 59% 41% / 57% 59% 41% 43%;
+  }
+.container .drop:nth-child(3){
+    border-radius: 35% 65% 31% 69% / 57% 59% 41% 43%;
+  }
+.container .drop:nth-child(4){
     border-radius: 57% 43% 43% 57% / 43% 43% 57% 57%;
   }
