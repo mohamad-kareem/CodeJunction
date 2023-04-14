@@ -1,0 +1,9 @@
+.anime-container{
+    display: flex;
+    justify-content: flex-start;
+ 
+}
+.anime{
+    display: flex;
+    justify-content: space-between;
+}
