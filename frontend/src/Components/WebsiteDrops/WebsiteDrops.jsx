@@ -1,8 +1,17 @@
 import React from 'react'
 import "./websitedrops.css"
+import { motion } from 'framer-motion';
 const WebsiteDrops = () => {
+
+  const containerVariants = {
+    animate: {
+      x: [-10, 0, -10],
+      transition: { duration: 1.5, repeat: Infinity },
+    },
+  };
+
   return (
-     <div className="drop-wrapper">
+     <motion.div className="drop-wrapper " variants={containerVariants}  animate="animate">
     <div className="container">
       <div className="drop">
         <div className="content">
@@ -29,7 +38,7 @@ const WebsiteDrops = () => {
         </div>
       </div>
     </div>
-  </div>
+  </motion.div>
   )
 }
 
