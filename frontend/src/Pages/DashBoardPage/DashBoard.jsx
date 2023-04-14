@@ -1,8 +1,9 @@
 import React from 'react'
 import SideBar from '../../Components/SideBar/SideBar'
+import "./dashboard.css"
 const DashBoard = () => {
   return (
-    <div>
+    <div className='sidebar-wrapper'>
       <SideBar/>
     </div>
   )

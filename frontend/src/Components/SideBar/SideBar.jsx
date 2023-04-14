@@ -1,9 +1,9 @@
 import React from 'react'
-
+import "./siddebar.css"
 const SideBar = () => {
   return (
-    <div>
-      
+    <div className='sidebar'>
+      dfsafds
     </div>
   )
 }
