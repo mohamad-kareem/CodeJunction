@@ -7,6 +7,7 @@ import "./anime.css"
 
 const Anime = () => {
     const [move,setMove]=useState(false);
+    const transition = { duration: 2, ease: "easeInOut" };
   return (
     <div className='anime-container'>
     <div className='anime'>
@@ -14,20 +15,22 @@ const Anime = () => {
      initial={{x: -400}}
      animate={{x:move?-40:80}} 
      onClick={()=>{setMove(!move);}}
+     transition={transition}
      >
-      <img src={rightPerson} alt='registration' />
+      <img src={rightPerson} alt='right-person' />
       </motion.div>
 
     <div>
-      <img src={middleComputer} alt='registration' />
+      <img src={middleComputer} alt='middle-image' />
     </div>
 
     <motion.div 
     initial={{x: 850}}
     animate={{x:move?600:-70}} 
     onClick={()=>{setMove(!move);}}
+    transition={transition}
     >
-      <img src={leftPerson} alt='registration' />
+      <img src={leftPerson} alt='left-person' />
       </motion.div>
     </div>
 
