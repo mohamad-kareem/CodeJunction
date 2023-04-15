@@ -19,3 +19,16 @@
     color: yellow;
     align-items: center;
 }
+.SideBarList .row:hover{
+    cursor: pointer;
+    background-color:  #494064;
+}
+.row #icon{
+    flex:30%;
+    display: grid;
+    place-items: center;
+}
+
+.row #title{
+    flex: 70%;
+}
