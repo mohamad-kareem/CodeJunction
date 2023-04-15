@@ -6,6 +6,7 @@
 .SideBarList{
     height: auto;
     padding: 0;
+    margin-top: 10px;
     }
 .SideBarList .row{
     height: 60px;

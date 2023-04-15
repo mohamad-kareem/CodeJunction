@@ -1,7 +1,7 @@
 import React from 'react'
 import "./logo.css"
-const Logo = ({ padding }) => {
-    const LogoStyle = { padding };
+const Logo = ({ padding , borderBottom}) => {
+    const LogoStyle = { padding , borderBottom};
   return (
     <div className='logo-container' style={LogoStyle}>
         <div className="logo">

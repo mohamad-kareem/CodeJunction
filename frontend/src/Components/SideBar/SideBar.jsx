@@ -8,7 +8,7 @@ const SideBar = () => {
 
   return (
     <div className='sidebar'>
-        <Logo padding="10px"/>
+        <Logo borderBottom="1px solid yellow"  padding="10px"/>
      <ul className='SideBarList'>
         {SideBarContent.map((value,key)=>{
           return(
