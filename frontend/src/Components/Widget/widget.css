@@ -9,6 +9,9 @@
     gap: 150px;
     flex-wrap: wrap;
 }
+.widget:hover{
+    transform: scale(1.1);
+}
 .left,.right{
     display: flex;
     flex-direction: column;

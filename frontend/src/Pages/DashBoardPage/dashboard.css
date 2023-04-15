@@ -6,7 +6,7 @@
     height: 100vh;
 
 }
-.widget-container{
+.widgets-container{
     display: flex;
     padding: 20px;
     gap: 20px;
