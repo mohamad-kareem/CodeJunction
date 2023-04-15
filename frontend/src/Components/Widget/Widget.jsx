@@ -8,7 +8,7 @@ const Widget = () => {
         <div className='left'>
             <span className='title'>Users</span>
             <span className='active-users'>1778</span>
-            <span className='link'>see all users</span>
+            <span className='widget-link'>see all users</span>
         </div>
         <div className='right'>
             <div className='percentage'>
