@@ -2,7 +2,6 @@ import React from 'react'
 import SideBar from '../../Components/SideBar/SideBar'
 import "./dashboard.css"
 import Widget from '../../Components/Widget/Widget'
-import Navbar from '../../Components/Navbar/Navbar'
 const DashBoard = () => {
   return (
     

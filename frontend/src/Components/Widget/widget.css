@@ -1,12 +1,14 @@
 .widget{
     display: flex;
-    width: 300px;
-    flex: 1;
     justify-content: space-between;
-    -webkit-box-box-shadow: 2px 4px 10px 1px rgba(173, 225, 14, 0.47);
-    box-shadow: 2px 4px 10px 1px yellow;
+    -webkit-box-box-shadow: 2px 4px 10px 1px rgba(29, 38, 1, 0.47);
+    box-shadow: 2px 4px 10px 1px rgb(98, 98, 65);
     border-radius: 10px;
-    height: 100px;
-    
-    
+    height: 120px;
+    padding: 5px;
+}
+.left,.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

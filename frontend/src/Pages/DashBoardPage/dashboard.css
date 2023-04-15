@@ -9,7 +9,8 @@
 .widget-container{
     display: flex;
     padding: 20px;
-    gap: 30px;
+    gap: 60px;
+    flex-wrap: wrap;
   
    
 
