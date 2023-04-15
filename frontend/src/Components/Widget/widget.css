@@ -6,7 +6,8 @@
     border-radius: 10px;
     height: 120px;
     padding: 10px;
-    gap: 40px;
+    gap: 150px;
+    flex-wrap: wrap;
 }
 .left,.right{
     display: flex;

@@ -11,10 +11,24 @@ const DashBoard = () => {
           <SideBar/>
        </div>
        <div className='widget-container'>
-        <Widget/>
-        <Widget/>
-        <Widget/>
-        <Widget/>
+       <Widget
+          title="Users"
+          activeUsers={1234}
+          widgetLink="Active coders"
+          percentage="75%"
+        />
+        <Widget
+          title="Points"
+          activeUsers={155}
+          widgetLink="Boost your skills"
+        />
+        <Widget
+           title="Badges"
+           activeUsers="Gold"
+           widgetLink="Boost your skills"
+         
+           />
+        
        </div>
     </div>
    
