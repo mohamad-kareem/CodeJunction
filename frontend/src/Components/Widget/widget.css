@@ -5,7 +5,7 @@
     box-shadow: 2px 4px 10px 1px rgb(98, 98, 65);
     border-radius: 10px;
     height: 120px;
-    padding: 5px;
+    padding: 10px;
 }
 .left,.right{
     display: flex;
@@ -13,12 +13,16 @@
     justify-content: space-between;
     color: yellow;
 }
-.title{
-    font-weight:lighter;
-    font-size: 20px;
+ .title{
     color: wheat;
 }
 .active-users{
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 36px;
+}
+.widget-link{
+    font-size: 10px;
+}
+.person-icon{
+    display: flex;
+    justify-content: flex-end;
 }
