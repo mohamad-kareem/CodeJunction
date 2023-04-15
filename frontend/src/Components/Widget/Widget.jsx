@@ -1,6 +1,7 @@
 import React from 'react'
 import "./widget.css"
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import PersonIcon from '@mui/icons-material/Person';
 const Widget = () => {
   return (
     <div className='widget'>
@@ -13,6 +14,7 @@ const Widget = () => {
             <div className='percentage'>
                <KeyboardArrowUpIcon/> 50%
             </div>
+            <PersonIcon className='person-icon'/>
         </div>
          
     </div>
