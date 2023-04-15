@@ -26,7 +26,6 @@
     display: grid;
     place-items: center;
 }
-
 .row #title{
     flex: 70%;
 }

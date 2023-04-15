@@ -2,14 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import "./navbar.css"
 import ButtonComponent from '../Button/ButtonComponent';
+import Logo from '../Logo/Logo';
 const Navbar = () => {
 
 
   return (
     <div className="navbar">
-			<div className="logo">
-				<span className='partLogo'>Code</span>Junction
-			</div>
+			<Logo/>
 			<div className="links">
 				<Link to="/home" className="linking">
 					Home
