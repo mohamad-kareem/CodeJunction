@@ -1,9 +1,9 @@
 import React from 'react'
-
+import "./table.css"
 const Table = () => {
   return (
-    <div className='table-wrapepr'>
-      <div className="search">
+    <div className='table-wrapper'>
+      <div className="all-users">
         <div className="table-header">
             <h2>Users</h2>
             <p>View All</p>
@@ -12,9 +12,10 @@ const Table = () => {
             <thead>
                 <tr>
                     <td>Username</td>
-                    <td>email</td>
-                    <td>age</td>
-                    <td>points</td>
+                    <td>Email</td>
+                    <td>Age</td>
+                    <td>Github</td>
+                    <td>Points</td>
                 </tr>
             </thead>
             <tbody>
@@ -22,7 +23,7 @@ const Table = () => {
                     <td>Darkweb</td>
                     <td>kareem@gmail.com</td>
                     <td>28</td>
-                    <td>Github link</td>
+                    <td>https://github.com/mohamad-kareem</td>
                     <td> 1200</td>
                 </tr>
             </tbody>

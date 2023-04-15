@@ -1,0 +1,30 @@
+.table-wrapper{
+    position: relative;
+    width: 100%;
+    padding:20px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 15fr;
+}
+.all-users{
+    position: relative;
+    display: grid;
+    
+    padding: 20px;
+}
+.table-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.table-header h2{
+    font-weight: 500;
+}
+.table-wrapper table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.table-wrapper table thead td{
+    font-weight: 500;
+}
