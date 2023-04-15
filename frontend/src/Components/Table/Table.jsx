@@ -4,22 +4,24 @@ const Table = () => {
   return (
     <div className='table-wrapper'>
       <div className="all-users">
-        <div className="table-header">
+        {/* <div className="table-header">
             <h2>Users</h2>
             <p>View All</p>
-        </div>
+        </div> */}
         <table>
             <thead>
                 <tr>
+                    <td>Rank</td>
                     <td>Username</td>
                     <td>Email</td>
                     <td>Age</td>
-                    <td>Github</td>
+                    <td className='git'>Github</td>
                     <td>Points</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td>#1</td>
                     <td>Darkweb</td>
                     <td>kareem@gmail.com</td>
                     <td>28</td>

@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    color: yellow;
+    color: wheat;
     align-items: center;
 }
 .SideBarList .row:hover{
