@@ -21,11 +21,11 @@
     font-weight: 500;
 } */
 thead{
-    color: #0b0925;
+    color: wheat;
     font-weight:bolder;
 }
 tbody{
-    color: wheat;
+    color: #0b0925;
 }
 .table-wrapper table{
     width: 100%;
@@ -46,8 +46,4 @@ tbody{
 }
 .table-wrapper .all-users table tr td{
     padding: 9px 5px;
-}
-.git{
-    display: flex;
-    justify-content: center;
 }

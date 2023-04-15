@@ -1,6 +1,8 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import "./table.css"
 const Table = () => {
+
+    const [users, setUsers] = useState([]);
   return (
     <div className='table-wrapper'>
       <div className="all-users">
@@ -20,14 +22,16 @@ const Table = () => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>#1</td>
-                    <td>Darkweb</td>
-                    <td>kareem@gmail.com</td>
-                    <td>28</td>
-                    <td>https://github.com/mohamad-kareem</td>
-                    <td> 1200</td>
-                </tr>
+            {users.map(user => (
+              <tr key={user.id}>
+                <td>#{user.rank}</td>
+                <td>{user.username}</td>
+                <td>{user.email}</td>
+                <td>{user.age}</td>
+                <td ><a href={user.github}>View</a></td>
+                <td>{user.points}</td>
+              </tr>
+            ))}
             </tbody>
         </table>
       </div>
