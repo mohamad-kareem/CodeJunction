@@ -1,5 +1,19 @@
+.dashboard-wrapper{
+    display: flex;
+}
+
 .sidebar-wrapper{
-    width: 100vw;
     height: 100vh;
 
 }
+.widget-container{
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+  
+   
+
+}
+
+
+
