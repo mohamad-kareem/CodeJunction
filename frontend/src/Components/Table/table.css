@@ -28,3 +28,16 @@
 .table-wrapper table thead td{
     font-weight: 500;
 }
+.table-wrapper .all-users table tr{
+    border-bottom: 1px solid #0F0A36;
+}
+.table-wrapper .all-users  table tbody tr:hover{
+    background-color: #0F0A36;
+    color: yellow;
+}
+.table-wrapper .all-users  table tbody tr:last-child{
+    border-bottom: none;
+}
+.table-wrapper .all-users table tr td{
+    padding: 9px 5px;
+}
