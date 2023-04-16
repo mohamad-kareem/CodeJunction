@@ -54,3 +54,10 @@ align-items: center;
     cursor: pointer;
     background-color:  #494064;
    }
+   .code-header{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      border-bottom: 1px solid yellow;
+      padding: 10px;
+   }

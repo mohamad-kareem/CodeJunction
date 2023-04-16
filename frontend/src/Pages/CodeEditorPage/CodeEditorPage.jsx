@@ -41,6 +41,8 @@ const CodeEditorPage = () => {
         </div>
         <div className="rightside">
             <div className='code-header'>
+                <ButtonComponent width='100px' children={"Save"} margin={"4px"}/>
+                <ButtonComponent width='100px' children={"Run"}/>
             </div>
             <CodeEditor/>
         </div>
