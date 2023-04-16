@@ -13,7 +13,6 @@ const CodesTable = ({code}) => {
                     <td>Title</td>
                     <td>Description</td>
                     <td>Language</td>
-                    <td><ButtonComponent/></td>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +22,7 @@ const CodesTable = ({code}) => {
                 <td>{code.title}</td>
                 <td>{code.description}</td>
                 <td>{code.language}</td>
+                <td><ButtonComponent width='100px'>Download</ButtonComponent></td>
               </tr>
             ))}
             </tbody>
