@@ -3,7 +3,7 @@ import Avatar from 'react-avatar';
 const Client = ({username}) => {
   return (
     <div className='Client-container'>
-      <Avatar color={Avatar.getRandomColor('sitebase', ['yellow'])} name={username} size={55} round="15px"/>
+      <Avatar color={Avatar.getRandomColor( ['yellow',"red"])} name={username} size={40} round="10px"/>
       <span className='username'>{username}</span>
     </div>
   )

@@ -3,7 +3,7 @@ import "./codeeditor.css"
 const CodeEditor = () => {
   return (
     <div>
-      
+      hello
     </div>
   )
 }

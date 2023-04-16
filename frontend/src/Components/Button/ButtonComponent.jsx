@@ -6,7 +6,7 @@ const ButtonComponent = ({color="yellow",size,width="300px",margin,children,onCl
     backgroundColor: color,
     fontSize: size,
     borderRadius: '15px',
-    padding: '10px',
+    padding: '5px',
     outline: 'none',
     border: '1px solid yellow',
     width: width,
