@@ -1,17 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 import SideBar from '../../Components/SideBar/SideBar'
 import "./dashboard.css"
 import Widget from '../../Components/Widget/Widget'
 import PersonIcon from '@mui/icons-material/Person';
 import ScoreboardIcon from '@mui/icons-material/Scoreboard';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
-import Table from '../../Components/Table/Table';
+import RankingTable from '../../Components/RankingTable/RankingTable';
+import CodesTable from '../../Components/CodesTable/CodesTable';
 const DashBoard = () => {
+  const [code ,setCode]=useState(false);
+  const [ranking ,setRanking]=useState(false);
   return (
-    
+  
     <div className='dashboard-wrapper'>
        <div className='sidebar-wrapper'>
-            <SideBar/>
+            <SideBar setCode={setCode} setRanking={setRanking}/>
        </div>
        <div className='middle-container'>
          <div className="widgets-container">
@@ -36,7 +39,8 @@ const DashBoard = () => {
                 />
          </div>    
          <div className="table">
-           <Table/>
+           <RankingTable ranking={ranking}/>
+           <CodesTable code={code}/>
          </div> 
        </div>
      

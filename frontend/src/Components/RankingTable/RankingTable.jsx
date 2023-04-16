@@ -1,10 +1,10 @@
 import React ,{useState} from 'react'
-import "./table.css"
-const Table = () => {
-
+import "./rankingtable.css"
+const RankingTable = ({ranking}) => {
+   
     const [users, setUsers] = useState([]);
   return (
-    <div className='table-wrapper'>
+    <div className='table-wrapper' style={{display:ranking ? 'block' : 'none'}}>
       <div className="all-users">
         {/* <div className="table-header">
             <h2>Users</h2>
@@ -40,4 +40,4 @@ const Table = () => {
   )
 }
 
-export default Table
+export default RankingTable
