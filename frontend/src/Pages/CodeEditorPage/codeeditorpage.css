@@ -1,7 +1,7 @@
 .editor-wrapper{
     display: grid;
     grid-template-columns: 220px 1fr;
-    background-color: #2D2254;
+    height: 100vh;
     
   
    }
@@ -42,7 +42,7 @@ h3{
    }
 .row{
 height: 60px;
-list-style-type: none;/*get rid of any list property*/
+list-style-type: none;
 margin: 0%;
 display: flex;
 justify-content: center;
