@@ -5,7 +5,7 @@
    
 }
 .top{
-    
+    flex: 1;
 }
 .leftside{
     flex: 1;
@@ -13,4 +13,17 @@
     color: wheat;
     display: flex;
     flex-direction: column;
+}
+.connections{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+.client-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+
 }

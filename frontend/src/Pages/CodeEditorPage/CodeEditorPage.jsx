@@ -5,7 +5,7 @@ import Client from '../../Components/Client/Client'
 import ButtonComponent from '../../Components/Button/ButtonComponent'
 import CodeEditor from '../../Components/CodeEditor/CodeEditor'
 const CodeEditorPage = () => {
-    const [clients,setClient]=useState([{sockedtid:1,username:"kareem"},{sockedtid:2,username:"nour"}]);
+    const [clients,setClient]=useState([{sockedtid:1,username:"kareem"},{sockedtid:2,username:"nour"},]);
 
   return (
     <div className='editor-wrapper'>
@@ -20,8 +20,8 @@ const CodeEditorPage = () => {
                 </div>
             </div>
             <ButtonComponent width='140px' children="Leave room"/>
-            <ButtonComponent width='100px' children="Shar"/>
-            <ButtonComponent width='100px' children="As"/>
+            <ButtonComponent width='140px' children="room ID"/>
+            <ButtonComponent width='140px' children="Ask AI"/>
 
         </div>
         <div className="rightside">
