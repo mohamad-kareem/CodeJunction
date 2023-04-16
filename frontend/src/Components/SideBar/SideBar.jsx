@@ -13,29 +13,30 @@ const SideBar = ({setCode,setRanking}) => {
   return (
     <div className='sidebar'>
         <Logo borderBottom="1px solid rgb(122, 175, 16)"  padding="10px"/>
-   
-
-        <div class="SideBarList">
-          <Link to="/home">
-          <div id='icon'>{<HomeIcon/>}</div>
-          <div id='title'>{"home"}</div>
+        
+        <div class="SideBarList">  
+          <Link  to="/home" className='row'>
+            <div id='icon'>{<HomeIcon/>}</div>
+            <div id='title'>{"home"}</div>
           </Link>
-          <div className="ranking" onClick={()=>{
-            setRanking(true);
-            setCode(false);
-          }}>
-            <div id='icon'>{< EmojiEventsIcon/>}</div>
-            <div id='title'>{"ranking"}</div>
+          
+          <div className="row" onClick={()=>{
+              setRanking(true);
+              setCode(false);
+              }}>
+              <div id='icon'>{< EmojiEventsIcon/>}</div>
+              <div id='title'>{"ranking"}</div>
           </div>
 
-          <div className="coding" onClick={()=>{
-            setRanking(false);
-            setCode(true);
-          }} >
-            <div id='icon'>{< SourceIcon/>}</div>
-            <div id='title'>code</div>
+          <div className="row" onClick={()=>{
+              setRanking(false);
+              setCode(true);
+              }} >
+              <div id='icon'>{< SourceIcon/>}</div>
+              <div id='title'>code</div>
           </div>
-          <div className="coding">
+
+          <div className="row">
             <div id='icon'>{< GitHubIcon/>}</div>
             <div id='title'>GitHub</div>
           </div>
