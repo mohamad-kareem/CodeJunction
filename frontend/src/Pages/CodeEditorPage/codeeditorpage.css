@@ -1,9 +1,10 @@
 .editor-wrapper{
     display: grid;
     grid-template-columns: 220px 1fr;
-    height: 100vh;
+    background-color: #2D2254;
+    
   
-}
+   }
 .leftside{
     flex: 1;
     background-color:#0F0A36 ;
@@ -11,31 +12,34 @@
     display: flex;
     flex-direction: column;
     padding: 5px;
-}
+   }
 .buttom{
     flex: 1;
     margin-top: 20px;
 
-}
+   }
 h3{
     color: rgb(154, 152, 148);
     font-weight: 100;
-}
+   }
 .connections{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 15px;
-}
+   }
 .client-container{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 10px;
-}
+   }
 .username{
     margin-top:4px;
-}
+   }
+.rows{  
+    margin-top: 20px;
+   }
 .row{
 height: 60px;
 list-style-type: none;/*get rid of any list property*/
@@ -44,8 +48,9 @@ display: flex;
 justify-content: center;
 flex-direction: row;
 color: wheat;
-align-items: center;}
+align-items: center;
+   }
 .row:hover{
     cursor: pointer;
     background-color:  #494064;
-}
+   }

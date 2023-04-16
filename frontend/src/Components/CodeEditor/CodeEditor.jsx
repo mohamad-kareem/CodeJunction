@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import "./codeeditor.css"
+import Codemirror from 'codemirror';
+import 'codemirror/lib/codemirror.css';
+import 'codemirror/theme/dracula.css';
+import 'codemirror/mode/javascript/javascript';
+import 'codemirror/addon/edit/closetag';
+import 'codemirror/addon/edit/closebrackets';
+
 const CodeEditor = () => {
+  useEffect(()=>{
+    async function init(){
+       Codemirror.fromTextArea(document.getElementById('codeEditorCollaboration'),{
+        mode:{name:'javascript',json:true},
+        theme:'dracula',
+        autoCloseTags:true,
+        autoCloseBrackets:true,
+        lineNumbers:true,
+       });
+    }
+    init();
+  },[]);
   return (
-    <div>
-      hello
-    </div>
+    <textarea id='codeEditorCollaboration'></textarea>
   )
 }
 
-export default CodeEditor
+export default CodeEditor;
