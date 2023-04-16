@@ -14,7 +14,7 @@ const SideBar = ({setCode,setRanking}) => {
     <div className='sidebar'>
         <Logo borderBottom="1px solid rgb(122, 175, 16)"  padding="10px"/>
         
-        <div class="SideBarList">  
+        <div className="SideBarList">  
           <Link  to="/home" className='row'>
             <div id='icon'>{<HomeIcon/>}</div>
             <div id='title'>{"home"}</div>
