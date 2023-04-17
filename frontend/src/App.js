@@ -6,6 +6,7 @@ import LoginPage from './Pages/LoginPage/Login';
 import DashBoardPage from './Pages/DashBoardPage/DashBoard';
 import CodeEditorPage from './Pages/CodeEditorPage/CodeEditorPage';
 import SessionForm from './Pages/SessionForm/SessionForm';
+import { Toaster } from 'react-hot-toast';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,17 @@ function App() {
       <Route path="/session" element={<SessionForm/>}/>
       </Routes>
   </Router>
+  <Toaster
+  position="top-center"
+  toastOptions={{
+    success: {
+      style: {
+        background: 'yellow',
+        color: 'black',
+      },
+    },
+  }}
+/>
     </div>
   );
 }

@@ -4,15 +4,18 @@ import ButtonComponent from '../../Components/Button/ButtonComponent'
 import "./sessionform.css"
 import Navbar from '../../Components/Navbar/Navbar'
 import CopyRights from '../../Components/CopyRight/CopyRight'
+import toast from "react-hot-toast";
 import { faUserSecret,faKey} from '@fortawesome/free-solid-svg-icons';
 import {v4 as uuidV4} from "uuid";
 const SessionForm = () => {
+    
     const [roomId,setRoomId]=useState("");
     const [username,setUserName]=useState("")
     const generateNewId=(e)=>{
         e.preventDefault();
         const id=uuidV4()
         setRoomId(id)
+        toast.success("New room generated")
     }
   return (
     <div className="page-wrapper">
