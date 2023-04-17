@@ -17,6 +17,13 @@ const SessionForm = () => {
         setRoomId(id)
         toast.success("New room generated")
     }
+    const Join=()=>{
+        if(!roomId || !username){
+            toast.error("Fill required fields")
+            return;
+        }
+
+    }
   return (
     <div className="page-wrapper">
             <Navbar/>
@@ -38,7 +45,7 @@ const SessionForm = () => {
                     value={roomId}
                     onChange={(e)=>setRoomId(e.target.value)}
                 />
-                <ButtonComponent children={"Join"} width='100px' className="join-btn"/>
+                <ButtonComponent children={"Join"} width='100px' className="join-btn"  onClick={Join}/>
                 <span className='generate-container'>Generate room ID  <a href="" className='generate' onClick={generateNewId}>Click Here</a> </span>
             </div>
         </div>

@@ -30,6 +30,12 @@ function App() {
         color: 'black',
       },
     },
+    error:{
+      style:{
+        background:"yellow",
+        color:'black',
+      },
+    },
   }}
 />
     </div>
