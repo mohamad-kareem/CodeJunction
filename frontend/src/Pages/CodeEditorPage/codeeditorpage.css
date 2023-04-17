@@ -54,10 +54,18 @@ align-items: center;
     cursor: pointer;
     background-color:  #494064;
    }
-   .code-header{
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      border-bottom: 1px solid yellow;
-      padding: 10px;
+.code-header{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   border-bottom: 1px solid yellow;
+   padding: 10px;
    }
+.code-output {
+display: flex;
+flex-direction: column;
+font-size: 20px;
+padding: 4px;
+border: 1px solid yellow;
+outline: none;
+}

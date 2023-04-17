@@ -45,6 +45,14 @@ const CodeEditorPage = () => {
                 <ButtonComponent width='100px' children={"Run"}/>
             </div>
             <CodeEditor/>
+            <div className="code-output">
+                <div className="output-tabs output-tabs-horizontal">
+                    <div className="output-tab">console</div>
+                    <div className="output-tab">output</div>
+                    <div className="output-tab">problems</div>
+                </div>
+                <textarea>className="output-textarea"</textarea>
+            </div>
         </div>
     </div>
   )
