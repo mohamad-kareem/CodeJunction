@@ -19,7 +19,7 @@ const LoginForm = () => {
             <img src={loginImage} alt='registration' />
     </div>
   <div className='sign-in-up-container'>
-    <form className='sign-in-out-inner-form'>
+    <form className='inner-form'>
       <h2 className='header'>Sign In</h2>
           <InputForm
             label="email address"

@@ -10,7 +10,7 @@ const SessionForm = () => {
     <div className="page-wrapper">
             <Navbar/>
         <div className='session-wrapper'>
-            <div className="form-container">
+            <div className="inner-form">
             <h1>War Room</h1>
                 <InputForm
                 label="ID ROOM"

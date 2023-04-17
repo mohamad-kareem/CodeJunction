@@ -60,7 +60,7 @@ const Register = () => {
                 <img src={registerImage} alt='registration' />
         </div>
      <div className='sign-in-up-container'>
-        <form className='sign-in-out-inner-form'>
+        <form className='inner-form'>
             <h2 className='header'>Create account</h2>
             <InputForm
                 label="username"
