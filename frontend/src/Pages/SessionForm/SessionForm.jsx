@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import InputForm from '../../Components/InputForm/InputForm'
 import ButtonComponent from '../../Components/Button/ButtonComponent'
 import "./sessionform.css"
@@ -7,10 +7,11 @@ import CopyRights from '../../Components/CopyRight/CopyRight'
 import { faUserSecret,faKey} from '@fortawesome/free-solid-svg-icons';
 import {v4 as uuidV4} from "uuid";
 const SessionForm = () => {
+    const [roomId,setRoomId]=useState("")
     const generateNewId=(e)=>{
         e.preventDefault();
         const id=uuidV4()
-        console.log(id)
+        setRoomId(id)
     }
   return (
     <div className="page-wrapper">
@@ -22,6 +23,8 @@ const SessionForm = () => {
                     label="username"
                     name="username"
                     icon={faUserSecret}
+                    value={roomId}
+                    onChange={(e)=>setRoomId(e.target.value)}
                 />
                 <InputForm
                     label="ID ROOM"
