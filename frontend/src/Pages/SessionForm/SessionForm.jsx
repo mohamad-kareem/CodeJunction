@@ -7,10 +7,12 @@ import CopyRights from '../../Components/CopyRight/CopyRight'
 import toast from "react-hot-toast";
 import { faUserSecret,faKey} from '@fortawesome/free-solid-svg-icons';
 import {v4 as uuidV4} from "uuid";
+import { useNavigate } from 'react-router-dom'
 const SessionForm = () => {
     
     const [roomId,setRoomId]=useState("");
     const [username,setUserName]=useState("")
+    const navigate=useNavigate()
     const generateNewId=(e)=>{
         e.preventDefault();
         const id=uuidV4()
@@ -21,6 +23,16 @@ const SessionForm = () => {
         if(!roomId || !username){
             toast.error("Fill required fields")
             return;
+        }
+        navigate(`/editor/${roomId}`,{
+            state:{
+                username,
+            }
+        })
+    }
+    const HandleEnter =(e)=>{
+        if (e.code==='Enter'){
+            Join();
         }
 
     }
@@ -36,6 +48,7 @@ const SessionForm = () => {
                     icon={faUserSecret}
                     value={username}
                     onChange={(e)=>setUserName(e.target.value)}
+                    onKeyUp={HandleEnter}
                    
                 />
                 <InputForm
@@ -44,6 +57,7 @@ const SessionForm = () => {
                     icon={faKey}
                     value={roomId}
                     onChange={(e)=>setRoomId(e.target.value)}
+                    onKeyUp={HandleEnter}
                 />
                 <ButtonComponent children={"Join"} width='100px' className="join-btn"  onClick={Join}/>
                 <span className='generate-container'>Generate room ID  <a href="" className='generate' onClick={generateNewId}>Click Here</a> </span>
