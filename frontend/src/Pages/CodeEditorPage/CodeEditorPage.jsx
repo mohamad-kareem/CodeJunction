@@ -39,21 +39,24 @@ const CodeEditorPage = () => {
             </div>
 
         </div>
-        <div className="rightside">
-            <div className='code-header'>
-                <ButtonComponent width='100px' children={"Save"} margin={"4px"}/>
-                <ButtonComponent width='100px' children={"Run"}/>
-            </div>
-            <CodeEditor/>
-            <div className="code-output">
-                <div className="output-tabs output-tabs-horizontal">
-                    <div className="output-tab">console</div>
-                    <div className="output-tab">output</div>
-                    <div className="output-tab">problems</div>
+        
+            <div className="rightside">
+                <div className='code-header'>
+                    <ButtonComponent width='100px' children={"Save"} margin={"4px"}/>
+                    <ButtonComponent width='100px' children={"Run"}/>
                 </div>
-                <textarea>className="output-textarea"</textarea>
+                <CodeEditor/>
+                
+                <div className="code-output">
+                    <div className="output-tabs output-tabs-horizontal">
+                        <div className="output-tab">console</div>
+                        <div className="output-tab">output</div>
+                        <div className="output-tab">problems</div>
+                    </div>
+                    <textarea className="output-textarea"></textarea>
+                </div>
             </div>
-        </div>
+      
     </div>
   )
 }

@@ -5,6 +5,7 @@ import RegisterPage from './Pages/RegisterPage/Register';
 import LoginPage from './Pages/LoginPage/Login';
 import DashBoardPage from './Pages/DashBoardPage/DashBoard';
 import CodeEditorPage from './Pages/CodeEditorPage/CodeEditorPage';
+import SessionForm from './Pages/SessionForm/SessionForm';
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
       <Route path="/login" element={<LoginPage/>}/>
       <Route path="/dashboard" element={<DashBoardPage/>}/>
       <Route path="/editor" element={<CodeEditorPage/>}/>
+      <Route path="/session" element={<SessionForm/>}/>
       </Routes>
   </Router>
     </div>

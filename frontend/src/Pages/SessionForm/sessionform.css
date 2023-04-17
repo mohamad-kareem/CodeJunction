@@ -1,0 +1,8 @@
+.session-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: wheat;
+    height: 100vh;
+    margin-top: -90px;
+}

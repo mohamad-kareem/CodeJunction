@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {faEnvelope,faKey} from '@fortawesome/free-solid-svg-icons';
-import InputBox from '../InputForm/InputForm';
+import InputForm from '../InputForm/InputForm';
 import ButtonComponent from '../Button/ButtonComponent';
 import { Link } from 'react-router-dom';
 import loginImage from "../../assets/ezgif.com-resize.gif"
@@ -21,14 +21,14 @@ const LoginForm = () => {
   <div className='sign-in-up-container'>
     <form className='sign-in-out-inner-form'>
       <h2 className='header'>Sign In</h2>
-          <InputBox
+          <InputForm
             label="email address"
             name="email"
             value={email}
             onChange={HandleEmailChange}
             icon={faEnvelope}
          />
-          <InputBox
+          <InputForm
             label="password"
             name="password"
             value={password}
