@@ -45,7 +45,9 @@ const CodeEditorPage = () => {
                 }
                 setClients(clients);
               });
-
+            socketRef.current.on(DoList.Disconnected,({sockedtId,username})=>{
+                toast.success(`${username} left the room `)
+            })
 
         }
         webSocket();
