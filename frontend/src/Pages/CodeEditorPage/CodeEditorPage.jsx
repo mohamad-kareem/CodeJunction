@@ -9,15 +9,16 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 import ButtonComponent from '../../Components/Button/ButtonComponent'
 import { initSocket } from '../../SocketConnections/socket'
 import DoList from  "../../SocketConnections/DoList.js"
-import { useLocation,useNavigate,Navigate,useParams } from 'react-router-dom'
+import { useLocation,useNavigate,Navigate ,useParams} from 'react-router-dom'
 import toast from "react-hot-toast";
 const CodeEditorPage = () => {
 
     const socketRef= useRef(null);
     const location=useLocation()
-    const params=useParams();
-    console.log(params)
+    const {roomId}=useParams();
     const reactNavigator=useNavigate();
+    const [clients,setClients]=useState([]);
+
     useEffect(()=>{
         const webSocket =async () =>{
             socketRef.current =await initSocket();
@@ -32,15 +33,25 @@ const CodeEditorPage = () => {
               }
 
             socketRef.current.emit(DoList.JOIN, {
-                // roomId,
-                username:location.state.username,
+                roomId,
+                username:location.state?.username,
             });
+
+            socketRef.current.on(DoList.JOINED, ({ clients, username, sockedtId }) => {
+               
+                if (username !== location.state?.username) {
+                  toast.success(`${username} joined the room`);
+                  console.log(`${username} joined`);
+                }
+                setClients(clients);
+              });
+
 
         }
         webSocket();
     },[])
 
-    const [clients,setClient]=useState([{sockedtid:1,username:"kareem"},{sockedtid:2,username:"nour"},]);
+
     
     if (!location.state){
         return   <Navigate to="/"/>

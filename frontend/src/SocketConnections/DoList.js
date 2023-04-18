@@ -1,6 +1,6 @@
-const ACTIONS = {
+const DoList = {
     JOIN: 'join',
     JOINED: 'joined',
 };
 
-module.exports = ACTIONS;
+module.exports = DoList;
