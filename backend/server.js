@@ -5,6 +5,7 @@ const server= http.createServer(app);
 
 const {Server}=require('socket.io');
 const DoList = require('../frontend/src/SocketConnections/DoList');
+const { Socket } = require('dgram');
 const io=new Server(server);
 
 const userSocketMap={};
@@ -40,7 +41,13 @@ io.on('connection', (socket) => {
 
     })
     socket.on("disconnecting", ()=>{
-      const rooms =[socket.rooms];
+      const rooms =[...socket.rooms];
+      rooms.forEach((roomId)=>{
+        socket.in(roomId).emit(DoList.Disconnected,{
+          socketId:socket.id,
+          username:userSocketMap[socket.id],
+        });
+      })
     })
 });
 
