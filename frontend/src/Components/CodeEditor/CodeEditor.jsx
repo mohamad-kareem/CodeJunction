@@ -31,6 +31,12 @@ const CodeEditor = (socketRef,roomId) => {
       }
       console.log(code)
     })
+    socketRef.changes.on(DoList.CODE_CHANGE,({code})=>{
+      console.log("rec",code)
+      if (code!==null){
+        editorRef.current.setValue(code);
+      }
+    })
     // editorRef.current.setValue('console.log(hello)')
   }, []);
   return (
