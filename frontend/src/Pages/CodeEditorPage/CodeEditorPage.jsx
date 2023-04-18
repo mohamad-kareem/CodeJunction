@@ -60,8 +60,18 @@ const CodeEditorPage = () => {
             socketRef.current.off(DoList.DISCONNECTED)
         }
     },[])
+   async function copyRoomId() {
+    console.log('Copying room ID...');
+        try{
+          await navigator.clipboard.writeText(roomId);
+          toast.success('Room ID has been copied') 
+        }
+        catch(err){
+            toast.error("could not copy ID");
+            console.error(err)
 
-
+        }
+    }
     
     if (!location.state){
         return   <Navigate to="/"/>
@@ -72,7 +82,7 @@ const CodeEditorPage = () => {
            <Logo padding="10px" borderBottom={"1px solid rgb(122, 175, 16)"}/>
             <div className="rows">
             <div className="row">
-                <div id='icon'>{< ContentCopyIcon/>}</div>
+                <div id='icon' className='copy' onClick={copyRoomId}>{< ContentCopyIcon/>}</div>
                 <div id='title'>Share Room ID</div>
            </div>
            <div className="row">
