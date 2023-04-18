@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
 }
-h1{
+h1,h2{
     background:linear-gradient(90deg,red,yellow,green,purple);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;

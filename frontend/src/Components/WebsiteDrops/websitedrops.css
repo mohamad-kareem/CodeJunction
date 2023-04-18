@@ -17,7 +17,7 @@
     width: 250px;
     height: 250px;
     margin-left: 50px;
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.729);
     box-shadow: inset 20px 20px 20px rgba(202, 11, 11, 0.05),
     25px 35px 20px rgba(228, 225, 225, 0.05),
     25px 30px 30px rgba(228, 225, 225, 0.05),

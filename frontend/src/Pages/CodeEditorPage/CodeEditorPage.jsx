@@ -87,11 +87,11 @@ const CodeEditorPage = () => {
            </div>
            <div className="buttom">
                 <h3>Connected</h3>
-                <div className='connections'>
-                    {clients.map((client)=>(
-                    <Client key={client.sockedtid} username={client.username}/>
+                <div className="connections">
+                    {clients && clients.map((client) => (
+                        <Client key={client.socketId} username={client.username} />
                     ))}
-                </div>
+            </div>
             </div>
 
         </div>
