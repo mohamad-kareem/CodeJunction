@@ -9,12 +9,14 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 import ButtonComponent from '../../Components/Button/ButtonComponent'
 import { initSocket } from '../../SocketConnections/socket'
 import DoList from  "../../SocketConnections/DoList.js"
-import { useLocation,useNavigate,Navigate } from 'react-router-dom'
+import { useLocation,useNavigate,Navigate,useParams } from 'react-router-dom'
 import toast from "react-hot-toast";
 const CodeEditorPage = () => {
 
     const socketRef= useRef(null);
     const location=useLocation()
+    const params=useParams();
+    console.log(params)
     const reactNavigator=useNavigate();
     useEffect(()=>{
         const webSocket =async () =>{
@@ -30,7 +32,7 @@ const CodeEditorPage = () => {
               }
 
             socketRef.current.emit(DoList.JOIN, {
-                roomId,
+                // roomId,
                 username:location.state.username,
             });
 
