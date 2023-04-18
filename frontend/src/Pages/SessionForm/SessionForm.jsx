@@ -52,8 +52,8 @@ const SessionForm = () => {
                    
                 />
                 <InputForm
-                    label="ID ROOM"
-                    name="ID ROOM"
+                    label="Room ID"
+                    name="Room ID"
                     icon={faKey}
                     value={roomId}
                     onChange={(e)=>setRoomId(e.target.value)}
