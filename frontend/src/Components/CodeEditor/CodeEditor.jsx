@@ -9,9 +9,10 @@ import 'codemirror/addon/edit/closebrackets';
 import { Socket } from 'socket.io-client';
 import DoList from '../../SocketConnections/DoList';
 
-const CodeEditor = (socketRef,roomId) => {
+const CodeEditor = ({socketRef,roomId}) => {
   const editorRef=useRef(null);
   useEffect(() => {
+    async function init() {
      editorRef.current=Codemirror.fromTextArea(document.getElementById('codeEditorCollaboration'), {
       mode: { name: 'javascript', json: true },
       theme: 'elegant',
@@ -31,14 +32,20 @@ const CodeEditor = (socketRef,roomId) => {
       }
       console.log(code)
     })
-    socketRef.changes.on(DoList.CODE_CHANGE,({code})=>{
-      console.log("rec",code)
-      if (code!==null){
-        editorRef.current.setValue(code);
-      }
-    })
-    // editorRef.current.setValue('console.log(hello)')
+    }
+    init()
   }, []);
+  useEffect(()=>{
+    if (socketRef.current){
+      socketRef.current.on(DoList.CODE_CHANGE,({code})=>{
+        console.log("rec",code)
+        if (code!==null){
+          editorRef.current.setValue(code);
+        }
+      })
+    }
+  
+  },[socketRef.current])
   return (
     <textarea id='codeEditorCollaboration'></textarea>
   )
