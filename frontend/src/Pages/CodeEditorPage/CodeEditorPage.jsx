@@ -45,8 +45,11 @@ const CodeEditorPage = () => {
                 }
                 setClients(clients);
               });
-            socketRef.current.on(DoList.Disconnected,({sockedtId,username})=>{
+            socketRef.current.on(DoList.DISCONNECTED,({sockedtId,username})=>{
                 toast.success(`${username} left the room `)
+                setClients((prev)=>{
+                    return prev.filter((client) => client.sockedtId!==sockedtId)
+                })
             })
 
         }
