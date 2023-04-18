@@ -72,6 +72,10 @@ const CodeEditorPage = () => {
 
         }
     }
+
+    function leaveRoom (){
+        reactNavigator("/");
+    }
     
     if (!location.state){
         return   <Navigate to="/"/>
@@ -81,11 +85,11 @@ const CodeEditorPage = () => {
         <div className="leftside">
            <Logo padding="10px" borderBottom={"1px solid rgb(122, 175, 16)"}/>
             <div className="rows">
-            <div className="row">
-                <div id='icon' className='copy' onClick={copyRoomId}>{< ContentCopyIcon/>}</div>
+            <div className="row" onClick={copyRoomId}>
+                <div id='icon' className='copy'>{< ContentCopyIcon/>}</div>
                 <div id='title'>Share Room ID</div>
            </div>
-           <div className="row">
+           <div className="row" onClick={leaveRoom}>
                 <div id='icon'>{<DoNotDisturbIcon/>}</div>
                 <div id='title'>Stop Session</div>
            </div>
