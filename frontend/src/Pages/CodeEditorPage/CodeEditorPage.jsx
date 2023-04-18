@@ -101,7 +101,7 @@ const CodeEditorPage = () => {
                     <ButtonComponent width='100px' children={"Save"} margin={"4px"}/>
                     <ButtonComponent width='100px' children={"Run"}/>
                 </div>
-                <CodeEditor/>
+                <CodeEditor socketRef={socketRef} roomId={roomId}/>
                 
                 <div className="code-output">
                     <div className="output-tabs output-tabs-horizontal">
