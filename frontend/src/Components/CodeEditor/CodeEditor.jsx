@@ -9,7 +9,7 @@ import 'codemirror/addon/edit/closebrackets';
 
 const CodeEditor = () => {
   useEffect(() => {
-    const editor = Codemirror.fromTextArea(document.getElementById('codeEditorCollaboration'), {
+     Codemirror.fromTextArea(document.getElementById('codeEditorCollaboration'), {
       mode: { name: 'javascript', json: true },
       theme: 'elegant',
       autoCloseTags: true,
@@ -17,9 +17,6 @@ const CodeEditor = () => {
       lineNumbers: true,
     });
   
-    return () => {
-      editor.toTextArea();
-    };
   }, []);
   return (
     <textarea id='codeEditorCollaboration'></textarea>
