@@ -41,7 +41,7 @@ io.on('connection', (socket) => {
     })
 
    socket.on(DoList.CODE_CHANGE,({roomId,code})=>{
-    io.to(roomId).emit(DoList.CODE_CHANGE,{code});
+    socket.in(roomId).emit(DoList.CODE_CHANGE,{code});
    });
 
 
