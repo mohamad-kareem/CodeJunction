@@ -9,14 +9,26 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 import ButtonComponent from '../../Components/Button/ButtonComponent'
 import { initSocket } from '../../SocketConnections/socket'
 import DoList from  "../../SocketConnections/DoList.js"
-import { useLocation } from 'react-router-dom'
+import { useLocation,useNavigate,Navigate } from 'react-router-dom'
+import toast from "react-hot-toast";
 const CodeEditorPage = () => {
 
     const socketRef= useRef(null);
     const location=useLocation()
+    const reactNavigator=useNavigate();
     useEffect(()=>{
         const webSocket =async () =>{
             socketRef.current =await initSocket();
+
+            socketRef.current.on('connect_error', handleErrors);
+            socketRef.current.on('connect_fail', handleErrors);
+
+            function handleErrors(e) {
+                console.log('socket error', e);
+                toast.error('Socket connection failed, try again later.');
+                reactNavigator('/');
+              }
+
             socketRef.current.emit(DoList.JOIN, {
                 roomId,
                 username:location.state.username,
@@ -27,7 +39,10 @@ const CodeEditorPage = () => {
     },[])
 
     const [clients,setClient]=useState([{sockedtid:1,username:"kareem"},{sockedtid:2,username:"nour"},]);
-
+    
+    if (!location.state){
+        return   <Navigate to="/"/>
+       }  
   return (
     <div className='editor-wrapper'>
         <div className="leftside">
