@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useRef, useState} from 'react'
 import Logo from '../../Components/Logo/Logo'
 import "./codeeditorpage.css"
 import Client from '../../Components/Client/Client'
@@ -7,7 +7,17 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import ButtonComponent from '../../Components/Button/ButtonComponent'
+import { initSocket } from '../../SocketConnections/socket'
 const CodeEditorPage = () => {
+
+    const socketRef= useRef(null);
+    useEffect(()=>{
+        const webSocket =async () =>{
+            socketRef.current =await initSocket();
+        }
+        webSocket();
+    },[])
+
     const [clients,setClient]=useState([{sockedtid:1,username:"kareem"},{sockedtid:2,username:"nour"},]);
 
   return (
