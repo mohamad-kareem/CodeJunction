@@ -54,6 +54,11 @@ const CodeEditorPage = () => {
 
         }
         webSocket();
+        return () =>{
+            socketRef.current.disconnect();
+            socketRef.current.off(DoList.JOINED);
+            socketRef.current.off(DoList.DISCONNECTED)
+        }
     },[])
 
 
