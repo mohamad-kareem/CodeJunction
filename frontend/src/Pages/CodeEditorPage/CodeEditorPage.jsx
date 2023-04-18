@@ -8,12 +8,20 @@ import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import ButtonComponent from '../../Components/Button/ButtonComponent'
 import { initSocket } from '../../SocketConnections/socket'
+import DoList from  "../../SocketConnections/DoList.js"
+import { useLocation } from 'react-router-dom'
 const CodeEditorPage = () => {
 
     const socketRef= useRef(null);
+    const location=useLocation()
     useEffect(()=>{
         const webSocket =async () =>{
             socketRef.current =await initSocket();
+            socketRef.current.emit(DoList.JOIN, {
+                roomId,
+                username:location.state.username,
+            });
+
         }
         webSocket();
     },[])
