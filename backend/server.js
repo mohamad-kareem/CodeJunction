@@ -39,6 +39,9 @@ io.on('connection', (socket) => {
            });
 
     })
+    socket.on("disconnecting", ()=>{
+      const rooms =[socket.rooms];
+    })
 });
 
 const Port=8000;
