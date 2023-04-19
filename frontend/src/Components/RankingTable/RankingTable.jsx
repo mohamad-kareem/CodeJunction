@@ -8,27 +8,28 @@ const RankingTable = ({ranking}) => {
    
     const [users, setUsers] = useState([]);
   return (
-    <div className='table-wrapper' style={{display:ranking ? 'block' : 'none'}}><div className="widgets-container">
-    <Widget
-        title="Users"
-        activeUsers={1234}
-        widgetLink="Active coders"
-        percentage="75%"
-        icon={PersonIcon}
-      />
+    <div className='table-wrapper' style={{display:ranking ? 'block' : 'none'}}>
+      <div className="widgets-container">
       <Widget
-        title="Points"
-        activeUsers={155}
-        widgetLink="Boost your skills"
-        icon={ScoreboardIcon}
-      />
-      <Widget
-        title="Badges"
-        activeUsers="Gold"
-        widgetLink="Boost your skills"
-        icon={MilitaryTechIcon}
+          title="Users"
+          activeUsers={1234}
+          widgetLink="Active coders"
+          percentage="75%"
+          icon={PersonIcon}
         />
- </div>    
+        <Widget
+          title="Points"
+          activeUsers={155}
+          widgetLink="Boost your skills"
+          icon={ScoreboardIcon}
+        />
+        <Widget
+          title="Badges"
+          activeUsers="Gold"
+          widgetLink="Boost your skills"
+          icon={MilitaryTechIcon}
+          />
+      </div>    
       <div className="all-users">
         {/* <div className="table-header">
             <h2>Users</h2>
@@ -59,7 +60,6 @@ const RankingTable = ({ranking}) => {
             </tbody>
         </table>
       </div>
-      <div></div>
     </div>
   )
 }

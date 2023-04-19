@@ -15,7 +15,6 @@ const DashBoard = () => {
             <SideBar setCode={setCode} setRanking={setRanking} setProfile={setProfile}/>
        </div>
        <div className='middle-container'>
-         
          <div className="table">
            <RankingTable ranking={ranking}/>
            <CodesTable code={code}/>
