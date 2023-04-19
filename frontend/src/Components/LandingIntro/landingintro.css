@@ -12,7 +12,8 @@
     display: flex;
     justify-content: center;
 }
-h1,h2{
+/*header for the login*/
+h1,.header{
     background:linear-gradient(90deg,red,yellow,green,purple);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
