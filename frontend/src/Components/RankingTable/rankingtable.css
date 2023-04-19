@@ -1,9 +1,15 @@
 .table-wrapper{
     position: relative;
     width: 100%;
-    padding:20px;
     padding-top: 0;
     display: grid;
+}
+.widgets-container{
+    display: flex;
+    margin-top:25px;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: fit-content;
 }
 .all-users{
     position: relative;
