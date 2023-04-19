@@ -1,7 +1,6 @@
 import React from 'react'
 import "./userprofile.css"
 import ProfileImage from '../ProfileImage/ProfileImage'
-import InputForm from '../InputForm/InputForm'
 const UserProfile = ({profile}) => {
   return (
     
@@ -10,10 +9,7 @@ const UserProfile = ({profile}) => {
       <ProfileImage/>
       </div>
       <div className="profile-user">
-          <InputForm/>
-          <InputForm/>
-          <InputForm/>
-          <InputForm/>
+        
 
         </div>
     </div>
