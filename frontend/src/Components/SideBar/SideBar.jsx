@@ -6,8 +6,8 @@ import HomeIcon from '@mui/icons-material/Home';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SourceIcon from '@mui/icons-material/Source';
 import GitHubIcon from '@mui/icons-material/GitHub';
-
-const SideBar = ({setCode,setRanking}) => {
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+const SideBar = ({setCode,setRanking,setProfile}) => {
 
 
   return (
@@ -23,6 +23,7 @@ const SideBar = ({setCode,setRanking}) => {
           <div className="row" onClick={()=>{
               setRanking(true);
               setCode(false);
+              setProfile(false);
               }}>
               <div id='icon'>{< EmojiEventsIcon/>}</div>
               <div id='title'>{"ranking"}</div>
@@ -31,9 +32,19 @@ const SideBar = ({setCode,setRanking}) => {
           <div className="row" onClick={()=>{
               setRanking(false);
               setCode(true);
+              setProfile(false);
               }} >
               <div id='icon'>{< SourceIcon/>}</div>
               <div id='title'>code</div>
+          </div>
+
+          <div className="row" onClick={()=>{
+              setRanking(false);
+              setCode(false);
+              setProfile(true);
+              }} >
+              <div id='icon'>{< AccountCircleIcon/>}</div>
+              <div id='title'>Profile</div>
           </div>
 
           <div className="row">
