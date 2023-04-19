@@ -1,9 +1,18 @@
-#userName,#Email,#github {
+.profile_form-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+
+#userName,#email,#github {
     border: 0;
     border-bottom: 2px solid black;
     width: 80%;
     height: 50px;
     margin-top: 25px;
-    background-color: yellow;
+    background-color:#2d2254;
     color: white;
 }

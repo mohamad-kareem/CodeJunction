@@ -8,7 +8,7 @@ const InputForm2 = () => {
                 type="text"
                 name="username"/>
 
-            <input id="Email"
+            <input id="email"
                     type="text"
                     name="Email"/>
 
