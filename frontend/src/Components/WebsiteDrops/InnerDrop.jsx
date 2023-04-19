@@ -28,7 +28,7 @@ const InnerDrop = ({Heading,content}) => {
    <motion.div className="container" variants={containerVariants} animate="animate">
      <motion.div className="drop"variants={dropVariants}  animate="animate">
        <motion.div className="content" variants={contentVariants} animate="animate">
-         <h2 className='head-drop'>{Heading}</h2>
+         <h2>{Heading}</h2>
          <p>{content}</p>
        </motion.div>
      </motion.div>

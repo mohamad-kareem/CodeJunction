@@ -60,7 +60,7 @@ h3{
 
 .code-header{
    display: flex;
-   justify-content: flex-end;
+   justify-content: space-between;
    align-items: center;
    border-bottom: 1px solid rgb(122, 175, 16);
    padding: 5px;
@@ -95,3 +95,7 @@ overflow-y: hidden;
    color: wheat;
    padding: 5px;
   }
+
+.back-icon{
+   color: yellow;
+}

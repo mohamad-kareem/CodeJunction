@@ -6,6 +6,7 @@ import CodeEditor from '../../Components/CodeEditor/CodeEditor'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import ButtonComponent from '../../Components/Button/ButtonComponent'
 import { initSocket } from '../../SocketConnections/socket'
 import DoList from  "../../SocketConnections/DoList.js"
@@ -18,7 +19,7 @@ const CodeEditorPage = () => {
     const {roomId}=useParams();
     const reactNavigator=useNavigate();
     const [clients,setClients]=useState([]);
-
+    const navigate = useNavigate();
     useEffect(()=>{
         const webSocket =async () =>{
             socketRef.current =await initSocket();
@@ -76,6 +77,9 @@ const CodeEditorPage = () => {
     function leaveRoom (){
         reactNavigator("/");
     }
+    function handleBackClick() {
+        navigate('/');
+    }
     
     if (!location.state){
         return   <Navigate to="/"/>
@@ -112,8 +116,13 @@ const CodeEditorPage = () => {
         
             <div className="rightside">
                 <div className='code-header'>
+                    <div className="back" onClick={handleBackClick}>
+                    <div id='icon'>{<KeyboardBackspaceIcon className='back-icon'/>}</div>
+                    </div>
+                    <div>
                     <ButtonComponent width='100px' children={"Save"} margin={"4px"}/>
                     <ButtonComponent width='100px' children={"Run"}/>
+                    </div>
                 </div>
                 <CodeEditor socketRef={socketRef} roomId={roomId}/>
                 
