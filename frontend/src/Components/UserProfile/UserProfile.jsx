@@ -5,8 +5,8 @@ import InputForm2 from '../InputForm2/InputForm2'
 const UserProfile = ({profile}) => {
   return (
     
-    <div className="user-profile-container">
-      <div className='profile-image'  style={{display:profile ? 'block' : 'none'}}>
+    <div className="user-profile-container" style={{display:profile ? 'block' : 'none'}}>
+      <div className='profile-image' >
       <ProfileImage/>
       </div>
       <div className="profile-user">
