@@ -1,5 +1,5 @@
 const { Server } = require('socket.io');
-const DoList = require('../frontend/src/SocketConnections/DoList');
+const DoList = require('../../frontend/src/SocketConnections/DoList');
 
 const userSocketMap = {};
 

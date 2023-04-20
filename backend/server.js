@@ -3,7 +3,7 @@ const app= express();
 const http = require('http');
 const server= http.createServer(app);
 
-const { socketServer } = require('./socketconfig');
+const { socketServer } = require('./configs/socketconfig');
 
 const Port=8000;
 server.listen(Port, ()=>console.log(`listening on Port ${Port}`));
