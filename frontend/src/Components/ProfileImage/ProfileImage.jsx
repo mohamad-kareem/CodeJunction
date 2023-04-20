@@ -1,7 +1,8 @@
-import React,{useState} from 'react'
-
+import React,{useState,useRef} from 'react'
+import emptyImage from "../../assets/empty-pic.jpg"
+import "./profile.css"
 const ProfileImage = () => {
-  
+    const fileInputRef = useRef(null);
     const [image,setImage]=useState("");
 
     function convertToBase64 (e){
@@ -12,16 +13,17 @@ const ProfileImage = () => {
             setImage(reader.result);
         }
     }
+    function handleImageClick() {
+      fileInputRef.current.click();
+    }
   return (
     <div className='image-wrapper'>
-        <div className="inner-image-container">
+        <div className="inner-image-container" onClick={handleImageClick}>
+        {image? (<img className='profile-image' alt='profile-pic' src={image}/>):(<img className='no-image' alt='no-img' src={emptyImage}/>) }
             <input 
             accept='image/*'
             type='file'
-            onChange={convertToBase64}
              />
-             {image==="" || image===null?"" : <img alt='profile-pic' width={200} height={200} src={image}/>}
-            
         </div>
       
     </div>
