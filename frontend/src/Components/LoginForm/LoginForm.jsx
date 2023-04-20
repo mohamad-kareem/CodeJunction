@@ -31,6 +31,7 @@ const LoginForm = () => {
           <InputForm
             label="password"
             name="password"
+            type='password'
             value={password}
             onChange={HandlePasswordChange}
             icon={faKey}

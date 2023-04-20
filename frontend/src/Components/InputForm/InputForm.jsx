@@ -1,12 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const InputForm = ({ label, name, value, icon,onChange ,onKeyUp}) => {
+const InputForm = ({ label, name, value,type='text',icon,onChange ,onKeyUp}) => {
   return (
     <div className='inputBox'>
       <input 
-      className='inner-input'
-        type="text"
+        className='inner-input'
+        type={type}
         name={name}
         value={value} 
         onChange={onChange}
