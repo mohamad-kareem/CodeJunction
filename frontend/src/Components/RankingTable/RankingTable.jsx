@@ -41,8 +41,6 @@ const RankingTable = () => {
                     <td>Rank</td>
                     <td>Username</td>
                     <td>Email</td>
-                    <td>Age</td>
-                    <td className='git'>Github</td>
                     <td>Points</td>
                 </tr>
             </thead>
@@ -52,8 +50,6 @@ const RankingTable = () => {
                 <td>#{user.rank}</td>
                 <td>{user.username}</td>
                 <td>{user.email}</td>
-                <td>{user.age}</td>
-                <td ><a href={user.github}>View</a></td>
                 <td>{user.points}</td>
               </tr>
             ))}
