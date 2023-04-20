@@ -2,11 +2,11 @@ const express =require('express');
 const app= express();
 const http = require('http');
 const server= http.createServer(app);
-
+require("dotenv").config();
 const { socketServer } = require('./configs/socketconfig');
 
-const Port=8000;
-server.listen(Port, ()=>console.log(`listening on Port ${Port}`));
+
+server.listen(process.env.PORT, ()=>console.log("listening on Port" ,process.env.PORT));
 
 app.get('/hello', (req, res) => {
   res.send('hello world');
