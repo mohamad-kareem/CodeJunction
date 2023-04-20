@@ -12,19 +12,5 @@
     display: flex;
     justify-content: center;
 }
-/*header for the login*/
-h1,.header{
-    background:linear-gradient(90deg,red,yellow,green,purple);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    animation: animate 10s linear infinite;
-}
-@keyframes animate{
-    0%{
-        background-position: 0%;
-    }
-    50%{
-        background-position: 100%;
-    }
-}
+
 

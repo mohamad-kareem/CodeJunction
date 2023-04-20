@@ -3,11 +3,12 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import LandingPage from './Pages/LandingPage/LandingPage';
 import RegisterPage from './Pages/RegisterPage/Register';
 import LoginPage from './Pages/LoginPage/Login';
-import DashBoardPage from './Pages/DashBoardPage/DashBoard';
 import CodeEditorPage from './Pages/CodeEditorPage/CodeEditorPage';
 import SessionForm from './Pages/SessionForm/SessionForm';
 import { Toaster } from 'react-hot-toast';
-import { height } from '@mui/system';
+import ProfilePage from './Pages/ProfilePage/ProfilePage';
+import SavedCodesPage from './Pages/SavedCodesPage/SavedCodes';
+import RankingPage from './Pages/RankingPage/RankingPage';
 function App() {
   return (
     <div className="App">
@@ -17,7 +18,9 @@ function App() {
       <Route path="/home" element={<LandingPage/>}/>
       <Route path="/register" element={<RegisterPage/>}/>
       <Route path="/login" element={<LoginPage/>}/>
-      <Route path="/dashboard" element={<DashBoardPage/>}/>
+      <Route path="/ranking" element={<RankingPage/>}/>
+      <Route path="/profile" element={<ProfilePage/>}/>
+      <Route path="/codes" element={<SavedCodesPage/>}/>
       <Route path="/editor/:roomId" element={<CodeEditorPage/>}/>
       <Route path="/session" element={<SessionForm/>}/>
       </Routes>

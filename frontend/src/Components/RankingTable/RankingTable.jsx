@@ -4,11 +4,11 @@ import Widget from '../Widget/Widget';
 import PersonIcon from '@mui/icons-material/Person';
 import ScoreboardIcon from '@mui/icons-material/Scoreboard';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
-const RankingTable = ({ranking}) => {
+const RankingTable = () => {
    
     const [users, setUsers] = useState([]);
   return (
-    <div className='table-wrapper' style={{display:ranking ? 'block' : 'none'}}>
+    <div className='table-wrapper' >
       <div className="widgets-container">
       <Widget
           title="Users"

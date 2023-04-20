@@ -1,10 +1,10 @@
 import React,{useState} from 'react'
 import "./CodesTable.css"
 import ButtonComponent from '../Button/ButtonComponent'
-const CodesTable = ({code}) => {
+const CodesTable = () => {
     const [codes, setcodes] = useState([]);
   return (
-<div className='table-wrapper'style={{display:code ? 'block' : 'none'}}>
+<div className='table-wrapper'>
       <div className="all-users">
         <table>
             <thead>

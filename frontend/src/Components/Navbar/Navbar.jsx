@@ -19,7 +19,7 @@ const Navbar = () => {
                 <Link to="/codes" className="linking">
 					Codes
 				</Link>
-                <Link to="/dashboard" className="linking">
+                <Link to="/ranking" className="linking">
 					DashBoard
 				</Link>
 			    <ButtonComponent id="logout" className="linking" width='80px'> LogOut</ButtonComponent>
