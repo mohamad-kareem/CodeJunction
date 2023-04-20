@@ -21,8 +21,11 @@ const ProfileImage = () => {
         <div className="inner-image-container" onClick={handleImageClick}>
         {image? (<img className='profile-image' alt='profile-pic' src={image}/>):(<img className='no-image' alt='no-img' src={emptyImage}/>) }
             <input 
+            ref={fileInputRef}
             accept='image/*'
             type='file'
+            onChange={convertToBase64}
+            style={{display:"none"}}
              />
         </div>
       

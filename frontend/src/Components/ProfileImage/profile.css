@@ -7,6 +7,13 @@
     object-fit: cover;
     border-radius: 50%;
     margin-left: 100px;
+ 
 }
 
+.no-image {
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 100px;
+    
+}
 
