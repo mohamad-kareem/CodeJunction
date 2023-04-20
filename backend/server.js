@@ -1,14 +1,17 @@
 const express =require('express');
 const app= express();
+require("dotenv").config();
+
 const http = require('http');
 const server= http.createServer(app);
-require("dotenv").config();
+
 const { socketServer } = require('./configs/socketconfig');
 
 
-server.listen(process.env.PORT, ()=>console.log("listening on Port" ,process.env.PORT));
+server.listen(process.env.PORT, (err)=>{
+  if (err) console.error(err)
+    console.log("listening on Port" ,process.env.PORT)});
 
-app.get('/hello', (req, res) => {
-  res.send('hello world');
-});
+require("./configs/db.config")
+
 socketServer(server);
