@@ -1,18 +1,30 @@
-.profile_form-block{
+
+.profile_form-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-  }
-
-
-
-#userName,#email,#github {
+    align-items: center;
+    
+  
+}
+#username,#email,#github {
     border: 0;
-    border-bottom: 2px solid black;
-    width: 80%;
-    height: 50px;
-    margin-top: 25px;
+    border-bottom: 2px solid wheat;
     background-color:#2d2254;
     color: white;
+  }
+ .align{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+ 
+.profile_form-container label {
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: wheat;
+    }
+.curly-braces {
+    color: wheat;
+    font-size: 30px;
 }

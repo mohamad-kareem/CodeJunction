@@ -18,9 +18,9 @@ const DashBoard = () => {
          <div className="table">
            <RankingTable ranking={ranking}/>
            <CodesTable code={code}/>
-           <UserProfile profile={profile}/>
          </div> 
        </div>
+    <UserProfile profile={profile}/>
      
 
 
