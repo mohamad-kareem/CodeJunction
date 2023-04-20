@@ -6,13 +6,13 @@ const UserProfile = ({profile}) => {
   return (
     
     <div className="user-profile-container" style={{display:profile ? 'block' : 'none'}}>
-      <div className='profile-image' >
-      <ProfileImage/>
+      <div className="text">
+        Edit Profile
       </div>
-      <div className="profile-user">
-        <InputForm2/>
-
-        </div>
+      <div>
+      <ProfileImage/>
+      <InputForm2/>
+      </div>
     </div>
   )
 }
