@@ -15,6 +15,9 @@ const { socketServer } = require('./configs/socketconfig');
 const authRouter=require("./routes/auth.routes")
 app.use("/auth",authRouter)
 
+const rankRouter=require("./routes/users.routes")
+app.use("/allusers",rankRouter)
+
 
 server.listen(process.env.PORT, (err)=>{
   if (err) console.error(err)
