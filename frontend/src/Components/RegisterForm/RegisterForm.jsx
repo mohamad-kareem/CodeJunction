@@ -53,8 +53,10 @@ const Register = () => {
               ).catch((err) => {
                   console.log(err);
               })
-    }else(setError("Your password is malformed"))
-    }else(setError("Your email is malformed"))
+    }
+    else(setError("Your password is malformed"))
+    }
+    else(setError("Your email is malformed"))
     }
 
   return (
@@ -83,6 +85,7 @@ const Register = () => {
                 name="password"
                 value={password}
                 icon={faKey}
+                type='password'
                 onChange={HandlePasswordChange}/>
 
             <div className = "error">{error}</div>

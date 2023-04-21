@@ -1,8 +1,9 @@
 .table-wrapper{
     position: relative;
     width: 100%;
-    padding-top: 0;
     display: grid;
+    padding:20px;
+   
 }
 .widgets-container{
     display: flex;
@@ -27,11 +28,13 @@
     font-weight: 500;
 } */
 thead{
-    color: wheat;
+    color: yellow;
     font-weight:bolder;
+    font-size: 20px;
+    border-bottom: 1px solid #0F0A36;
 }
 tbody{
-    color: #0b0925;
+    color: wheat;
 }
 .table-wrapper table{
     width: 100%;
@@ -41,9 +44,7 @@ tbody{
 .table-wrapper table thead td{
     font-weight: 500;
 }
-.table-wrapper .all-users table tr{
-    border-bottom: 1px solid #191346;
-}
+
 .table-wrapper .all-users  table tbody tr:hover{
     color: yellow;
 }

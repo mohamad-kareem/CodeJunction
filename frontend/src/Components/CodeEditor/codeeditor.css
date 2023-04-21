@@ -1,8 +1,11 @@
 .CodeMirror{
     font-size: 16px;
     line-height: 1.6;
-    padding-top: 20px;
-    min-height: 100vh;
     overflow-y: hidden;
+    
 }
 
+.CodeMirror.cm-s-eclipse{
+    height: 100vh;
+    background-color: white;
+  }

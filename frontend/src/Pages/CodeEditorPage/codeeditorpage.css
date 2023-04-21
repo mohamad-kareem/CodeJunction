@@ -3,6 +3,7 @@
     grid-template-columns: 220px 1fr;
     background-color:#0F0A36;
     overflow-y: hidden;
+    height: 100vh;
    
    }
 .leftside{

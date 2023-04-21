@@ -12,7 +12,7 @@ const SideBar = () => {
 
   return (
     <div className='sidebar'>
-        <Logo borderBottom="1px solid rgb(122, 175, 16)"  padding="10px"/>
+        <Logo borderBottom="1px solid wheat"  padding="10px"/>
         
         <div className="SideBarList">  
           <Link  to="/home" className='row'>

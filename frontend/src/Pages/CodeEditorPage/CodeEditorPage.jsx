@@ -41,7 +41,7 @@ const CodeEditorPage = () => {
                 username:location.state?.username,
             });
 
-            socketRef.current.on(DoList.JOINED, ({ clients, username, sockedtId }) => {
+            socketRef.current.on(DoList.JOINED, ({ clients, username}) => {
                
                 if (username !== location.state?.username) {
                   toast.success(`${username} joined the room`);
@@ -63,7 +63,7 @@ const CodeEditorPage = () => {
             socketRef.current.off(DoList.JOINED);
             socketRef.current.off(DoList.DISCONNECTED)
         }
-    },[])
+    },[location.state?.username, reactNavigator, roomId])
 
    async function copyRoomId() {
     console.log('Copying room ID...');
@@ -131,14 +131,6 @@ return (
                 </div>
                 <CodeEditor socketRef={socketRef} roomId={roomId}/>
                 
-                <div className="code-output">
-                    <div className="output-tabs output-tabs-horizontal">
-                        <div className="output-tab">console</div>
-                        <div className="output-tab">output</div>
-                        <div className="output-tab">problems</div>
-                    </div>
-                    <textarea className="output-textarea"></textarea>
-                </div>
             </div>
       
     </div>

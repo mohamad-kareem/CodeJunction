@@ -1,12 +1,23 @@
-import React ,{useState} from 'react'
+import React ,{useState,useEffect} from 'react'
 import "./rankingtable.css"
 import Widget from '../Widget/Widget';
 import PersonIcon from '@mui/icons-material/Person';
 import ScoreboardIcon from '@mui/icons-material/Scoreboard';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
+import axios from 'axios';
 const RankingTable = () => {
    
-    const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+
+    axios.get('http://localhost:8000/allusers/ranking')
+        .then(response => {
+          const usersWithRank = response.data.map((user, index) => ({ ...user, rank: index + 1 }));
+          setUsers(usersWithRank);
+        })
+        .catch(error => console.log(error));
+  }, []);
+
   return (
     <div className='table-wrapper' >
       <div className="widgets-container">
