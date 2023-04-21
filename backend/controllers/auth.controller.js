@@ -15,7 +15,12 @@ register =async (req,res)=>{
     user.password=password;
 
   user.save();
+  
+  const { password: hashedPassword, ...newUser } = user.toJSON()
+  res.status(201).json(newUser);
 }
+
+
 
 login = async (req, res) => {
 
