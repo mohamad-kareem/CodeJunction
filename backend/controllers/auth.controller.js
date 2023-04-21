@@ -1,5 +1,5 @@
 const User = require("../models/userModel");
-
+const jwt = require("jsonwebtoken");
 
 exports.register =async (req,res)=>{
 
@@ -14,7 +14,7 @@ exports.register =async (req,res)=>{
     user.email=email;
     user.password=password;
 
-  user.save();
+   await user.save();
   
   const { password: hashedPassword, ...newUser } = user.toJSON()
   res.status(201).json(newUser);
@@ -29,5 +29,14 @@ login = async (req, res) => {
     const user = await User.findOne({ email });
       if (!user) 
         return res.status(404).json({ message: "Invalid Credentials" });
+
+    const isMatched = await user.matchPassword(password);
+    console.log(isMatched);
+      if (!isMatched)
+        return res.status(404).json({ message: "Invalid Credentials" });
+    
+    const token = jwt.sign({ id: user._id, email: user.email }, process.env.SECRET_KEY);
+    
+    res.json({ token })
 
 }
