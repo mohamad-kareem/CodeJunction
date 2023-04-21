@@ -24,7 +24,8 @@ const CodeEditor = ({socketRef,roomId}) => {
     });
 
     editorRef.current.on("change",(instance,changes)=>{
-      console.log(changes)
+      // console.log(changes)
+      // console.log(editorRef)
       const {origin}=changes;
       const code=instance.getValue();
         if (origin !=='setValue'){
@@ -33,7 +34,7 @@ const CodeEditor = ({socketRef,roomId}) => {
             code,
           });
       }
-      console.log(code)
+      console.log("here",code)
     })
     }
     init()
@@ -41,7 +42,7 @@ const CodeEditor = ({socketRef,roomId}) => {
   useEffect(()=>{
     if (socketRef.current){
       socketRef.current.on(DoList.CODE_CHANGE,({code})=>{
-        console.log("rec",code)
+        // console.log("rec",code)
         if (code!==null){
           editorRef.current.setValue(code);
         }

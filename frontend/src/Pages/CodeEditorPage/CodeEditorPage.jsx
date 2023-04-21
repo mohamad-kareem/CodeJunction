@@ -12,6 +12,7 @@ import { initSocket } from '../../SocketConnections/socket'
 import DoList from  "../../SocketConnections/DoList.js"
 import { useLocation,useNavigate,Navigate ,useParams} from 'react-router-dom'
 import toast from "react-hot-toast";
+import AddIcon from '@mui/icons-material/Add';
 const CodeEditorPage = () => {
 
     const socketRef= useRef(null);
@@ -121,8 +122,9 @@ return (
         
             <div className="rightside">
                 <div className='code-header'>
-                    <div className="back" onClick={handleBackClick}>
-                    <div id='icon'>{<KeyboardBackspaceIcon className='back-icon'/>}</div>
+                    <div className="options" >
+                    <div >{<KeyboardBackspaceIcon className='back-icon' onClick={handleBackClick} />}</div>
+                    <div >{<AddIcon className='add-folder'  />}</div>
                     </div>
                     <div>
                     <ButtonComponent width='100px' children={"Save"} margin={"4px"}/>
@@ -130,7 +132,6 @@ return (
                     </div>
                 </div>
                 <CodeEditor socketRef={socketRef} roomId={roomId}/>
-                
             </div>
       
     </div>

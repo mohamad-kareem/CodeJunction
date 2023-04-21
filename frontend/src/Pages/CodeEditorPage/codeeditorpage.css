@@ -3,7 +3,6 @@
     grid-template-columns: 220px 1fr;
     background-color:#0F0A36;
     overflow-y: hidden;
-    height: 100vh;
    
    }
 .leftside{
@@ -97,6 +96,8 @@ overflow-y: hidden;
    padding: 5px;
   }
 
-.back-icon{
+
+.options{
+   display: flex; 
    color: yellow;
 }
