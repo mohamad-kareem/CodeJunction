@@ -6,14 +6,24 @@
 .profile-image {
     object-fit: cover;
     border-radius: 50%;
+    width: 100%;
     margin-left: 100px;
+   
  
 }
-
+.inner-image-container{
+    width: 200px;
+  
+}
 .no-image {
+    position: relative;
     object-fit: cover;
     border-radius: 50%;
     margin-left: 100px;
-    
+    width: 100%;
+  
+ 
+ 
 }
+
 

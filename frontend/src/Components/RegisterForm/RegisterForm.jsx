@@ -6,8 +6,11 @@ import "../Css/signInOut.css"
 import { faUserSecret,faEnvelope,faKey} from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import registerImage from "../../assets/gif.gif" ;
+import { useNavigate } from "react-router-dom";
+
 const Register = () => {
 
+    const navigate = useNavigate();
     const [username,setUserName]=useState("");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
@@ -28,7 +31,7 @@ const Register = () => {
         return passwordRegex.test(password);
       }
 
-    const handleSubmit = (e) => {
+    const HandleSubmit = (e) => {
         e.preventDefault()
         if (validateEmail(email)){
           if(validatePassword(password)){
@@ -38,14 +41,14 @@ const Register = () => {
               password: password
             };
     
-              axios.post("",data,{
+              axios.post("http://127.0.0.1:8000/auth/register",data,{
               headers: {
                 'Content-Type': 'application/json'
               }
               })
               .then((res) => {
                   console.log(res)
-                  window.location.href="../../Pages/LandingPage/LandingPage.jsx"  
+                  navigate("/login")  
             }
               ).catch((err) => {
                   console.log(err);
@@ -83,7 +86,7 @@ const Register = () => {
                 onChange={HandlePasswordChange}/>
 
             <div className = "error">{error}</div>
-            <ButtonComponent color="yellow"size="15px" onClick={handleSubmit}>Register</ButtonComponent> 
+            <ButtonComponent color="yellow"size="15px" onClick={HandleSubmit}>Register</ButtonComponent> 
             <div className="register-direct">Already have an account?  <Link to="/login">Log in</Link></div>
         </form>
     </div>

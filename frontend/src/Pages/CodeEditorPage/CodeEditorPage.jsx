@@ -17,11 +17,14 @@ const CodeEditorPage = () => {
     const socketRef= useRef(null);
     const location=useLocation()
     const {roomId}=useParams();
-    const reactNavigator=useNavigate();
     const [clients,setClients]=useState([]);
+
     const navigate = useNavigate();
+    const reactNavigator=useNavigate();
+
     useEffect(()=>{
         const webSocket =async () =>{
+
             socketRef.current =await initSocket();
 
             socketRef.current.on('connect_error', handleErrors);
@@ -61,6 +64,7 @@ const CodeEditorPage = () => {
             socketRef.current.off(DoList.DISCONNECTED)
         }
     },[])
+
    async function copyRoomId() {
     console.log('Copying room ID...');
         try{
@@ -84,7 +88,8 @@ const CodeEditorPage = () => {
     if (!location.state){
         return   <Navigate to="/"/>
        }  
-  return (
+       
+return (
     <div className='editor-wrapper'>
         <div className="leftside">
            <Logo padding="10px" borderBottom={"1px solid rgb(122, 175, 16)"}/>
