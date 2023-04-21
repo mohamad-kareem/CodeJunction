@@ -15,6 +15,11 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true,
+    },
+    points:{
+        type:Number,
+        required:false,
+        default:0,
     }
 })
 
