@@ -13,6 +13,7 @@ import DoList from  "../../SocketConnections/DoList.js"
 import { useLocation,useNavigate,Navigate ,useParams} from 'react-router-dom'
 import toast from "react-hot-toast";
 import AddIcon from '@mui/icons-material/Add';
+import CreateFolder from '../../Components/CreateFolder/CreateFolder'
 const CodeEditorPage = () => {
 
     const socketRef= useRef(null);
@@ -86,6 +87,13 @@ const CodeEditorPage = () => {
         navigate('/');
     }
     
+    const [ShowFolder, setShowFolder] = useState(false);
+
+    const showup = () => {
+        setShowFolder(!ShowFolder);
+    };
+
+
     if (!location.state){
         return   <Navigate to="/"/>
        }  
@@ -124,7 +132,10 @@ return (
                 <div className='code-header'>
                     <div className="options" >
                     <div >{<KeyboardBackspaceIcon className='back-icon' onClick={handleBackClick} />}</div>
-                    <div >{<AddIcon className='add-folder'  />}</div>
+                    <div >
+                        {<AddIcon className='add-folder' onClick={showup} />}
+                        {ShowFolder ? (<CreateCode HideFolder={showup} />) : null}
+                    </div>
                     </div>
                     <div>
                     <ButtonComponent width='100px' children={"Save"} margin={"4px"}/>
