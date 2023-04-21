@@ -134,7 +134,7 @@ return (
                     <div >{<KeyboardBackspaceIcon className='back-icon' onClick={handleBackClick} />}</div>
                     <div >
                         {<AddIcon className='add-folder' onClick={showup} />}
-                        {ShowFolder ? (<CreateCode HideFolder={showup} />) : null}
+                        {ShowFolder ? (<CreateFolder HideFolder={showup} />) : null}
                     </div>
                     </div>
                     <div>
