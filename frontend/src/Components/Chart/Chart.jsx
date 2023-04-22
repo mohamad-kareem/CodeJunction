@@ -10,7 +10,7 @@ const Chart = () => {
     const token = localStorage.getItem('token')
     if (token) {
       axios
-        .get("http://127.0.0.1:8000/grapghdata/:userId", {
+        .get("http://127.0.0.1:8000/grapghdata", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
