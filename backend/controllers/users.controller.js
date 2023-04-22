@@ -10,3 +10,22 @@ exports.getAllUsers=async (req,res)=>{
         res.status(500).json({ message: error.message });
     }
 };
+
+
+exports.addCode = async(req,res) =>{
+
+    const {userId}= req.params;
+    const {title,description,code} = req.body;
+
+    try{
+        const user = await User.findById(userId)
+
+        if (!user){
+            return res.status(404).json({message:"user not found"})
+        }
+
+    }
+    catch{
+
+    }
+}
