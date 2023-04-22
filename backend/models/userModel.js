@@ -1,6 +1,27 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
+
+
+const codeSchema = new mongoose.Schema({
+    title:{
+        type:String,
+        required:true,
+    },
+    description:{
+        type:String,
+        required:true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+    code:{
+        type:String,
+        required:true,
+    },
+});
+
 const userSchema = new mongoose.Schema({
     username:{
         type:String,
@@ -20,7 +41,8 @@ const userSchema = new mongoose.Schema({
         type:Number,
         required:false,
         default:0,
-    }
+    },
+    codes:[codeSchema]
 })
 
 userSchema.pre("save", async function(next){
