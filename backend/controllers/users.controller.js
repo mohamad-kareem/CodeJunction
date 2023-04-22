@@ -34,7 +34,8 @@ exports.addCode = async(req,res) =>{
         res.status(201).json(Code);
 
     }
-    catch{
-
+    catch(error){
+        console.error(error);
+        res.status(500).json({ message: "Server error" });
     }
 }
