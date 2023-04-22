@@ -6,14 +6,15 @@ import CodeEditor from '../../Components/CodeEditor/CodeEditor'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
-import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ButtonComponent from '../../Components/Button/ButtonComponent'
 import { initSocket } from '../../SocketConnections/socket'
 import DoList from  "../../SocketConnections/DoList.js"
 import { useLocation,useNavigate,Navigate ,useParams} from 'react-router-dom'
 import toast from "react-hot-toast";
-import AddIcon from '@mui/icons-material/Add';
+import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import CreateFolder from '../../Components/CreateFolder/CreateFolder'
+import SaveIcon from '@mui/icons-material/Save';
 const CodeEditorPage = () => {
 
     const socketRef= useRef(null);
@@ -111,11 +112,15 @@ return (
                 <div id='icon'>{<DoNotDisturbIcon/>}</div>
                 <div id='title'>Stop Session</div>
            </div>
-
+           <div className="row">
+                <div id='icon'>{<SaveIcon/>}</div>
+                <div id='title'>Save Code</div>
+           </div>
            <div className="row">
                 <div id='icon'>{<SmartToyIcon/>}</div>
                 <div id='title'>Ask ChatGPT</div>
            </div>
+           
            </div>
            <div className="buttom">
                 <h3>Connected</h3>
@@ -131,14 +136,13 @@ return (
             <div className="rightside">
                 <div className='code-header'>
                     <div className="options" >
-                    <div >{<KeyboardBackspaceIcon className='back-icon' onClick={handleBackClick} />}</div>
+                    <div >{<ArrowBackIcon  className='back-icon' onClick={handleBackClick} />}</div>
                     <div >
-                        {<AddIcon className='add-folder' onClick={showup} />}
+                        {<CreateNewFolderIcon className='add-folder' onClick={showup} />}
                         {ShowFolder ? (<CreateFolder HideFolder={showup} />) : null}
                     </div>
                     </div>
                     <div>
-                    <ButtonComponent width='100px' children={"Save"} margin={"4px"}/>
                     <ButtonComponent width='100px' children={"Run"}/>
                     </div>
                 </div>
