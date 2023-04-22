@@ -5,6 +5,6 @@ const { getAllUsers,addCode,getCodeCountsByMonth } = require("../controllers/use
 
 router.get("/ranking", getAllUsers);
 router.post("/:userId",addCode);
-router.get("/:userId",getCodeCountsByMonth);
+router.get("/",getCodeCountsByMonth);
 
 module.exports = router;
