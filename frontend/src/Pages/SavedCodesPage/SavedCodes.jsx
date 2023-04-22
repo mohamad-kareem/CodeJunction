@@ -3,6 +3,7 @@ import CodesTable from '../../Components/CodesTable/CodesTable'
 import SideBar from '../../Components/SideBar/SideBar'
 import "./savedcodespage.css"
 import Chart from '../../Components/Chart/Chart'
+
 const SavedCodesPage = () => {
   return (
     
@@ -11,10 +12,10 @@ const SavedCodesPage = () => {
             <SideBar/>
         </div>
         <div className="code-table">
+             <div className="statistics">
              <Chart/>
-            <CodesTable/>
-          
-
+             </div>
+             <CodesTable/>
         </div>
     </div>
     

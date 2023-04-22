@@ -1,24 +1,29 @@
-import React from 'react'
+import React , {useState,useEffect}from 'react'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-const data = [
-  {
-    "_id": "june",
-    "count": 800
-},
-{
-    "_id": "May",
-    "count": 250
-},
-{
-  "_id": "April",
-  "count": 1000
-},
-{
-  "_id": "october",
-  "count": 115
-}
-];
+import axios from 'axios';
 const Chart = () => {
+
+
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      axios
+        .get("http://127.0.0.1:8000/grapghdata/:userId", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then((res) => {
+          console.log(res.data)
+          setData(res.data)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
+  }, [])
   
   return (
     <div className='chart'>

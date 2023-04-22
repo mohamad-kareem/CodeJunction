@@ -44,15 +44,13 @@ exports.addCode = async(req,res) =>{
 }
 
 exports.getCodeCountsByMonth = async (req, res) => {
-    const { userId } = req.params;
-  
     try {
       const countsByMonth = await User.aggregate([
         {
           $match: {
-            _id: new mongoose.Types.ObjectId(userId)
+            _id: req.user._id
           }
-         },
+        },
         {
           $unwind: "$codes"
         },
@@ -71,4 +69,5 @@ exports.getCodeCountsByMonth = async (req, res) => {
       res.status(500).json({ message: error.message });
     }
   };
+  
   

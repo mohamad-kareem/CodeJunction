@@ -21,7 +21,7 @@ app.use("/auth",authRouter)
 const userRouter=require("./routes/users.routes")
 app.use("/allusers",userRouter)
 app.use("/saveCode",authMiddleware,userRouter)
-app.use("/grapghdata",userRouter)
+app.use("/grapghdata",authMiddleware,userRouter)
 
 
 server.listen(process.env.PORT, (err)=>{
