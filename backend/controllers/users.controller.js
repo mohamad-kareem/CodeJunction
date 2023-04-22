@@ -23,6 +23,15 @@ exports.addCode = async(req,res) =>{
         if (!user){
             return res.status(404).json({message:"user not found"})
         }
+        const Code={
+            title:title,
+            description:description,
+            code:code
+        };
+
+        user.codes.push(Code);//name of the schema codes
+        await user.save();
+        res.status(201).json(Code);
 
     }
     catch{
