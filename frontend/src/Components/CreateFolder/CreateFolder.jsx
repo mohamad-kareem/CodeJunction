@@ -2,7 +2,7 @@ import React from 'react'
 import ButtonComponent from '../Button/ButtonComponent';
 import InputForm from '../InputForm/InputForm';
 import "./createfolder.css"
-const CreateFolder = () => {
+const CreateFolder = ({HideFolder}) => {
   return (
     <div className='Create-code-folder-wrapper'>
       
@@ -27,7 +27,7 @@ const CreateFolder = () => {
                 />
                 <div className="folder-buttom">
                 <ButtonComponent color="yellow"size="15px" width='100px'>Create</ButtonComponent> 
-                <ButtonComponent color="yellow"size="15px" width='100px'marginLeft={20} >Close</ButtonComponent>
+                <ButtonComponent color="yellow"size="15px" width='100px'marginLeft={20} onClick={HideFolder} >Close</ButtonComponent>
                 </div>
                 
                 </div>
