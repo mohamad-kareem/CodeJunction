@@ -14,7 +14,10 @@ const codeSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now
+        default: Date.now,
+        get: function() {
+            return this._createdAt.toLocaleDateString();
+        }
     },
     code:{
         type:String,

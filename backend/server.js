@@ -12,12 +12,15 @@ const server= http.createServer(app);
 
 const { socketServer } = require('./configs/socketconfig');
 
+
+const { authMiddleware } = require("./midllewares/auth.middleware");
+
 const authRouter=require("./routes/auth.routes")
 app.use("/auth",authRouter)
 
 const userRouter=require("./routes/users.routes")
 app.use("/allusers",userRouter)
-app.use("/saveCode",userRouter)
+app.use("/saveCode",authMiddleware,userRouter)
 
 server.listen(process.env.PORT, (err)=>{
   if (err) console.error(err)

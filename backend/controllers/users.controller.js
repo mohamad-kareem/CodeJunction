@@ -26,13 +26,15 @@ exports.addCode = async(req,res) =>{
         const Code={
             title:title,
             description:description,
+            createdAt: Date.now(),
             code:code
         };
 
         user.codes.push(Code);//name of the schema codes
         await user.save();
+        console.log(Code)
         res.status(201).json(Code);
-
+       
     }
     catch(error){
         console.error(error);
