@@ -2,6 +2,7 @@ import React from 'react'
 import CodesTable from '../../Components/CodesTable/CodesTable'
 import SideBar from '../../Components/SideBar/SideBar'
 import "./savedcodespage.css"
+import Chart from '../../Components/Chart/Chart'
 const SavedCodesPage = () => {
   return (
     
@@ -10,7 +11,10 @@ const SavedCodesPage = () => {
             <SideBar/>
         </div>
         <div className="code-table">
+             <Chart/>
             <CodesTable/>
+          
+
         </div>
     </div>
     
