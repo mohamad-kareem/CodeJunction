@@ -5,6 +5,7 @@ import ButtonComponent from '../Button/ButtonComponent';
 import { Link } from 'react-router-dom';
 import loginImage from "../../assets/ezgif.com-resize.gif"
 import { useNavigate } from "react-router-dom";
+import "./signInOut.css"
 import axios from 'axios';
 
 const LoginForm = () => {
@@ -33,11 +34,12 @@ const LoginForm = () => {
           .then((res) => {
             console.log(res);
             localStorage.setItem('token',res.data.token);
+            navigate('/home');
           })
           .catch((err) => {
             console.log(err);
           });
-        };
+    };
     
 return (
     <div className='wrapper'>
@@ -65,8 +67,8 @@ return (
             <ButtonComponent color="yellow"size="15px"onClick={HandleSubmit}>Sign in</ButtonComponent> 
             <div className="forget-password"><Link to="">Forget Password</Link></div>
         </form>
+      </div>
     </div>
-</div>
   )
 }
 

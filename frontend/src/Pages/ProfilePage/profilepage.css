@@ -1,8 +1,8 @@
 .profile-wrapper{
-    display: flex;
+    display: flex;  
 }
 .profile{
-    flex: 6;
+    flex: 1;
 }
 .h1-edit-profile{
     color: wheat;
@@ -21,7 +21,6 @@
     align-items: center;
     margin-top: 100px;
 }
-
 .left-profile{
     flex: 1;
     text-align: center;
@@ -29,7 +28,7 @@
 .right-profile{
     flex: 2;
 }
-.empty-pic{
+.pic{
     width: 250px;
     height: 250px;
     border-radius: 50%;

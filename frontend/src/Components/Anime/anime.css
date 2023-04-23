@@ -1,7 +1,6 @@
 .anime-container{
     display: flex;
     justify-content: flex-start;
- 
 }
 .anime{
     display: flex;

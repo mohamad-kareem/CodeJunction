@@ -21,9 +21,10 @@ const CodeEditorPage = () => {
     const location=useLocation()
     const {roomId}=useParams();
     const [clients,setClients]=useState([]);
+    const [ShowFolder, setShowFolder] = useState(false);
 
     const navigate = useNavigate();
-    const reactNavigator=useNavigate();
+    const connectionNavigator=useNavigate();
 
     useEffect(()=>{
         const webSocket =async () =>{
@@ -36,7 +37,7 @@ const CodeEditorPage = () => {
             function handleErrors(e) {
                 console.log('socket error', e);
                 toast.error('Socket connection failed, try again later.');
-                reactNavigator('/');
+                connectionNavigator('/');
               }
 
             socketRef.current.emit(DoList.JOIN, {
@@ -66,7 +67,7 @@ const CodeEditorPage = () => {
             socketRef.current.off(DoList.JOINED);
             socketRef.current.off(DoList.DISCONNECTED)
         }
-    },[location.state?.username, reactNavigator, roomId])
+    },[location.state?.username, connectionNavigator, roomId])
 
    async function copyRoomId() {
     console.log('Copying room ID...');
@@ -82,13 +83,11 @@ const CodeEditorPage = () => {
     }
 
     function leaveRoom (){
-        reactNavigator("/");
+        connectionNavigator("/");
     }
     function handleBackClick() {
         navigate('/');
     }
-    
-    const [ShowFolder, setShowFolder] = useState(false);
 
     const showup = () => {
         setShowFolder(!ShowFolder);
@@ -107,7 +106,7 @@ return (
             <div className="row" onClick={copyRoomId}>
                 <div id='icon' className='copy'>{< ContentCopyIcon/>}</div>
                 <div id='title'>Share Room ID</div>
-           </div>
+            </div>
            <div className="row" onClick={leaveRoom}>
                 <div id='icon'>{<DoNotDisturbIcon/>}</div>
                 <div id='title'>Stop Session</div>
@@ -121,15 +120,15 @@ return (
                 <div id='title'>Ask ChatGPT</div>
            </div>
            
-           </div>
+            </div>
            <div className="buttom">
                 <h3>Connected</h3>
                 <div className="connections">
                     {clients && clients.map((client) => (
                         <Client key={client.socketId} username={client.username} />
                     ))}
-            </div>
-            </div>
+                </div>
+           </div>
 
         </div>
         

@@ -30,8 +30,8 @@ const CreateFolder = ({HideFolder}) => {
                 <ButtonComponent color="yellow"size="15px" width='100px'marginLeft={20} onClick={HideFolder} >Close</ButtonComponent>
                 </div>
                 
-                </div>
-          </div>
+             </div>
+      </div>
           
     </div>
   )

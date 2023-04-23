@@ -7,7 +7,7 @@ const InnerDrop = ({Heading,content}) => {
           x: [-10, 0, -10],
           transition: { duration: 1.5, repeat: Infinity },
         },
-      };
+    };
     
 
     const dropVariants = {
@@ -15,7 +15,7 @@ const InnerDrop = ({Heading,content}) => {
           y: [-10, 0, -10],
           transition: { duration: 1.5, repeat: Infinity, delay: 0.2 },
         },
-      };
+    };
     
       const contentVariants = {
         animate: {

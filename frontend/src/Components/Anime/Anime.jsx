@@ -20,7 +20,7 @@ const Anime = () => {
         transition={transition}>
           
           <img src={rightPerson} alt='right-person' />
-          </motion.div>
+        </motion.div>
 
         <div>
           <img src={middleComputer} alt='middle-pic' />
@@ -33,10 +33,10 @@ const Anime = () => {
         transition={transition}
         >
           <img src={leftPerson} alt='left-person' />
-          </motion.div>
+        </motion.div>
       </div>
 
-  </div>
+    </div>
   )
 }
 

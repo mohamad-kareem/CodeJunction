@@ -5,7 +5,7 @@ import CopyRights from '../../Components/CopyRight/CopyRight'
 const RegisterPage = () => {
   return (
     <div>
-      <Navbar/>
+     <Navbar/>
      <Register/>
      <CopyRights marginTop={30}/>
     </div>

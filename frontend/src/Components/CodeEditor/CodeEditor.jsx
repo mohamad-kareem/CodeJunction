@@ -21,6 +21,10 @@ const CodeEditor = ({socketRef,roomId}) => {
       autoCloseBrackets: true,
       theme:"eclipse",
       lineNumbers: true,
+      extraKeys: {
+        Enter: "newlineAndIndentContinueMarkdownList"
+      },
+      
     });
 
     editorRef.current.on("change",(instance,changes)=>{

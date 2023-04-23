@@ -2,7 +2,6 @@ import React, {useState}  from 'react'
 import InputForm from '../InputForm/InputForm'
 import ButtonComponent from '../Button/ButtonComponent';
 import { Link } from 'react-router-dom';
-import "../Css/signInOut.css"
 import { faUserSecret,faEnvelope,faKey} from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import registerImage from "../../assets/gif.gif" ;
@@ -24,12 +23,13 @@ const Register = () => {
 
     const validateEmail=(email) =>{
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);}
+        return emailRegex.test(email);
+    }
 
     const validatePassword=(password)=> {
         const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
         return passwordRegex.test(password);
-      }
+    }
 
     const HandleSubmit = (e) => {
         e.preventDefault()
@@ -53,9 +53,9 @@ const Register = () => {
               ).catch((err) => {
                   console.log(err);
               })
-    }
+          }
     else(setError("Your password is malformed"))
-    }
+        }
     else(setError("Your email is malformed"))
     }
 
@@ -92,8 +92,7 @@ const Register = () => {
             <ButtonComponent color="yellow"size="15px" onClick={HandleSubmit}>Register</ButtonComponent> 
             <div className="register-direct">Already have an account?  <Link to="/login">Log in</Link></div>
         </form>
-    </div>
-      
+     </div>
     </div>
   )
 }

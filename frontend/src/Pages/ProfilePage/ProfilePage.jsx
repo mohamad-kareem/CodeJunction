@@ -14,32 +14,32 @@ const ProfilePage = () => {
     setImage(selectedImage);
   };
   return (
-  <div className='profile-wrapper'>
-      <SideBar/>
-    <div className="profile">
+    <div className='profile-wrapper'>
+        <SideBar/>
+      <div className="profile">
 
-      <div className="profile-top">
-      <h1 className='h1-edit-profile'>Edit profile</h1>
-      </div>
+        <div className="profile-top">
+        <h1 className='h1-edit-profile'>Edit profile</h1>
+        </div>
 
-      <div className="profile-buttom">
+        <div className="profile-buttom">
           <div className="left-profile">
           <label htmlFor="image-input">
-              <img src={image} className='empty-pic' alt="empty-pic" />
-            </label>
+              <img src={image} className='pic' alt="empty-pic" />
+          </label>
             <input id="image-input" type="file" onChange={handleImageChange} style={{ display: "none" }} />
           </div>
           <div className="right-profile">
             <div className='sign-in-up-container'>
-             <div className="inner-form">
-               
+            <div className="inner-form">
+              
                   <InputForm
                     label="username"
                     name="username"
                     type='text'
                     icon={faUserSecret}
                 />
-                   <InputForm
+                  <InputForm
                     label="email address"
                     name="email"
                     icon={faEnvelope}
@@ -50,14 +50,12 @@ const ProfilePage = () => {
                     icon={faMapMarker}
                 />
                 <ButtonComponent color="yellow"size="15px">Update Profile</ButtonComponent> 
-                </div>
+            </div>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
-
     </div>
-
-</div>
   )
 }
 

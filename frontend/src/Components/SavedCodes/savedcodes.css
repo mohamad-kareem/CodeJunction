@@ -1,0 +1,32 @@
+.flex-box{
+    width: 300px;
+    height: 150px;
+    color: wheat;
+    margin: 10px;
+    border: 2px solid #2d2254;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgba(176, 175, 175, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px  rgba(225, 225, 225, 0.1),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+.flex-box:hover{
+    background-color: #2d2254;
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.inner-box{
+    padding: 20px;
+}
+.code-title{
+   margin-bottom: 10px;
+    
+}
+.code-description{
+    margin-bottom: 30px;
+}
+.code-delete{
+   margin-left: 180px;
+   color: yellow;
+}

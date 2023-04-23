@@ -3,7 +3,6 @@
     width: 100%;
     display: grid;
     padding:20px;
-   
 }
 .widgets-container{
     display: flex;
@@ -18,15 +17,6 @@
     
     padding: 20px;
 }
-/* .table-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    color: yellow;
-} */
-/* .table-header h2{
-    font-weight: 500;
-} */
 thead{
     color: yellow;
     font-weight:bolder;
@@ -44,7 +34,6 @@ tbody{
 .table-wrapper table thead td{
     font-weight: 500;
 }
-
 .table-wrapper .all-users  table tbody tr:hover{
     color: yellow;
 }

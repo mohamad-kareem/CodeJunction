@@ -10,23 +10,27 @@ import "./landingpage.css"
 const LandingPage = () => {
   return (
     <div>
-      <Navbar/>
-      <div className='intro-section'><LandingIntro/></div>
-      <div className='anime-section'><Anime/></div>
-      <br /><br /><br /><br /><br /><br />
-      <div className="parallax-image" ><Parallax backgroundImage={parallaxImage}>
-        <div className='trigger'>
-          <div className='trigger-content'>
-            <h1>Soon... CopilotX <br/>Intergration</h1> 
-          </div>
+        <Navbar/>
+        <div className='intro-section'>
+          <LandingIntro/>
         </div>
-        </Parallax>
-    </div>
-    <br /><br /><br /><br /><br /><br />
-    <WebsiteDrops/>
-    <br /><br /><br /><br /><br /><br />
-      <Footer/>
-      <br /><br /><br />
+        <div className='anime-section'>
+          <Anime/>
+        </div>
+        <br /><br /><br /><br /><br /><br />
+        <div className="parallax-image" ><Parallax backgroundImage={parallaxImage}>
+          <div className='trigger'>
+            <div className='trigger-content'>
+              <h1>Soon... CopilotX <br/>Intergration</h1> 
+            </div>
+          </div>
+          </Parallax>
+        </div>
+      <br /><br /><br /><br /><br /><br />
+      <WebsiteDrops/>
+      <br /><br /><br /><br /><br /><br />
+        <Footer/>
+        <br /><br /><br />
     </div>
   )
 }

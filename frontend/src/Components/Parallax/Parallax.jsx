@@ -3,8 +3,8 @@ import "./Parallax.css"
 const Parallax=({ backgroundImage, children }) => {
   return (
     <div className="parallax" style={{ backgroundImage: `url(${backgroundImage})` }}>
-    {children}
-  </div>
+     {children}
+    </div>
 
   )
 }

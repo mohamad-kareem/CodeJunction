@@ -12,9 +12,6 @@ const RankingPage = () => {
        <div className='ranking-table'>
            <RankingTable />
        </div>
-     
-
-
     </div>
    
   )

@@ -7,7 +7,7 @@ import CodeEditorPage from './Pages/CodeEditorPage/CodeEditorPage';
 import SessionForm from './Pages/SessionForm/SessionForm';
 import { Toaster } from 'react-hot-toast';
 import ProfilePage from './Pages/ProfilePage/ProfilePage';
-import SavedCodesPage from './Pages/SavedCodesPage/SavedCodes';
+import HomePage from './Pages/HomePage/HomePage';
 import RankingPage from './Pages/RankingPage/RankingPage';
 function App() {
   return (
@@ -15,12 +15,12 @@ function App() {
  <Router>
       <Routes>
       <Route path="/" element={<LandingPage/>}/>
-      <Route path="/home" element={<LandingPage/>}/>
+      <Route path="/landing" element={<LandingPage/>}/>
       <Route path="/register" element={<RegisterPage/>}/>
       <Route path="/login" element={<LoginPage/>}/>
       <Route path="/ranking" element={<RankingPage/>}/>
       <Route path="/profile" element={<ProfilePage/>}/>
-      <Route path="/codes" element={<SavedCodesPage/>}/>
+      <Route path="/home" element={<HomePage/>}/>
       <Route path="/editor/:roomId" element={<CodeEditorPage/>}/>
       <Route path="/session" element={<SessionForm/>}/>
       </Routes>
