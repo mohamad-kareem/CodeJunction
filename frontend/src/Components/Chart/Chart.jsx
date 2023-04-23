@@ -40,8 +40,8 @@ const Chart = () => {
             </linearGradient>
             
           </defs>
-          <XAxis dataKey="_id" />
-          <YAxis />
+          <XAxis dataKey="month" />
+          <YAxis dataKey="count"/>
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
           <Area type="monotone" dataKey="count" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
