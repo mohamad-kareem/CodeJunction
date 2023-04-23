@@ -12,6 +12,18 @@ exports.getAllUsers=async (req,res)=>{
     }
 };
 
+exports.getUserCodes = async (req, res) => {
+  try {
+    const user = req.user;
+    const codes = user.codes;
+    console.log(codes,user)
+    res.status(200).json({ codes });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+}
+
+
 
 exports.addCode = async(req,res) =>{
 
@@ -61,10 +73,36 @@ exports.getCodeCountsByMonth = async (req, res) => {
           }
         },
         {
+        $project: {
+          month: {
+            $switch: {
+              branches: [
+                { case: { $eq: [ "$_id", 1 ] }, then: "January" },
+                { case: { $eq: [ "$_id", 2 ] }, then: "February" },
+                { case: { $eq: [ "$_id", 3 ] }, then: "March" },
+                { case: { $eq: [ "$_id", 4 ] }, then: "April" },
+                { case: { $eq: [ "$_id", 5 ] }, then: "May" },
+                { case: { $eq: [ "$_id", 6 ] }, then: "June" },
+                { case: { $eq: [ "$_id", 7 ] }, then: "July" },
+                { case: { $eq: [ "$_id", 8 ] }, then: "August" },
+                { case: { $eq: [ "$_id", 9 ] }, then: "September" },
+                { case: { $eq: [ "$_id", 10 ] }, then: "October" },
+                { case: { $eq: [ "$_id", 11 ] }, then: "November" },
+                { case: { $eq: [ "$_id", 12 ] }, then: "December" }
+              ],
+              default: "Invalid month"
+            }
+          },
+          count: 1,
+          _id: 0
+        }
+      },
+        {
           $sort: { _id: 1 }
         }
       ]);
       res.json(countsByMonth);
+      console.log(countsByMonth)
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
