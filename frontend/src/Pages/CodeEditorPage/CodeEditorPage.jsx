@@ -3,9 +3,7 @@ import Logo from '../../Components/Logo/Logo'
 import "./codeeditorpage.css"
 import Client from '../../Components/Client/Client'
 import CodeEditor from '../../Components/CodeEditor/CodeEditor'
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
-import SmartToyIcon from '@mui/icons-material/SmartToy';
+import EditorNavigator from '../../Components/EditorNavigator/EditorNavigator'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ButtonComponent from '../../Components/Button/ButtonComponent'
 import { initSocket } from '../../SocketConnections/socket'
@@ -14,7 +12,7 @@ import { useLocation,useNavigate,Navigate ,useParams} from 'react-router-dom'
 import toast from "react-hot-toast";
 import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import CreateFolder from '../../Components/CreateFolder/CreateFolder'
-import SaveIcon from '@mui/icons-material/Save';
+
 const CodeEditorPage = () => {
 
     const socketRef= useRef(null);
@@ -69,22 +67,7 @@ const CodeEditorPage = () => {
         }
     },[location.state?.username, connectionNavigator, roomId])
 
-   async function copyRoomId() {
-    console.log('Copying room ID...');
-        try{
-          await navigator.clipboard.writeText(roomId);
-          toast.success('Room ID has been copied') 
-        }
-        catch(err){
-            toast.error("could not copy ID");
-            console.error(err)
-
-        }
-    }
-
-    function leaveRoom (){
-        connectionNavigator("/");
-    }
+   
     function handleBackClick() {
         navigate('/');
     }
@@ -102,25 +85,7 @@ return (
     <div className='editor-wrapper'>
         <div className="leftside">
            <Logo padding="10px" borderBottom={"1px solid rgb(122, 175, 16)"}/>
-            <div className="rows">
-            <div className="row" onClick={copyRoomId}>
-                <div id='icon' className='copy'>{< ContentCopyIcon/>}</div>
-                <div id='title'>Share Room ID</div>
-            </div>
-           <div className="row" onClick={leaveRoom}>
-                <div id='icon'>{<DoNotDisturbIcon/>}</div>
-                <div id='title'>Stop Session</div>
-           </div>
-           <div className="row">
-                <div id='icon'>{<SaveIcon/>}</div>
-                <div id='title'>Save Code</div>
-           </div>
-           <div className="row">
-                <div id='icon'>{<SmartToyIcon/>}</div>
-                <div id='title'>Ask ChatGPT</div>
-           </div>
-           
-            </div>
+           <EditorNavigator/>
            <div className="buttom">
                 <h3>Connected</h3>
                 <div className="connections">
@@ -147,7 +112,6 @@ return (
                 </div>
                 <CodeEditor socketRef={socketRef} roomId={roomId}/>
             </div>
-      
     </div>
   )
 }
