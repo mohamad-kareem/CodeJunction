@@ -5,7 +5,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import SaveIcon from '@mui/icons-material/Save';
-
+import GavelIcon from '@mui/icons-material/Gavel';
 
 const EditorNavigator = () => {
     const {roomId}=useParams();
@@ -25,6 +25,30 @@ const EditorNavigator = () => {
     function leaveRoom (){
         connectionNavigator("/");
     }
+
+    /// axios request:
+     const handleSaveCode = async () => {
+        try{
+
+        }catch{
+
+        }
+     }
+     const handleAnalyzeCode = async () => {
+        try{
+
+        }
+        catch{
+
+        }
+     }
+     const handleAdviceCode = async () => {
+        try{
+            
+        }catch{
+            
+        }
+     }
   return (
     <div className="rows">
         <div className="row" onClick={copyRoomId}>
@@ -35,13 +59,17 @@ const EditorNavigator = () => {
             <div id='icon'>{<DoNotDisturbIcon/>}</div>
             <div id='title'>Stop Session</div>
         </div>
-        <div className="row">
+        <div className="row"onClick={handleSaveCode}>
             <div id='icon'>{<SaveIcon/>}</div>
             <div id='title'>Save Code</div>
         </div>
-        <div className="row">
+        <div className="row" onClick={handleAnalyzeCode}>
+            <div id='icon'>{<GavelIcon />}</div>
+            <div id='title'>Evaluate</div>
+        </div>
+        <div className="row"onClick={handleAdviceCode}>
             <div id='icon'>{<SmartToyIcon/>}</div>
-            <div id='title'>Ask ChatGPT</div>
+            <div id='title'>AI Advice</div>
         </div>
     </div>
   )
