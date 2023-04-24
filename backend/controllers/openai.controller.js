@@ -42,6 +42,26 @@ const analyzeCode = async (req, res) => {
         console.error(error);
         res.status(500).json({ message: 'Server error' });
     };
- };
+};
 
-module.exports = {analyzeCode};
+const adviceCode = async (req, res) => {
+    try {
+      const { code } = req.body;
+      const prompt = `
+      In not more than 21 words but not less than 15 (between 15 and 20 where every 6 words in a line)=>Please analyze the following code and provide advice to improve it.`
+      
+      const response = await openai.createCompletion({
+        model: 'text-davinci-003',
+        prompt: prompt,
+        max_tokens: 200,
+        temperature: 1,
+      });
+  
+      const answer = response.data.choices[0].text.trim();
+      res.json({ answer });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Server error' });
+    }
+};
+module.exports = {analyzeCode,adviceCode};
