@@ -19,9 +19,13 @@ const codeSchema = new mongoose.Schema({
             return this._createdAt.toLocaleDateString();
         }
     },
-    code:{
+    roomId:{
         type:String,
         required:true,
+    },
+    code:{
+        type:String,
+        required:false,
     },
 });
 

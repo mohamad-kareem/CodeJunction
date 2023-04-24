@@ -1,10 +1,17 @@
 const { Router } = require("express");
 const router = Router();
 
-const { getAllUsers,addCode,getCodeCountsByMonth,getUserCodes } = require("../controllers/users.controller");
+const { getAllUsers,addCode,updateCode,getCodeCountsByMonth,getUserCodes} = require("../controllers/users.controller");
 
-router.get("/ranking", getAllUsers);
-router.post("/:userId",addCode);
-router.get("/",getCodeCountsByMonth);
-router.get("/getcodes",getUserCodes);
+const { authMiddleware } = require("../midllewares/auth.middleware");
+
+router.get("/allusers", getAllUsers);
+router.get("/grapghdata",authMiddleware,getCodeCountsByMonth);
+router.get("/usercodes",authMiddleware,getUserCodes);
+
+router.post("/createfolder",authMiddleware,addCode);
+
+router.put("/updateCode",authMiddleware,updateCode);
+
+
 module.exports = router;
