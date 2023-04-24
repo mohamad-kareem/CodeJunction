@@ -27,8 +27,8 @@ exports.getUserCodes = async (req, res) => {
 
 exports.addCode = async(req,res) =>{
 
-    const {userId}= req.params;
-    const {title,description,code} = req.body;
+    const {userId}= req.user._id;
+    const {title,description,roomId} = req.body;
 
     try {
         const user = await User.findById(userId)
@@ -40,14 +40,13 @@ exports.addCode = async(req,res) =>{
             title:title,
             description:description,
             createdAt: Date.now(),
-            code:code
+            roomId:roomId,
         };
 
-        user.codes.push(Code);//name of the schema codes
+        user.codes.push(Code);
         await user.save();
-        console.log(Code)
+
         res.status(201).json(Code);
-       
     }
     catch(error){
         console.error(error);
