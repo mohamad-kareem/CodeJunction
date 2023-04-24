@@ -67,7 +67,18 @@ const EditorNavigator = ({ code }) => {
      };
      const handleAdviceCode = async () => {
         try{
-            
+            const token = localStorage.getItem("token");
+            const response = await axios.post(
+                'http://localhost:8000/advice',
+                { code },
+                { headers: { 
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                } 
+                }
+            );
+            console.log(response.data.answer);
+            toast.success(response.data.answer);
         }catch{
 
         }
