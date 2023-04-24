@@ -2,6 +2,7 @@ import React ,{useState}from 'react'
 import { useParams } from "react-router-dom";
 import InputForm from '../InputForm/InputForm';
 import "./createfolder.css"
+import ButtonComponent from "../Button/ButtonComponent";
 import axios from "axios";
 
 const CreateFolder = ({HideFolder}) => {
@@ -21,7 +22,7 @@ const CreateFolder = ({HideFolder}) => {
       console.log(response.data);
       HideFolder();
       return response.data;
-    } catch (error) {
+    }catch (error) {
       console.error(error);
     }
   };
@@ -36,7 +37,7 @@ const CreateFolder = ({HideFolder}) => {
               type='text'
               color=' #0F0A36'
               onChange={(e) => setTitle(e.target.value)}
-          />
+            />
               <InputForm
               label="Description"
               name="Description"
@@ -44,11 +45,31 @@ const CreateFolder = ({HideFolder}) => {
               isTextarea={true}
               height={150}
               onChange={(e) => setDescription(e.target.value)}
-          />
+            />
+            <div className="folder-buttom">
+              <ButtonComponent
+                color="yellow"
+                size="15px"
+                width="100px"
+                className="create-folder"
+                onClick={handleCreateFolder}
+              >
+                Create
+              </ButtonComponent>
+              <ButtonComponent
+                color="yellow"
+                size="15px"
+                width="100px"
+                marginLeft={20}
+                onClick={HideFolder}
+              >
+                Close
+              </ButtonComponent>
+            </div>
         </div>
       </div>  
     </div>
-  )
-}
+  );
+};
 
 export default CreateFolder
