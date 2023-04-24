@@ -47,7 +47,19 @@ const EditorNavigator = ({ code }) => {
      }
      const handleAnalyzeCode = async () => {
         try{
-
+            const token = localStorage.getItem("token");
+            const response = await axios.post(
+                'http://localhost:8000/analyze',
+                { code },
+                { headers: { 
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                } 
+                }
+            );
+            const points=response.data.answer
+            console.log(points);
+            toast.success(points);
         }
         catch{
 
