@@ -79,8 +79,9 @@ const EditorNavigator = ({ code }) => {
             );
             console.log(response.data.answer);
             toast.success(response.data.answer);
-        }catch{
-
+        }catch(error){
+            console.error(error);
+            toast.success("try agian");
         }
      }
   return (
