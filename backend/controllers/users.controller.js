@@ -68,11 +68,12 @@ exports.updateCode = async (req,res) =>{
 
     res.status(200).json(updatedCode);
     console.log(updatedCode)
-    
-  }catch(error){
 
-  }
-}
+  }catch(error){
+    onsole.error(error);
+    res.status(500).json({ message: "Server error" });
+  };
+};
 
 exports.getCodeCountsByMonth = async (req, res) => {
     try {
