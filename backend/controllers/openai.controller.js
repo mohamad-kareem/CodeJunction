@@ -48,8 +48,17 @@ const adviceCode = async (req, res) => {
     try {
       const { code } = req.body;
       const prompt = `
-      In not more than 21 words but not less than 15 (between 15 and 20 where every 6 words in a line)=>Please analyze the following code and provide advice to improve it.`
-      
+      In not more than 21 words but not less than 15 (between 15 and 20 where every 6 words in a line)=>Please analyze the following code and provide advice to improve it.
+
+        \
+        javascript
+        ${code}
+        \
+        Return response in the following parsable json format:
+        {
+            "Answer"
+        }`;
+  
       const response = await openai.createCompletion({
         model: 'text-davinci-003',
         prompt: prompt,
