@@ -8,7 +8,8 @@ import SaveIcon from '@mui/icons-material/Save';
 import GavelIcon from '@mui/icons-material/Gavel';
 import axios from 'axios'
 
-const EditorNavigator = () => {
+const EditorNavigator = ({ code }) => {
+
     const {roomId}=useParams();
     const connectionNavigator=useNavigate();
 
@@ -27,7 +28,8 @@ const EditorNavigator = () => {
         connectionNavigator("/");
     }
 
-    /// axios request:
+    /// axios requests:
+    
      const handleSaveCode = async () => {
         try{
             const token = localStorage.getItem("token");
@@ -38,7 +40,7 @@ const EditorNavigator = () => {
             );
             console.log(response.data);
             toast.success("code saved successfully");        
-        }catch{
+        }catch(error){
             console.error(error);
             toast.success("was not saved");
         }

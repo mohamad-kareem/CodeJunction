@@ -14,7 +14,7 @@ import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import CreateFolder from '../../Components/CreateFolder/CreateFolder'
 
 const CodeEditorPage = () => {
-
+    const [code,setCode]=useState("");
     const socketRef= useRef(null);
     const location=useLocation()
     const {roomId}=useParams();
@@ -85,7 +85,7 @@ return (
     <div className='editor-wrapper'>
         <div className="leftside">
            <Logo padding="10px" borderBottom={"1px solid rgb(122, 175, 16)"}/>
-           <EditorNavigator/>
+           <EditorNavigator code={code}/>
            <div className="buttom">
                 <h3>Connected</h3>
                 <div className="connections">
@@ -110,7 +110,7 @@ return (
                     <ButtonComponent width='100px' children={"Run"}/>
                     </div>
                 </div>
-                <CodeEditor socketRef={socketRef} roomId={roomId}/>
+                <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>
             </div>
     </div>
   )

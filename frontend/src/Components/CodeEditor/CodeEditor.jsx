@@ -8,7 +8,7 @@ import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
 import DoList from '../../SocketConnections/DoList';
 
-const CodeEditor = ({socketRef,roomId}) => {
+const CodeEditor = ({socketRef,roomId,setCode}) => {
 
   const editorRef=useRef(null);
 
@@ -38,6 +38,7 @@ const CodeEditor = ({socketRef,roomId}) => {
             code,
           });
       }
+      setCode(code)
       console.log("here",code)
     })
     }
