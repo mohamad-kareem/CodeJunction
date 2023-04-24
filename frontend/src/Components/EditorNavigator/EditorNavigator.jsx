@@ -6,6 +6,7 @@ import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import SaveIcon from '@mui/icons-material/Save';
 import GavelIcon from '@mui/icons-material/Gavel';
+import axios from 'axios'
 
 const EditorNavigator = () => {
     const {roomId}=useParams();
@@ -29,9 +30,17 @@ const EditorNavigator = () => {
     /// axios request:
      const handleSaveCode = async () => {
         try{
-
+            const token = localStorage.getItem("token");
+            const response = await axios.put(
+              "http://localhost:8000/updateCode/",
+              { roomId, code },
+              { headers: { Authorization: `Bearer ${token}` } }
+            );
+            console.log(response.data);
+            toast.success("code saved successfully");        
         }catch{
-
+            console.error(error);
+            toast.success("was not saved");
         }
      }
      const handleAnalyzeCode = async () => {
@@ -46,7 +55,7 @@ const EditorNavigator = () => {
         try{
             
         }catch{
-            
+
         }
      }
   return (
