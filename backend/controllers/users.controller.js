@@ -2,7 +2,6 @@ const User = require("../models/userModel");
 const mongoose = require('mongoose');
 
 exports.getAllUsers=async (req,res)=>{
-    
     try {
         const users = await User.find({},"username email points").sort({points:-1});
         res.json(users.map(({ username, email, points }) => ({ username, email, points })));
@@ -22,8 +21,6 @@ exports.getUserCodes = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 }
-
-
 
 exports.addCode = async(req,res) =>{
 
@@ -52,6 +49,29 @@ exports.addCode = async(req,res) =>{
         console.error(error);
         res.status(500).json({ message: "Server error" });
     }
+}
+
+exports.updateCode = async (req,res) =>{
+  const {code, roomId} = req.body;
+  const userId = req.user._id;
+
+  try{
+    const user = await User.findOne({_id:userId, "codes.roomId":roomId});
+
+    if (!user) {
+      return res.status(404).json({message:"User Not Found"});
+    }
+    const updatedCode = user.codes.find((c) => c.roomId === roomId);
+    updatedCode.code = code;
+
+    await user.save();
+
+    res.status(200).json(updatedCode);
+    console.log(updatedCode)
+    
+  }catch(error){
+
+  }
 }
 
 exports.getCodeCountsByMonth = async (req, res) => {
