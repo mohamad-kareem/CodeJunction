@@ -56,15 +56,15 @@ const EditorNavigator = ({ code }) => {
                     'Authorization': `Bearer ${token}`
                 } 
                 }
-            );
+            )
             const points=response.data.answer
             console.log(points);
             toast.success(points);
-        }
-        catch{
-
-        }
-     }
+        }catch(error){
+            console.error(error);
+            toast.success("try agian");
+        };
+     };
      const handleAdviceCode = async () => {
         try{
             
