@@ -18,6 +18,9 @@ app.use("/auth",authRouter)
 const userRouter=require("./routes/users.routes")
 app.use("/",userRouter)
 
+const openaiRouter=require("./routes/openai.routes")
+app.use("/",openaiRouter)
+
 server.listen(process.env.PORT, (err)=>{
   if (err) console.error(err)
     console.log("listening on Port" ,process.env.PORT)});

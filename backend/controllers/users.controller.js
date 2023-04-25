@@ -1,5 +1,5 @@
 const User = require("../models/userModel");
-
+const mongoose = require('mongoose');
 exports.getAllUsers=async (req,res)=>{
     try {
         const users = await User.find({},"username email points").sort({points:-1});
@@ -21,14 +21,14 @@ exports.getUserCodes = async (req, res) => {
   }
 }
 
-exports.addCode = async(req,res) =>{
+exports.addCode = async (req,res) =>{
 
-    const {userId}= req.user._id;
+    const userId= req.user._id;
     const {title,description,roomId} = req.body;
 
     try {
-        const user = await User.findById(userId)
-
+        const user = await User.findById(userId);
+        console.log(user)
         if (!user){
             return res.status(404).json({message:"user not found"})
         }
@@ -43,12 +43,11 @@ exports.addCode = async(req,res) =>{
         await user.save();
 
         res.status(201).json(Code);
-    }
-    catch(error){
+    }catch(error){
         console.error(error);
         res.status(500).json({ message: "Server error" });
-    }
-}
+    };
+};
 
 exports.updateCode = async (req,res) =>{
   const {code, roomId} = req.body;
