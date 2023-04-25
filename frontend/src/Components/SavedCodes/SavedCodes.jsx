@@ -7,7 +7,7 @@ const SavedCodes = () => {
 
     useEffect(() => {
       const fetchCodes = async () => {
-        const response = await axios.get('http://localhost:8000/usercodes/getcodes', {
+        const response = await axios.get('http://localhost:8000/usercodes', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

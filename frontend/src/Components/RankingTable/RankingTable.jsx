@@ -10,7 +10,7 @@ const RankingTable = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
 
-    axios.get('http://localhost:8000/allusers/ranking')
+    axios.get('http://localhost:8000/allusers')
         .then(response => {
           const usersWithRank = response.data.map((user, index) => ({ ...user, rank: index + 1 }));
           setUsers(usersWithRank);

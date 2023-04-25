@@ -45,6 +45,7 @@ const EditorNavigator = ({ code }) => {
             toast.success("was not saved");
         }
      }
+     
      const handleAnalyzeCode = async () => {
         try{
             const token = localStorage.getItem("token");
@@ -65,6 +66,7 @@ const EditorNavigator = ({ code }) => {
             toast.success("try agian");
         };
      };
+
      const handleAdviceCode = async () => {
         try{
             const token = localStorage.getItem("token");
@@ -82,8 +84,8 @@ const EditorNavigator = ({ code }) => {
         }catch(error){
             console.error(error);
             toast.success("try agian");
-        }
-     }
+        };
+     };
   return (
     <div className="rows">
         <div className="row" onClick={copyRoomId}>
