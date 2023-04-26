@@ -7,9 +7,10 @@ import 'codemirror/mode/javascript/javascript';
 import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
 import DoList from '../../SocketConnections/DoList';
+import { useLocation } from 'react-router-dom';
 
 const CodeEditor = ({socketRef,roomId,setCode}) => {
-
+  const location=useLocation()
   const editorRef=useRef(null);
 
   useEffect(() => {
@@ -57,7 +58,7 @@ const CodeEditor = ({socketRef,roomId,setCode}) => {
   
   },[socketRef.current])
   return (
-    <textarea id='codeEditorCollaboration'></textarea>
+    <textarea id='codeEditorCollaboration' defaultValue={location.state?.code}></textarea>
   )
 }
 

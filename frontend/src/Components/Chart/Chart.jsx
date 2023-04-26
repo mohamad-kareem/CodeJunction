@@ -15,7 +15,7 @@ const Chart = () => {
           },
         })
         .then((res) => {
-          console.log(res.data)
+          
           setData(res.data)
         })
         .catch((err) => {

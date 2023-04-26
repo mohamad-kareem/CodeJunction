@@ -1,10 +1,11 @@
 import React,{useState,useEffect} from 'react'
 import "./savedcodes.css"
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 const SavedCodes = () => {
 
     const [codes, setCodes] = useState([]);
-
+    const navigate=useNavigate()
     useEffect(() => {
       const fetchCodes = async () => {
         const response = await axios.get('http://localhost:8000/usercodes', {
@@ -12,14 +13,22 @@ const SavedCodes = () => {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
         });
-        setCodes(response.data.codes);
+        setCodes(response.data);
+        console.log(response.data.user)
       };
       fetchCodes();
     }, []);
   return (
     <>
-    {codes.map((code) => (
-      <div className="flex-box" key={code._id}>
+    {codes?.user?.codes.map((code) => (
+      <div className="flex-box" key={code._id}onClick={()=>{ 
+        navigate(`/editor/${code.roomId}`,{
+        state:{
+            username:codes.user.username,
+            code:code.code
+        },
+    }
+    )}}>
         <div className="inner-box">
           <div className="code-title">{code.title}</div>
           <div className="code-description">{code.description}</div>
