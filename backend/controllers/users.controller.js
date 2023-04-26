@@ -15,7 +15,7 @@ exports.getUserCodes = async (req, res) => {
     const user = req.user;
     const codes = user.codes;
     console.log(codes,user)
-    res.status(200).json({ codes });
+    res.status(200).json({user});
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -68,7 +68,7 @@ exports.updateCode = async (req,res) =>{
     console.log(updatedCode)
 
   }catch(error){
-    onsole.error(error);
+    console.error(error);
     res.status(500).json({ message: "Server error" });
   };
 };
