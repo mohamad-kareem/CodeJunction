@@ -14,7 +14,7 @@ const PersonalInfo = () => {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
         });
-        setUserInfo(response.data);
+        setUserInfo(response.data.user);
       } catch (error) {
         console.log(error);
       }
@@ -28,9 +28,9 @@ const PersonalInfo = () => {
                      <img src={emptyimage} className='small-pic' alt="pic" />
                   </div>
                   <div className="personal-text">
-                      <h2 className='Username'></h2>
-                      <p className='Job'></p>
-                      <h3 className='Profession'></h3>
+                      <h2 className='Username'>{userInfo.username}</h2>
+                      <p className='Job'>{userInfo.job}</p>
+                      <h3 className='Profession'>{userInfo.profession}</h3>
                   </div>
               </div>
               <div className="edit-icon-container">
