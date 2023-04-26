@@ -44,6 +44,14 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
+    job:{
+        type:String,
+        required:false
+    },
+    profession:{
+        type:String,
+        required:false
+    },
     points:{
         type:Number,
         required:false,

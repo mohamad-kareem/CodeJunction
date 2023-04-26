@@ -12,9 +12,8 @@ exports.getAllUsers=async (req,res)=>{
 
 exports.getUserCodes = async (req, res) => {
   try {
-    const user = req.user;
-    const codes = user.codes;
-    console.log(codes,user)
+    const user = await User.findById(req.user._id).select('username codes');
+    console.log(user)
     res.status(200).json({user});
   } catch (error) {
     res.status(500).json({ message: error.message });
