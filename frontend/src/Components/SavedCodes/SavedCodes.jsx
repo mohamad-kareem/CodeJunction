@@ -18,17 +18,20 @@ const SavedCodes = () => {
       };
       fetchCodes();
     }, []);
+    
+    const handleCodeClick = (roomId, username, code) => {
+      navigate(`/editor/${roomId}`, {
+        state: {
+          username,
+          code,
+        },
+      });
+    };
+
   return (
     <>
     {codes?.user?.codes.map((code) => (
-      <div className="flex-box" key={code._id}onClick={()=>{ 
-        navigate(`/editor/${code.roomId}`,{
-        state:{
-            username:codes.user.username,
-            code:code.code
-        },
-    }
-    )}}>
+      <div className="flex-box" key={code._id} onClick={() => handleCodeClick(code.roomId, codes.user.username, code.code)}>
         <div className="inner-box">
           <div className="code-title">{code.title}</div>
           <div className="code-description">{code.description}</div>
