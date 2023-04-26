@@ -18,13 +18,28 @@ const ProfilePage = () => {
     const selectedImage = URL.createObjectURL(event.target.files[0]);
     setImage(selectedImage);
   };
-
+  const handleUsernameChange = (e) => setUsername(e.target.value);
+  const handleEmailChange = (e) => setEmail(e.target.value);
+  const handleJobChange = (e) => setJob(e.target.value);
+  const handleProfessionChange = (e) => setProfession(e.target.value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const updatedProfileData = {};
+    if (username) {
+      updatedProfileData.username = username;
+    }
+    if (email) {
+      updatedProfileData.email = email;
+    }
+    if (job) {
+      updatedProfileData.job = job;
+    }
+    if (profession) {
+      updatedProfileData.profession = profession;
+    }
     axios
-      .put('http://127.0.0.1:8000/update', updatedProfileData, {
+      .put('http://127.0.0.1:8000/updateProfile', updatedProfileData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -63,25 +78,29 @@ const ProfilePage = () => {
                     name="username"
                     type='text'
                     icon={faUserSecret}
-                    value={username} setValue={setUsername}
+                    value={username} 
+                    onChange={handleUsernameChange}
                 />
                   <InputForm
                     label="email address"
                     name="email"
                     icon={faEnvelope}
-                    value={email} setValue={setEmail}
+                    value={email} 
+                    onChange={handleEmailChange}
                 />
                 <InputForm
                     label="Job"
                     name="Job"
                     icon={faBriefcase}
-                    value={job} setValue={setJob}
+                    value={job} 
+                    onChange={handleJobChange}
                 />
                 <InputForm
                     label="profession"
                     name="profession"
                     icon={faUserTie}
-                    value={profession} setValue={setProfession}
+                    value={profession} 
+                    onChange={handleProfessionChange}
                 />
                 <ButtonComponent color="yellow"size="15px" onClick={handleSubmit}>Update Profile</ButtonComponent> 
             </div>
