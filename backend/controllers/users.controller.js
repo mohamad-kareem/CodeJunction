@@ -125,4 +125,30 @@ exports.getCodeCountsByMonth = async (req, res) => {
     }
   };
   
+exports.updateProfile = async (req, res) => {
+  try {
+    const { username, email, job, profession } = req.body;
+    const user = await User.findById(req.user._id);
+
+    if (username) {
+      user.username = username;
+    }
+    if (email) {
+      user.email = email;
+    }
+    if (job) {
+      user.job = job;
+    }
+    if (profession) {
+      user.profession = profession;
+    }
+
+    await user.save();
+    res.status(200).json(user);
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
   
