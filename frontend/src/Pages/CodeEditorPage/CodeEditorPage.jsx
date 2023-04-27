@@ -12,7 +12,7 @@ import { useLocation,useNavigate,Navigate ,useParams} from 'react-router-dom'
 import toast from "react-hot-toast";
 import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import CreateFolder from '../../Components/CreateFolder/CreateFolder'
-
+import Console_Editor from '../../Components/Console_Editor/Console_Editor'
 const CodeEditorPage = () => {
     const [code,setCode]=useState("");
     const socketRef= useRef(null);
@@ -109,8 +109,9 @@ return (
                     <div>
                     <ButtonComponent width='100px' children={"Run"}/>
                     </div>
-                </div>
+                </div>        
                 <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>
+                <Console_Editor/>
             </div>
     </div>
   )

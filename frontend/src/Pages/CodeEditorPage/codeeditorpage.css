@@ -66,31 +66,6 @@ h3{
 overflow-y: hidden;
  
 }
-.code-output {
-   display: flex;
-   flex-direction: column;
-   font-size: 20px;
-   border-top: 1px solid rgb(122, 175, 16);
-}
-.output-textarea {
-   background-color: #0F0A36 ;
-   border: none;
-   color: wheat;
-}
-.output-tabs {
-   display: flex;
-   flex-direction: column;
-   margin-bottom: 10px;
-}
-.output-tabs-horizontal {
-   flex-direction: row;
-}
-.output-tab {
-   margin-right: 35px;
-   cursor: pointer;
-   color: wheat;
-   padding: 5px;
-}
 .options{
    display: flex; 
    color: yellow;
