@@ -9,3 +9,16 @@
     border: 1.8px solid #e7e7e7;
    
 }
+.output-tabs-horizontal {
+   justify-content: space-between;
+    padding-left: 30px;
+}
+.output-tabs{
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+}
+.left-output{
+    display: flex;
+    flex-direction: row;
+}
