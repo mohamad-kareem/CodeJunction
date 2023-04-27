@@ -1,0 +1,11 @@
+.wrapper-console{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 12rem;
+    background-color:#f5f5f6 ;
+    bottom: 0px; 
+    position: fixed;
+    border: 1.8px solid #e7e7e7;
+   
+}
