@@ -3,6 +3,8 @@
     width: 100%;
     display: grid;
     padding:20px;
+    height: 100vh;
+    overflow: scroll;
 }
 .widgets-container{
     display: flex;

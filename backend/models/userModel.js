@@ -52,6 +52,10 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:false
     },
+    imageUrl:{
+        type:String,
+        required:false
+    },
     points:{
         type:Number,
         required:false,
