@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from 'react'
-import emptyimage from "../../assets/empty-pic.jpg"
 import EditIcon from '@mui/icons-material/Edit';
 import "./personal.css"
 import axios from 'axios';
+import UserImage from '../UserImage/UserImage';
 const PersonalInfo = () => {
   const [userInfo, setUserInfo] = useState({});
 
@@ -25,7 +25,7 @@ const PersonalInfo = () => {
     <div className="personal-info">
               <div className="inner-personal-info">
                   <div className="image">
-                     <img src={emptyimage} className='small-pic' alt="pic" />
+                  <UserImage className={"small-pic"}/>
                   </div>
                   <div className="personal-text">
                       <h2 className='Username'>{userInfo.username}</h2>
