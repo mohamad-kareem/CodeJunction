@@ -4,20 +4,15 @@ import "./profilepage.css"
 import {faEnvelope,faUserSecret,faBriefcase, faUserTie} from '@fortawesome/free-solid-svg-icons';
 import InputForm from '../../Components/InputForm/InputForm';
 import ButtonComponent from '../../Components/Button/ButtonComponent';
-import emptyImage from "../../assets/empty-pic.jpg"
 import axios from 'axios';
+import UserImage from '../../Components/UserImage/UserImage';
 const ProfilePage = () => {
 
-  const [image, setImage] = useState(emptyImage);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [job, setJob] = useState('');
   const [profession, setProfession] = useState('');
 
-  const handleImageChange = (event) => {
-    const selectedImage = URL.createObjectURL(event.target.files[0]);
-    setImage(selectedImage);
-  };
   const handleUsernameChange = (e) => setUsername(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handleJobChange = (e) => setJob(e.target.value);
@@ -64,10 +59,7 @@ const ProfilePage = () => {
 
         <div className="profile-buttom">
           <div className="left-profile">
-          <label htmlFor="image-input">
-              <img src={image} className='pic' alt="empty-pic" />
-          </label>
-            <input id="image-input" type="file" onChange={handleImageChange} style={{ display: "none" }} />
+          <UserImage/>
           </div>
           <div className="right-profile">
             <div className='sign-in-up-container'>

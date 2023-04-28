@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { useState,useEffect }  from 'react'
 import emptyImage from '../../assets/empty-pic.jpg';
 import { storage } from '../../firebase';
 import { getDownloadURL, uploadBytes, ref } from 'firebase/storage';
 import {v4 as uuidV4} from "uuid";
 import "./userimage.css"
-import React, { useState,useEffect } from 'react';
 import axios from 'axios';
-const UserImage = () => {
+const UserImage = ({ className }) => {
 
     const [url, setUrl] = useState(null);
     const [image, setImage] = useState(emptyImage);
