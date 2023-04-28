@@ -12,7 +12,7 @@ import { useLocation,useNavigate,Navigate ,useParams} from 'react-router-dom'
 import toast from "react-hot-toast";
 import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import CreateFolder from '../../Components/CreateFolder/CreateFolder'
-import Console_Editor from '../../Components/Console_Editor/Console_Editor'
+import ConsoleEditor from '../../Components/ConsoleEditor/ConsoleEditor'
 const CodeEditorPage = () => {
     const [code,setCode]=useState("");
     const socketRef= useRef(null);
@@ -20,7 +20,6 @@ const CodeEditorPage = () => {
     const {roomId}=useParams();
     const [clients,setClients]=useState([]);
     const [ShowFolder, setShowFolder] = useState(false);
-    const [output, setOutput] = useState("");
     const navigate = useNavigate();
     const connectionNavigator=useNavigate();
 
@@ -79,7 +78,7 @@ const CodeEditorPage = () => {
 
     if (!location.state){
         return   <Navigate to="/"/>
-       }    
+       }  
 return (
     <div className='editor-wrapper'>
         <div className="leftside">
@@ -108,12 +107,12 @@ return (
                     </div>
                     </div>
                     <div>
-                    <ButtonComponent width='100px' onClick={runCode} children={"Run"}/>
+                    <ButtonComponent width='100px' children={"Run"}/>
                     </div>
                 </div>
                
                 <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>
-                <Console_Editor output={output}/>
+                <ConsoleEditor />
             </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
-import "./console_editor.css"
-const Console_Editor = ({output}) => {
+import "./consoleeditor.css"
+const ConsoleEditor = ({output}) => {
     
     return (
         <div className='wrapper-console'>
@@ -20,4 +20,4 @@ const Console_Editor = ({output}) => {
       )
     }
 
-export default Console_Editor
+export default ConsoleEditor
