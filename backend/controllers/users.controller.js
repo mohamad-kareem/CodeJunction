@@ -160,3 +160,25 @@ exports.getUserInfo = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 }
+
+exports.updateImageUrl = async (req, res) => {
+  const { imageUrl } = req.body;
+  const userId = req.user._id;
+
+  try {
+    const user = await User.findOne({ _id: userId });
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    user.imageUrl = imageUrl;
+
+    await user.save();
+
+    res.status(200).json({ message: "Image URL updated successfully" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
+  }
+};

@@ -2,7 +2,7 @@ const { Router } = require("express");
 const router = Router();
 
 const { authMiddleware } = require("../midllewares/auth.middleware");
-const { getAllUsers,addCode,updateCode,getCodeCountsByMonth,getUserCodes, updateProfile, getUserInfo} = require("../controllers/users.controller");
+const { getAllUsers,addCode,updateCode,getCodeCountsByMonth,getUserCodes, updateProfile, getUserInfo,updateImageUrl} = require("../controllers/users.controller");
 
 
 
@@ -16,6 +16,6 @@ router.post("/createfolder",authMiddleware,addCode);
 
 router.put("/updateCode",authMiddleware,updateCode);
 router.put("/updateProfile",authMiddleware,updateProfile);
-
+router.put("/updateUserImage",authMiddleware,updateImageUrl);
 
 module.exports = router;
