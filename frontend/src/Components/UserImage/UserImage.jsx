@@ -5,7 +5,7 @@ import { getDownloadURL, uploadBytes, ref } from 'firebase/storage';
 import {v4 as uuidV4} from "uuid";
 import "./userimage.css"
 import axios from 'axios';
-const UserImage = ({ className }) => {
+const UserImage = ({ className,disableChange }) => {
 
     const [url, setUrl] = useState(null);
     const [image, setImage] = useState(emptyImage);
@@ -59,12 +59,14 @@ const UserImage = ({ className }) => {
     <label htmlFor="image-input">
            <img src={url || image} className={`pic ${className}`} alt="empty-pic" />
     </label>
-         <input
-           id="image-input"
-           type="file"
-           onChange={handleImageChange}
-           style={{ display: 'none' }}
-         />
+    {!disableChange &&
+        <input
+          id="image-input"
+          type="file"
+          onChange={handleImageChange}
+          style={{ display: 'none' }}
+        />
+      }
  </>
   )
 }

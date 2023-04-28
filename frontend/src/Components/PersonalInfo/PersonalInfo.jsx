@@ -25,7 +25,7 @@ const PersonalInfo = () => {
     <div className="personal-info">
               <div className="inner-personal-info">
                   <div className="image">
-                  <UserImage className={"small-pic"}/>
+                  <UserImage className={"small-pic"} disableChange={true}/>
                   </div>
                   <div className="personal-text">
                       <h2 className='Username'>{userInfo.username}</h2>
