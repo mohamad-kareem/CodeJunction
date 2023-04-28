@@ -10,8 +10,23 @@ const UserImage = () => {
 
     const [url, setUrl] = useState(null);
     const [image, setImage] = useState(emptyImage);
+     
+    useEffect(() => {
 
-    
+        // Fetch user's imageUrl from the database when the component mounts
+        axios.get('http://127.0.0.1:8000/getUserImage', {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+          },
+        })
+        .then(res => {
+          setImage(res.data.imageUrl || emptyImage);
+          setUrl(res.data.imageUrl);
+          
+        })
+        .catch(err => console.log(err));
+      }, []);
+
     const handleImageChange = (e) => {
         if (e.target.files[0]) {
             const imageRef = ref(storage, `${uuidV4()}`);
