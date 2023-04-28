@@ -14,7 +14,7 @@ const ConsoleEditor = ({output}) => {
             </div>
           </div>
           <div className="result">
-            <textarea className='output-result' Value={output} ></textarea>
+            <textarea className='output-result' value={output} ></textarea>
           </div>
         </div>
       )

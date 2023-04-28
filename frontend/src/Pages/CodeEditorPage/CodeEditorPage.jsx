@@ -23,7 +23,9 @@ const CodeEditorPage = () => {
     const [ShowFolder, setShowFolder] = useState(false);
     const navigate = useNavigate();
     const connectionNavigator=useNavigate();
-
+    const [showAdvice, setShowAdvice] = useState(false);
+    const [advice,setadvice]=useState("")
+     
     useEffect(()=>{
         const webSocket =async () =>{
 
@@ -74,6 +76,7 @@ const CodeEditorPage = () => {
 
     const showup = () => {
         setShowFolder(!ShowFolder);
+        setShowAdvice(!showAdvice)
     };
 
 
@@ -84,7 +87,7 @@ return (
     <div className='editor-wrapper'>
         <div className="leftside">
            <Logo padding="10px" borderBottom={"1px solid rgb(122, 175, 16)"}/>
-           <EditorNavigator code={code}/>
+           <EditorNavigator  setShowAdvice={setShowAdvice} code={code} setAdvice={setadvice}/>
            <div>
            </div>
            <div className="buttom">
@@ -111,8 +114,12 @@ return (
                     <ButtonComponent width='100px' children={"Run"}/>
                     </div>
                 </div>
-               
+                <div>
+                {showAdvice? <Advice advice={advice}  HideFolder={showup}/> : null}
+                </div>
                 <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>
+               
+         
                 <ConsoleEditor />
             </div>
     </div>

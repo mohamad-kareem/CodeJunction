@@ -8,7 +8,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import GavelIcon from '@mui/icons-material/Gavel';
 import axios from 'axios'
 
-const EditorNavigator = ({ code }) => {
+const EditorNavigator = ({ code,setShowAdvice,setAdvice}) => {
 
     const {roomId}=useParams();
     const connectionNavigator=useNavigate();
@@ -79,8 +79,12 @@ const EditorNavigator = ({ code }) => {
                 } 
                 }
             );
+            // console.log(response.data.answer);
+            // toast.success(response.data.answer);
             console.log(response.data.answer);
-            toast.success(response.data.answer);
+     const advice=response.data.answer
+      setAdvice(advice)
+      setShowAdvice(true)
         }catch(error){
             console.error(error);
             toast.success("try agian");
