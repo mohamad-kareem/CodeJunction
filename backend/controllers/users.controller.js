@@ -182,3 +182,19 @@ exports.updateImageUrl = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+
+exports.getUserImage = async (req, res) => {
+  try {
+   
+    const userId = req.user._id;
+
+    const user = await User.findById(userId);
+    const imageUrl = user.imageUrl;
+
+    res.json({ imageUrl });
+    console.log(imageUrl)
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+}
