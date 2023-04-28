@@ -20,7 +20,7 @@ const CodeEditorPage = () => {
     const {roomId}=useParams();
     const [clients,setClients]=useState([]);
     const [ShowFolder, setShowFolder] = useState(false);
-
+    const [output, setOutput] = useState("");
     const navigate = useNavigate();
     const connectionNavigator=useNavigate();
 
@@ -79,13 +79,14 @@ const CodeEditorPage = () => {
 
     if (!location.state){
         return   <Navigate to="/"/>
-       }  
-       
+       }    
 return (
     <div className='editor-wrapper'>
         <div className="leftside">
            <Logo padding="10px" borderBottom={"1px solid rgb(122, 175, 16)"}/>
            <EditorNavigator code={code}/>
+           <div>
+           </div>
            <div className="buttom">
                 <h3>Connected</h3>
                 <div className="connections">
@@ -107,11 +108,12 @@ return (
                     </div>
                     </div>
                     <div>
-                    <ButtonComponent width='100px' children={"Run"}/>
+                    <ButtonComponent width='100px' onClick={runCode} children={"Run"}/>
                     </div>
-                </div>        
+                </div>
+               
                 <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>
-                <Console_Editor/>
+                <Console_Editor output={output}/>
             </div>
     </div>
   )

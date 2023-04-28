@@ -1,6 +1,7 @@
 import React from 'react'
 import "./console_editor.css"
-const Console_Editor = () => {
+const Console_Editor = ({output}) => {
+    
     return (
         <div className='wrapper-console'>
           <div className="output-tabs output-tabs-horizontal">
@@ -13,7 +14,7 @@ const Console_Editor = () => {
             </div>
           </div>
           <div className="result">
-            sdaasdz
+            <textarea className='output-result' Value={output} ></textarea>
           </div>
         </div>
       )
