@@ -2,7 +2,18 @@ import React from 'react'
 
 const UserImage = () => {
     const handleImageChange = (e) => {
-        
+        if (e.target.files[0]) {
+            const imageRef = ref(storage, `${uuidV4()}`);
+            uploadBytes(imageRef, e.target.files[0])
+              .then(() => {
+                getDownloadURL(imageRef)
+                  .then((url) => {
+                    setUrl(url);
+                    setImage(url);
+                    console.log(url);
+              })
+              })
+            }
     }
   return (
     <>
