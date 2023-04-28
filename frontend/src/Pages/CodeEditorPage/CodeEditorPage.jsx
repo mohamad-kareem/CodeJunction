@@ -13,6 +13,7 @@ import toast from "react-hot-toast";
 import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import CreateFolder from '../../Components/CreateFolder/CreateFolder'
 import ConsoleEditor from '../../Components/ConsoleEditor/ConsoleEditor'
+import Advice from '../../Components/Advice/Advice'
 const CodeEditorPage = () => {
     const [code,setCode]=useState("");
     const socketRef= useRef(null);
