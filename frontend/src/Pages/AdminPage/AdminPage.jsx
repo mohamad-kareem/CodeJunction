@@ -23,6 +23,17 @@ const AdminPage = () => {
                 <BarGrapgh/>
                 </div>
             </div>
+            <div className="piechart">
+                <div className="left-piechart">
+                    <h1 className='piechart-title'>Active Users</h1>
+                    <p className='piechart-info'>An active user is defined as someone who has logged <br/> into their account and interacted with our platform within the last 30 days.</p>
+                </div>
+                <div className="right-piechart">
+                   <CircularProgressbar value={20} text='70%' strokeWidth={1}/>
+                 </div>
+            </div>
+           
+           
          </div>
 
         </div>

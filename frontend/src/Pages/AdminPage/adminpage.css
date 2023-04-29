@@ -31,3 +31,6 @@
 .bargrapgh-info{
     color:rgb(154, 152, 148);
 }
+.piechart{
+    display: flex;
+}
