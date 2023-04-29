@@ -3,4 +3,31 @@
 }
 .admin{
     flex: 1;
+    overflow: scroll;
+    height: 100vh;
+}
+.website-info{
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+.grapgh{
+    display: flex;
+  
+}
+.right-bargrapah{
+    width: 50%;
+   
+}
+.left-bargrapgh{
+    padding: 30px;
+    margin-top: 50px;
+}
+.bargrapgh-title{
+    color: yellow;
+    font-weight:normal;
+}
+
+.bargrapgh-info{
+    color:rgb(154, 152, 148);
 }
