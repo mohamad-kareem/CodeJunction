@@ -10,6 +10,10 @@
 .profile-top{
     -webkit-box-shadow: 2px 4px 10px 1px rgba(2, 2, 2, 0.47);
     box-shadow: 2px 4px 10px 1px rgba(87, 82, 82, 0.47);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .profile-top,.profile-buttom{
     padding: 10px;
@@ -35,3 +39,29 @@
     object-fit: cover;
 }
 
+.text-anime {
+    padding: 20px;
+    position: fixed;
+    color: wheat;
+    letter-spacing: 1px;
+ 
+
+  }
+  .text-anime::before,
+  .text-anime::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .text-anime::before{
+    background-color: #2d2254;
+    animation: typewriter 6s steps(50) forwards;
+  }
+  @keyframes typewriter {
+    to{
+        left: 100%;
+    }
+  }
