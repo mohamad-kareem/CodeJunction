@@ -32,4 +32,10 @@
 }
 .piechart{
     display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.right-piechart{
+    display: flex;
+  margin-right: 150px;
 }

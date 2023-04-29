@@ -25,12 +25,16 @@ const AdminPage = () => {
             </div>
             <div className="piechart">
                 <div className="left-part">
-                    <h1 className='statistics-title'>Active Users</h1>
-                    <p className='statistics-info'>An active user is defined as someone who has logged <br/> into their account and interacted with our platform within the last 30 days.</p>
+                    <h1 className='statistics-title'>Active Users</h1><br />
+                    <p className='statistics-info'>An active user is defined as someone who has logged <br/> into their account and interacted with our platform <br /> within the last 30 days.</p>
                 </div>
                 <div className="right-piechart">
-                   <CircularProgressbar value={20} text='70%' strokeWidth={1}/>
+                   <CircularProgressbar value={50} text='40%' strokeWidth={3}/>
                  </div>
+            </div>
+
+            <div className="suggestions">
+
             </div>
            
            
