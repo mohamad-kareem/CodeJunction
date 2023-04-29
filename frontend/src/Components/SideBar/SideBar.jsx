@@ -4,7 +4,7 @@ import Logo from '../Logo/Logo'
 import { Link } from 'react-router-dom'
 import HomeIcon from '@mui/icons-material/Home';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const SideBar = () => {
 
@@ -34,10 +34,10 @@ const SideBar = () => {
               <div id='title'>Profile</div>
             </Link>
 
-          <div className="row">
-            <div id='icon'>{< GitHubIcon/>}</div>
-            <div id='title'>GitHub</div>
-          </div>
+          <Link to={"/admin"} className="row">
+            <div id='icon'>{<SupervisorAccountIcon/>}</div>
+            <div id='title'>Statistics</div>
+          </Link>
         
         </div>
     </div>

@@ -9,6 +9,7 @@ import { Toaster } from 'react-hot-toast';
 import ProfilePage from './Pages/ProfilePage/ProfilePage';
 import HomePage from './Pages/HomePage/HomePage';
 import RankingPage from './Pages/RankingPage/RankingPage';
+import AdminPage from './Pages/AdminPage/AdminPage';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
       <Route path="/login" element={<LoginPage/>}/>
       <Route path="/ranking" element={<RankingPage/>}/>
       <Route path="/profile" element={<ProfilePage/>}/>
+      <Route path="/admin" element={<AdminPage/>}/>
       <Route path="/home" element={<HomePage/>}/>
       <Route path="/editor/:roomId" element={<CodeEditorPage/>}/>
       <Route path="/session" element={<SessionForm/>}/>
