@@ -74,10 +74,13 @@ const CodeEditorPage = () => {
         navigate('/');
     }
 
-    const showup = () => {
+    const showfolder = () => {
         setShowFolder(!ShowFolder);
-        setShowAdvice(!showAdvice)
+        
     };
+    const HideAdvice = ()=>{
+        setShowAdvice(!showAdvice)
+    }
 
 
     if (!location.state){
@@ -106,8 +109,8 @@ return (
                     <div className="options" >
                     <div >{<ArrowBackIcon  className='back-icon' onClick={handleBackClick} />}</div>
                     <div >
-                        {<CreateNewFolderIcon className='add-folder' onClick={showup} />}
-                        {ShowFolder ? (<CreateFolder HideFolder={showup} />) : null}
+                        {<CreateNewFolderIcon className='add-folder' onClick={showfolder} />}
+                        {ShowFolder ? (<CreateFolder HideFolder={showfolder} />) : null}
                     </div>
                     </div>
                     <div>
@@ -115,7 +118,8 @@ return (
                     </div>
                 </div>
                 <div>
-                {showAdvice? <Advice advice={advice}  HideFolder={showup}/> : null}
+                    
+                {showAdvice? <Advice advice={advice}  HideAdvice={HideAdvice }/> : null}
                 </div>
                 <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>
                
