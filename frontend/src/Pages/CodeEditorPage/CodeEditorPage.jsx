@@ -14,6 +14,7 @@ import CreateNewFolderIcon from '@mui/icons-material/CreateNewFolder';
 import CreateFolder from '../../Components/CreateFolder/CreateFolder'
 import ConsoleEditor from '../../Components/ConsoleEditor/ConsoleEditor'
 import Advice from '../../Components/Advice/Advice'
+import Evaluation from '../../Components/Evaluation/Evaluation'
 const CodeEditorPage = () => {
     const [code,setCode]=useState("");
     const socketRef= useRef(null);
@@ -25,6 +26,8 @@ const CodeEditorPage = () => {
     const connectionNavigator=useNavigate();
     const [showAdvice, setShowAdvice] = useState(false);
     const [advice,setadvice]=useState("")
+    const [evaluation,setEvaluation]=useState("")
+    const [showEvaluation,setShowEvaluation]=useState(false)
      
     useEffect(()=>{
         const webSocket =async () =>{
@@ -81,7 +84,9 @@ const CodeEditorPage = () => {
     const HideAdvice = ()=>{
         setShowAdvice(!showAdvice)
     }
-
+    const HideEvaluation=()=>{
+        setShowEvaluation(!showEvaluation)
+    }
 
     if (!location.state){
         return   <Navigate to="/"/>
@@ -90,7 +95,7 @@ return (
     <div className='editor-wrapper'>
         <div className="leftside">
            <Logo padding="10px" borderBottom={"1px solid rgb(122, 175, 16)"}/>
-           <EditorNavigator  setShowAdvice={setShowAdvice} code={code} setAdvice={setadvice}/>
+           <EditorNavigator  setShowAdvice={setShowAdvice} code={code} setAdvice={setadvice} setEvaluation={setEvaluation} setShowEvaluation={setShowEvaluation}/>
            <div>
            </div>
            <div className="buttom">
@@ -116,6 +121,9 @@ return (
                     <div>
                     <ButtonComponent width='100px' children={"Run"}/>
                     </div>
+                </div>
+                <div>
+                  {showEvaluation ? <Evaluation evaluation={evaluation} HideEvaluation={HideEvaluation} />:null}  
                 </div>
                 <div>
                     

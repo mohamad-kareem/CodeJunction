@@ -8,7 +8,7 @@ import SaveIcon from '@mui/icons-material/Save';
 import GavelIcon from '@mui/icons-material/Gavel';
 import axios from 'axios'
 
-const EditorNavigator = ({ code,setShowAdvice,setAdvice}) => {
+const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEvaluation}) => {
 
     const {roomId}=useParams();
     const connectionNavigator=useNavigate();
@@ -59,7 +59,8 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice}) => {
                 }
             )
             const points=response.data.answer
-            console.log(points);
+            setEvaluation(points)
+            setShowEvaluation(true)
             toast.success(points);
         }catch(error){
             console.error(error);
