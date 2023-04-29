@@ -6,28 +6,23 @@ const Advice = ({advice,HideAdvice}) => {
 
   const variants = {
     hidden: { 
-        opacity: 0,
-        y: "50%"
+        opacity: 2,
+        y: "100%"
       },
       visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 3 }
+        transition: { duration: 2 }
       },
-      exit: {
-        opacity: 0,
-        y: "50%",
-        transition: { duration: 3 }
-      }
   }
 return (
     <div className='ai-advice' onClick={HideAdvice}>
         <div className='sign-in-up-container'>
           < motion.div 
             className="advice-inner-form" 
-            variants={variants}initial="hidden"
-            animate="visible"
-            exit="exit">
+            variants={variants}
+            initial="hidden"
+            animate="visible">
               <div className="advice-flex">
               <img src={robot} className='robot' />
               <br />{ advice} 
