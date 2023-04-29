@@ -16,19 +16,18 @@
   
 }
 .right-bargrapah{
-    width: 50%;
-   
+    width: 50%; 
 }
-.left-bargrapgh{
+.left-part{
     padding: 30px;
     margin-top: 50px;
 }
-.bargrapgh-title{
+.statistics-title{
     color: yellow;
     font-weight:normal;
 }
 
-.bargrapgh-info{
+.statistics-info{
     color:rgb(154, 152, 148);
 }
 .piechart{
