@@ -1,0 +1,6 @@
+.admin-wrapper{
+    display: flex;
+}
+.admin{
+    flex: 1;
+}

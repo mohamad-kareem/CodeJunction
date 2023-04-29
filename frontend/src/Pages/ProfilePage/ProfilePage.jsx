@@ -53,8 +53,8 @@ const ProfilePage = () => {
         <SideBar/>
       <div className="profile">
 
-        <div className="profile-top">
-        <h1 className='h1-edit-profile'>Edit profile</h1>
+        <div className="top-section">
+        <h1 className='top-name'>Edit profile</h1>
         </div>
         <p className='text-anime'>"Your profile is your digital handshake with the world." - Amy Jo Martin</p>
         <div className="profile-buttom">

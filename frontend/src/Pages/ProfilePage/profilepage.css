@@ -4,10 +4,10 @@
 .profile{
     flex: 1;
 }
-.h1-edit-profile{
+.top-name{
     color: wheat;
 }
-.profile-top{
+.top-section{
     -webkit-box-shadow: 2px 4px 10px 1px rgba(2, 2, 2, 0.47);
     box-shadow: 2px 4px 10px 1px rgba(87, 82, 82, 0.47);
     display: flex;
@@ -15,7 +15,7 @@
     align-items: center;
     text-align: center;
 }
-.profile-top,.profile-buttom{
+.top-section,.profile-buttom{
     padding: 10px;
     margin: 10px;
     display: flex;
