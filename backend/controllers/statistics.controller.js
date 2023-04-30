@@ -9,6 +9,7 @@ exports.getDailyUsageValue=async (req,res)=>{
             date: date.toLocaleDateString('en-US', { day: 'numeric', month: 'long' }),
             value
         }));
+        valuesArray.sort((a, b) => new Date(a.date).getMonth() - new Date(b.date).getMonth());
 
         res.json(valuesArray);
     
