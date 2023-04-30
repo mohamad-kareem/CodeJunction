@@ -9,7 +9,7 @@ import { DataGrid, } from '@mui/x-data-grid';
 import imaage from '../../assets/empty-pic.jpg';
 
 const columns = [
-  { field: 'id', headerName: 'Rank', width:190, valueGetter: (params) => params.row.rank  },
+  { field: 'id', headerName: 'Rank', width:190, valueGetter: (params) =>'#' +params.row.rank  },
   { field: 'username', headerName: 'Username', width:400,renderCell:(params)=>{
     return(
       <div className="userImage">
