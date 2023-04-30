@@ -3,16 +3,17 @@ const Statistics=require("../models/adminStatistics")
 exports.getDailyUsageValue=async (req,res)=>{
     try {
 
-      const currentDate = new Date();
-      const month = currentDate.getMonth() + 1; 
-  
-      const dailyValues = await Statistics.find({
-        date: { $regex: `^\\d{4}-${month.toString().padStart(2, '0')}` }
-      });
+        const dailyValues = await Statistics.find({});
+    
+        const valuesArray = dailyValues.map(({ date, value }) => ({ 
+            date: date.toLocaleDateString('en-US', { day: 'numeric', month: 'long' }),
+            value
+        }));
 
-      res.json({ dailyValues });
+        res.json(valuesArray);
+    
     } catch (err) {
-      console.error(err);
-      res.status(500).json({ message: 'server error' });
+        console.error(err);
+        res.status(500).json({ error: 'Server error' });
       }
 };
