@@ -51,7 +51,14 @@ const RankingTable = () => {
             rowHeight={70}
             autoHeight
             getRowClassName={() => "custom-row-class"}
-           
+            sx={{
+              boxShadow: 8,
+              border: 0,
+              borderColor: 'primary.light',
+              '& .MuiDataGrid-cell:hover': {
+                color: 'yellow',
+              },
+            }}
           />
       </div>
     </div>
