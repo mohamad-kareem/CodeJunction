@@ -2,7 +2,7 @@ import React from 'react'
 import "./adminpage.css"
 import SideBar from '../../Components/SideBar/SideBar'
 import BarGrapgh from '../../Components/BarGrapgh/BarGrapgh'
-import {CircularProgressbar} from "react-circular-progressbar"
+import {CircularProgressbar,buildStyles} from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
 const AdminPage = () => {
   return (
@@ -29,7 +29,15 @@ const AdminPage = () => {
                     <p className='statistics-info'>An active user is defined as someone who has logged <br/> into their account and interacted with our platform <br /> within the last 30 days.</p>
                 </div>
                 <div className="right-piechart">
-                   <CircularProgressbar value={50} text='40%' strokeWidth={3}/>
+                   <CircularProgressbar
+                     value={50} 
+                     text='40%' 
+                     strokeWidth={3} 
+                     styles={buildStyles({
+                        pathColor: "yellow",
+                        textColor: "wheat",
+                     })}
+                    />
                  </div>
             </div>
 
