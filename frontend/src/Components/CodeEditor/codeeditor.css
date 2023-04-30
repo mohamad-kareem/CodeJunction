@@ -3,18 +3,15 @@
     line-height: 1.6;
     overflow-y: hidden;
 }
-
-.CodeMirror.cm-s-eclipse{
-    height: 100vh;
-    background-color: #2d2254;
-  }
-  .CodeMirror .CodeMirror-gutters {
-    background-color:#2d2254;
-    border-right: none;
-    color: yellow;
-  }
-  
-  .CodeMirror-linenumber {
+/* .CodeMirror-linenumber {
     color:yellow;
-  }
-  
+} */
+
+.cm-s-blackboard.CodeMirror{
+    height: 100vh;
+    background: #2d2254 !important;
+}
+.CodeMirror.cm-s-blackboard .CodeMirror-gutters {
+    background-color: #2d2254;
+    border-right: 1px solid yellowgreen !important;
+}

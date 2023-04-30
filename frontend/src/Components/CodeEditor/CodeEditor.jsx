@@ -2,7 +2,7 @@ import React, { useEffect,useRef } from 'react';
 import "./codeeditor.css"
 import Codemirror from 'codemirror';
 import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/eclipse.css';
+import 'codemirror/theme/blackboard.css';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
@@ -20,7 +20,7 @@ const CodeEditor = ({socketRef,roomId,setCode}) => {
       mode: { name: 'javascript', json: true },
       autoCloseTags: true,
       autoCloseBrackets: true,
-      theme:"eclipse",
+      theme:"blackboard",
       lineNumbers: true,
       extraKeys: {
         Enter: "newlineAndIndentContinueMarkdownList"

@@ -58,7 +58,7 @@ h3{
    display: flex;
    justify-content: space-between;
    align-items: center;
-   border-bottom: 1px solid rgb(122, 175, 16);
+   border-bottom: 1px solid yellowgreen;
    padding: 5px;
    background-color:#2d2254;
 }
