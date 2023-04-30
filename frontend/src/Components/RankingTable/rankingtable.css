@@ -1,7 +1,8 @@
 .table-wrapper{
     position: relative;
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding:20px;
     height: 100vh;
     overflow: scroll;
@@ -14,34 +15,7 @@
     width: fit-content;
 }
 .all-users{
-    position: relative;
-    display: grid;
-    
-    padding: 20px;
-}
-thead{
-    color: yellow;
-    font-weight:bolder;
-    font-size: 20px;
-    border-bottom: 1px solid #0F0A36;
-}
-tbody{
-    color: wheat;
-}
-.table-wrapper table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-.table-wrapper table thead td{
-    font-weight: 500;
-}
-.table-wrapper .all-users  table tbody tr:hover{
-    color: yellow;
-}
-.table-wrapper .all-users  table tbody tr:last-child{
-    border-bottom: none;
-}
-.table-wrapper .all-users table tr td{
-    padding: 9px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
 }

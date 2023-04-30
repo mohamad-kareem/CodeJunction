@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 *{
+    
     font-family: "Audiowide";
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
