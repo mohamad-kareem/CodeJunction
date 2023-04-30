@@ -199,7 +199,7 @@ exports.getUserImage = async (req, res) => {
   }
 };
 exports.updateDailyUsageValue=async (req,res)=>{
-    try {
+  try {
         
     const currentDate = new Date().toLocaleDateString('en-US');
   
@@ -210,10 +210,9 @@ exports.updateDailyUsageValue=async (req,res)=>{
     );
   
     res.json({ dailyValue: dailyValue.value });
-  }
-    catch {
+  } catch {
         console.error(err);
         res.status(500).json({ error: 'Server error' });
     }
-  };
+};
   
