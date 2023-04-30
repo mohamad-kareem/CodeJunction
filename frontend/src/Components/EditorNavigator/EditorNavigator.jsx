@@ -86,11 +86,23 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
      const advice=response.data.answer
       setAdvice(advice)
       setShowAdvice(true)
-        }catch(error){
-            console.error(error);
-            toast.success("try agian");
-        };
+      const valueResponse = await axios.put(
+        'http://localhost:8000/updateDailyValue',
+        { value: 0.25 },
+        { 
+          headers: { 
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          } 
+        }
+      );
+      console.log(valueResponse.data);
+    } catch (error) {
+      console.error(error);
+      toast.success("try again");
+    };
      };
+     
   return (
     <div className="rows">
         <div className="row" onClick={copyRoomId}>
