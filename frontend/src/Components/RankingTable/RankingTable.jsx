@@ -13,7 +13,11 @@ const columns = [
   { field: 'username', headerName: 'Username', width:400,renderCell:(params)=>{
     return(
       <div className="userImage">
-        <img src={imaage} alt="no-image" className='user-image' />
+        {params.row.imageUrl ? (
+          <img src={params.row.imageUrl} alt={params.row.username} className='user-image' />
+        ) : (
+          <img src={imaage} alt="empty" className='user-image' />
+        )}
         {params.row.username}
       </div>
     )
@@ -30,6 +34,7 @@ const RankingTable = () => {
       .then((response) => {
         const usersWithRank = response.data.map((user, index) => ({ ...user, rank: index + 1 }));
         setUsers(usersWithRank);
+        console.log(usersWithRank)
       })
       .catch((error) => console.log(error));
   }, []);
