@@ -1,51 +1,29 @@
-import React from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React ,{useEffect,useState}from 'react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import axios from 'axios';
 const BarGrapgh = () => {
+   
+    const [dailyValue, setDailyValue] = useState(null);
 
-    const data = [
-     {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400
-  },
-  {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210
-  },
-  {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000
-  },
-  {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100
-  }
-      ];
+    useEffect(() => {
+      const token = localStorage.getItem("token");
+      if (token) {
+        axios
+          .get("http://127.0.0.1:8000/getAiDailyUsageValue", {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          .then((res) => {
+            setDailyValue(res.data);
+            console.log("heee",res.data)
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    }, []);
+    
   return (
     <div className='bargrapgh'>
       <div className='bar-grapgh title'>Daily usage (USD) </div>
@@ -54,7 +32,7 @@ const BarGrapgh = () => {
         <BarChart
           width={500}
           height={300}
-          data={data}
+          data={dailyValue}
           margin={{
             top: 5,
             right: 30,
@@ -63,11 +41,11 @@ const BarGrapgh = () => {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
+          <XAxis dataKey="date" />
+          <YAxis dataKey="value"/>
           <Tooltip />
           <Legend />
-          <Bar dataKey="pv" fill="#8884d8" />
+          <Bar dataKey="value" fill="yellow" />
           
         </BarChart>
         </ResponsiveContainer>
