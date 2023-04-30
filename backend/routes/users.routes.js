@@ -18,6 +18,6 @@ router.post("/createfolder",authMiddleware,addCode);
 router.put("/updateCode",authMiddleware,updateCode);
 router.put("/updateProfile",authMiddleware,updateProfile);
 router.put("/updateUserImage",authMiddleware,updateImageUrl);
-
+router.put("/updateDailyValue",authMiddleware,updateDailyUsageValue);
 
 module.exports = router;
