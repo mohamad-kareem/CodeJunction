@@ -6,5 +6,15 @@
 
 .CodeMirror.cm-s-eclipse{
     height: 100vh;
-    background-color: white;
+    background-color: #2d2254;
   }
+  .CodeMirror .CodeMirror-gutters {
+    background-color:#2d2254;
+    border-right: none;
+    color: yellow;
+  }
+  
+  .CodeMirror-linenumber {
+    color:yellow;
+  }
+  

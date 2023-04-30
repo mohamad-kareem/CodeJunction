@@ -3,10 +3,10 @@
     flex-direction: column;
     width: 85%;
     height: 12rem;
-    background-color:#f5f5f6 ;
+    background-color:#2d2254 ;
     bottom: 0px; 
     position: fixed;
-    border: 1.8px solid #e7e7e7;
+    border-top: 1.8px solid yellow;
    
 }
 .output-tabs-horizontal {
@@ -36,5 +36,5 @@
     border: none;
     outline: none;
     resize: none;
-    background-color: #f5f5f6 ;
+    background-color: #2d2254 ;
 }
