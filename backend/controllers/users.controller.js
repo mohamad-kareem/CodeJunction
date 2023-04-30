@@ -1,5 +1,5 @@
 const User = require("../models/userModel");
-const mongoose = require('mongoose');
+const Statistics=require("../models/adminStatistics")
 exports.getAllUsers=async (req,res)=>{
     try {
         const users = await User.find({},"username email points").sort({points:-1});
@@ -197,4 +197,23 @@ exports.getUserImage = async (req, res) => {
     console.log(error);
     res.status(500).json({ error: 'Server error' });
   }
-}
+};
+exports.updateDailyUsageValue=async (req,res)=>{
+    try {
+        
+    const currentDate = new Date().toLocaleDateString('en-US');
+  
+    const dailyValue = await Statistics.findOneAndUpdate(
+      { date: currentDate },
+      { $inc: { value: 0.25 } },
+      { upsert: true, new: true }
+    );
+  
+    res.json({ dailyValue: dailyValue.value });
+  }
+    catch {
+        console.error(err);
+        res.status(500).json({ error: 'Server error' });
+    }
+  };
+  

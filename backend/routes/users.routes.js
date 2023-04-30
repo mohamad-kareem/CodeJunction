@@ -19,4 +19,5 @@ router.put("/updateCode",authMiddleware,updateCode);
 router.put("/updateProfile",authMiddleware,updateProfile);
 router.put("/updateUserImage",authMiddleware,updateImageUrl);
 
+
 module.exports = router;
