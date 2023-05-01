@@ -51,12 +51,12 @@ exports.forgetPasswordNotification = async (req,res) =>{
     
     const link=`http://localhost:8000/auth/reset-password/${user._id}/${token}`;
     console.log("link:",link)
-    
+
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: 'mohamadkareemeng@gmail.com',
-        pass: "pistlnybrqcdjotq",
+        pass: "your password",
       }
     });
     
