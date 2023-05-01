@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import axios from 'axios';
-import Navbar from '../Navbar/Navbar';
-import InputForm from '../InputForm/InputForm';
-import ButtonComponent from '../Button/ButtonComponent';
-import {faEnvelope,faKey} from '@fortawesome/free-solid-svg-icons';
+import Navbar from '../../Components/Navbar/Navbar';
+import InputForm from '../../Components/InputForm/InputForm';
+import ButtonComponent from '../../Components/Button/ButtonComponent';
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 
 const ForgetPassword = () => {
 
