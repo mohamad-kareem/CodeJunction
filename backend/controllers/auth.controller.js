@@ -44,6 +44,13 @@ exports.forgetPasswordNotification = async (req,res) =>{
   const {email}=req.body;
   try{
     const user=await User.findOne({email});
+    if(!user){
+      return res.status(400).json({error:"user with this email does not exists"});
+    }
+    const token=jwt.sign({email:user.email,id:user._id},process.env.RESET_PASSWORD_KEY,{expiresIn:"10m"});
+    
+    const link=`http://localhost:8000/auth/reset-password/${user._id}/${token}`;
+    console.log("link:",link)
   }catch(error){
     
   }
