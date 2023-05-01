@@ -82,10 +82,11 @@ exports.resetpassword = async (req, res) => {
   }
   try {
     const verify = jwt.verify(token, process.env.RESET_PASSWORD_KEY);
-    user.password = password; 
+    user.password = password;
     await user.save(); 
 
     res.render("index", { email: verify.email, status: "verified" });//set status as an identifier for the html (ejs)
   }catch (error) {
+    return res.status(400).json({ message: "Something went wrong. Try again." });
   }
 };
