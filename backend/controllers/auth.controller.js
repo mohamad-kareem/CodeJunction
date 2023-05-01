@@ -38,5 +38,13 @@ exports.login = async (req, res) => {
     const token = jwt.sign({ id: user._id, email: user.email }, process.env.SECRET_KEY);
     
     res.json({ token })
+}
 
+exports.forgetPasswordNotification = async (req,res) =>{
+  const {email}=req.body;
+  try{
+    const user=await User.findOne({email});
+  }catch(error){
+    
+  }
 }
