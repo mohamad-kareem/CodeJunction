@@ -51,8 +51,30 @@ exports.forgetPasswordNotification = async (req,res) =>{
     
     const link=`http://localhost:8000/auth/reset-password/${user._id}/${token}`;
     console.log("link:",link)
-  }catch(error){
     
+    var transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'mohamadkareemeng@gmail.com',
+        pass: "pistlnybrqcdjotq",
+      }
+    });
+    
+    var mailOptions = {
+      from: 'youremail@gmail.com',
+      to: 'mohamadkareemeng@gmail.com',
+      subject: 'Reset Password',
+      text:link
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
+  }catch(error){
   }
 }
 
