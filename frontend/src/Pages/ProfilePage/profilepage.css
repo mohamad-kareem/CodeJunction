@@ -6,12 +6,16 @@
 }
 .top-name{
     color: wheat;
+    margin-right: 480px;
+}
+.hide-icon{
+    color: yellow;
 }
 .top-section{
     -webkit-box-shadow: 2px 4px 10px 1px rgba(2, 2, 2, 0.47);
     box-shadow: 2px 4px 10px 1px rgba(87, 82, 82, 0.47);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 }
