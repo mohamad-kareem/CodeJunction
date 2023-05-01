@@ -6,7 +6,7 @@ import InputForm from '../../Components/InputForm/InputForm';
 import ButtonComponent from '../../Components/Button/ButtonComponent';
 import axios from 'axios';
 import UserImage from '../../Components/UserImage/UserImage';
-import GridViewIcon from '@mui/icons-material/GridView';
+import TopNav from '../../Components/TopNav/TopNav';
 const ProfilePage = () => {
 
   const [username, setUsername] = useState('');
@@ -53,15 +53,7 @@ const ProfilePage = () => {
     <div className='profile-wrapper'>
         <SideBar/>
       <div className="profile">
-
-        <div className="top-section">
-          <div className="dashboard-icon">
-             <GridViewIcon className='hide-icon'/>
-          </div>
-          <div className="top-title">
-             <h1 className='top-name'>Edit profile</h1>
-          </div>
-        </div>
+       <TopNav/>
         <p className='text-anime'>"Your profile is your digital handshake with the world." - Amy Jo Martin</p>
         <div className="profile-buttom">
           <div className="left-profile">

@@ -1,6 +1,6 @@
 .sidebar{
     background-color: #0F0A36;
-     width: 220px;
+     width: fit-content;
      height: 100vh;
      position: relative;
 }
@@ -8,6 +8,10 @@
     height: auto;
     padding: 0;
     margin-top: 10px;
+}
+.icon{
+    color: wheat;
+    margin-left: 22px;
 }
 .SideBarList .row{
     height: 60px;
@@ -27,6 +31,7 @@
     flex:30%;
     display: grid;
     place-items: center;
+    padding: 20px;
 }
 .row #title{
     flex: 70%;
