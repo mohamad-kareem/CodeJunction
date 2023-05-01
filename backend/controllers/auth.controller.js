@@ -63,6 +63,11 @@ exports.forgotpassword = async (req,res)=>{
   if(!user){
     return res.status(400).json({error:"user with this email does not exists"});
   }
+  try{
+    const verify=jwt.verify(token,process.env.RESET_PASSWORD_KEY);
+    res.render("index",{email:verify.email,status:"not verified"})
+  }catch(error){
+    res.send("not verified")
 
-
+  }
 }
