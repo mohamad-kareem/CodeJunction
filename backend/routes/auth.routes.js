@@ -5,7 +5,7 @@ const { login, register,forgetPasswordNotification,forgotpassword,resetpassword 
 
 router.post("/register", register);
 router.post("/login", login);
-router.post("/forgot-password-notification",forgetPasswordNotification)
+router.post("/forget-password-notification",forgetPasswordNotification)
 router.post("/reset-password/:id/:token",resetpassword)
 
 router.get("/reset-password/:id/:token",forgotpassword)

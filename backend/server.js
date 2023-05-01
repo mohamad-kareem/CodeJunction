@@ -12,6 +12,10 @@ const server= http.createServer(app);
 
 const { socketServer } = require('./configs/socketconfig');
 
+//for sending reset emal html form
+app.set("view engine","ejs");
+app.use(express.urlencoded({extended:false}));
+
 const authRouter=require("./routes/auth.routes")
 app.use("/auth",authRouter)
 
