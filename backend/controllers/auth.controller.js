@@ -55,3 +55,14 @@ exports.forgetPasswordNotification = async (req,res) =>{
     
   }
 }
+
+exports.forgotpassword = async (req,res)=>{
+  const {id,token}=req.params;
+  console.log(req.params);
+  const user=await User.findOne({_id:id});
+  if(!user){
+    return res.status(400).json({error:"user with this email does not exists"});
+  }
+
+
+}
