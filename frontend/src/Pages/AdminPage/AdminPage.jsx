@@ -4,14 +4,13 @@ import SideBar from '../../Components/SideBar/SideBar'
 import BarGrapgh from '../../Components/BarGrapgh/BarGrapgh'
 import {CircularProgressbar,buildStyles} from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
+import TopNav from '../../Components/TopNav/TopNav'
 const AdminPage = () => {
   return (
     <div className='admin-wrapper'>
         <SideBar/>
         <div className="admin">
-        <div className="top-section">
-            <h1 className='top-name'>Admin </h1>
-        </div>
+          <TopNav title={"Admin"}/>
         <div className="buttom-section">
          <div className="website-info">
             <div className="grapgh">
