@@ -53,7 +53,7 @@ const ProfilePage = () => {
     <div className='profile-wrapper'>
         <SideBar/>
       <div className="profile">
-       <TopNav/>
+       <TopNav title={"profile"}/>
         <p className='text-anime'>"Your profile is your digital handshake with the world." - Amy Jo Martin</p>
         <div className="profile-buttom">
           <div className="left-profile">
