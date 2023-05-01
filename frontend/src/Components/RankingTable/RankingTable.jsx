@@ -7,7 +7,6 @@ import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import axios from 'axios';
 import { DataGrid, } from '@mui/x-data-grid';
 import imaage from '../../assets/empty-pic.jpg';
-
 const columns = [
   { field: 'id', headerName: 'Rank', width:190, valueGetter: (params) =>'#' +params.row.rank  },
   { field: 'username', headerName: 'Username', width:400,renderCell:(params)=>{
@@ -56,6 +55,10 @@ const RankingTable = () => {
             rowHeight={70}
             autoHeight
             getRowClassName={() => "custom-row-class"}
+            getRowSpacing={params=>({
+              top:5,
+              bottom:params.isLastVisible ? 0: 5
+            })}
             sx={{
               boxShadow: 8,
               border: 0,
