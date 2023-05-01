@@ -1,6 +1,24 @@
 import React from 'react'
 
 const ForgetPassword = () => {
+
+
+    const HandleSubmit=(e)=>{
+        e.preventDefault();
+        axios
+          .post("http://127.0.0.1:8000/forgot-password",{ email: email }, {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+    };
+    
   return (
     <>
         <Navbar/>
