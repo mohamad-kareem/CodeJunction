@@ -71,3 +71,21 @@ exports.forgotpassword = async (req,res)=>{
 
   }
 }
+
+exports.resetpassword = async (req, res) => {
+  const { id, token } = req.params;
+  const { password } = req.body;
+
+  const user = await User.findOne({ _id: id });
+  if (!user) {
+    return res.status(400).json({ error: "User with this email does not exist" });
+  }
+  try {
+    const verify = jwt.verify(token, process.env.RESET_PASSWORD_KEY);
+    user.password = password; 
+    await user.save(); 
+
+    res.render("index", { email: verify.email, status: "verified" });//set status as an identifier for the html (ejs)
+  }catch (error) {
+  }
+};
