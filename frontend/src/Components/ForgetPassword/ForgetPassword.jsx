@@ -1,7 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
+import axios from 'axios';
+import Navbar from '../Navbar/Navbar';
+import InputForm from '../InputForm/InputForm';
+import ButtonComponent from '../Button/ButtonComponent';
+import {faEnvelope,faKey} from '@fortawesome/free-solid-svg-icons';
 
 const ForgetPassword = () => {
 
+    const [email,setEmail]=useState("");
+
+    const HandleEmailChange=(e)=>setEmail(e.target.value);
 
     const HandleSubmit=(e)=>{
         e.preventDefault();
@@ -18,7 +26,7 @@ const ForgetPassword = () => {
             console.log(err);
           });
     };
-    
+
   return (
     <>
         <Navbar/>
