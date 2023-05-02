@@ -56,7 +56,7 @@ exports.forgetPasswordNotification = async (req,res) =>{
       service: 'gmail',
       auth: {
         user: 'mohamadkareemeng@gmail.com',
-        pass: "your password",
+        pass: process.env.NODE_MAILER_KEY,
       }
     });
     
