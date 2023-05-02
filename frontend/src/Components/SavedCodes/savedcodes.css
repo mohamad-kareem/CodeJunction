@@ -29,4 +29,8 @@
 .code-delete{
    margin-left: 180px;
    color: yellow;
+   cursor:pointer;
+}
+.code-delete:hover{
+    scale: 1.1;
 }
