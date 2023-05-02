@@ -7,8 +7,12 @@ import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import axios from 'axios';
 import { DataGrid, } from '@mui/x-data-grid';
 import imaage from '../../assets/empty-pic.jpg';
+
 const columns = [
+
   { field: 'id', headerName: 'Rank', width:190, valueGetter: (params) =>'#' +params.row.rank  },
+  { field: 'email', headerName: 'Email', width:280 },
+  { field: 'points', headerName: 'Points', width:150 },
   { field: 'username', headerName: 'Username', width:400,renderCell:(params)=>{
     return(
       <div className="userImage">
@@ -21,10 +25,9 @@ const columns = [
       </div>
     )
   } },
-  { field: 'email', headerName: 'Email', width:280 },
-  { field: 'points', headerName: 'Points', width:150 },
 ];
 columns.forEach((col) => (col.headerClassName = "my-column"));
+
 const RankingTable = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -47,7 +50,6 @@ const RankingTable = () => {
       </div>
       <div className="all-users">
         <div className='datatable'>
-     
           <DataGrid
             rows={users}
             columns={columns}
