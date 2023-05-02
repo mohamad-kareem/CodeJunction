@@ -13,7 +13,7 @@ exports.getAllUsers=async (req,res)=>{
 exports.getUserCodes = async (req, res) => {
   try {
     const user = await User.findById(req.user._id).select('username codes');
-    console.log(user)
+    console.log("testttt",user)
     res.status(200).json({user});
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -216,3 +216,18 @@ exports.updateDailyUsageValue=async (req,res)=>{
     }
 };
   
+exports.removeCode = async (req,res)=>{
+  try {
+    const user = await User.findOneAndUpdate(
+      { "codes._id": req.params.id },
+      { $pull: { codes: { _id: req.params.id } } },
+      { new: true }
+    );
+    if (!user) {
+      return res.status(404).json({ error: 'Code not found' });
+    }
+    return res.status(200).json({ message: 'Code deleted successfully' });
+  } catch (error) {
+    return res.status(500).json({ error: 'Server error' });
+  }
+}
