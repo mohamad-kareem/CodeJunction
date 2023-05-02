@@ -1,14 +1,15 @@
 .CodeMirror{
     font-size: 16px;
     line-height: 1.6;
-    overflow-y: hidden;
+    height: 100vh;
+    overflow-y: scroll;
 }
 /* .CodeMirror-linenumber {
     color:yellow;
 } */
 
 .cm-s-blackboard.CodeMirror{
-    height: 100vh;
+    height: 440px;
     background: #2d2254 !important;
 }
 .CodeMirror.cm-s-blackboard .CodeMirror-gutters {

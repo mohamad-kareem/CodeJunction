@@ -4,7 +4,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import InputForm from '../../Components/InputForm/InputForm';
 import ButtonComponent from '../../Components/Button/ButtonComponent';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
-
+import loginImage from "../../assets/ezgif.com-resize.gif"
 const ForgetPassword = () => {
 
     const [email,setEmail]=useState("");
@@ -14,7 +14,7 @@ const ForgetPassword = () => {
     const HandleSubmit=(e)=>{
         e.preventDefault();
         axios
-          .post("http://127.0.0.1:8000/forgot-password",{ email: email }, {
+          .post("http://127.0.0.1:8000/auth/forget-password-notification",{ email: email }, {
             headers: {
               "Content-Type": "application/json",
             },

@@ -15,6 +15,8 @@ import CreateFolder from '../../Components/CreateFolder/CreateFolder'
 import ConsoleEditor from '../../Components/ConsoleEditor/ConsoleEditor'
 import Advice from '../../Components/Advice/Advice'
 import Evaluation from '../../Components/Evaluation/Evaluation'
+import axios from 'axios'
+
 const CodeEditorPage = () => {
     const [code,setCode]=useState("");
     const socketRef= useRef(null);
@@ -28,7 +30,41 @@ const CodeEditorPage = () => {
     const [advice,setadvice]=useState("")
     const [evaluation,setEvaluation]=useState("")
     const [showEvaluation,setShowEvaluation]=useState(false)
-     
+	const [outputValue, setOutputValue] = useState("");
+
+    const handleRunClick = async () => {
+		const encodedParams = new URLSearchParams();
+		encodedParams.append("LanguageChoice", "5");
+		encodedParams.append("Program", code);
+
+		const options = {
+			method: "POST",
+			url: "https://code-compiler.p.rapidapi.com/v2",
+			headers: {
+				"content-type": "application/x-www-form-urlencoded",
+				"X-RapidAPI-Key": "cbdc674ff1msh892f29bf6a57b00p184d9ejsn36e5f91cc1ff",
+				"X-RapidAPI-Host": "code-compiler.p.rapidapi.com",
+			},
+			data: encodedParams,
+		};
+
+		try {
+			const response = await axios.post(
+				"https://code-compiler.p.rapidapi.com/v2",
+				encodedParams,
+				options
+			);
+			console.log(response);
+			const output = response.data.Result;
+			if (output) {
+				setOutputValue(output);
+			} else {
+				setOutputValue(response.data.Errors);
+			}
+		} catch (error) {
+			console.error(error);
+		}
+	};
     useEffect(()=>{
         const webSocket =async () =>{
 
@@ -119,7 +155,7 @@ return (
                     </div>
                     </div>
                     <div>
-                    <ButtonComponent width='100px' children={"Run"}/>
+                    <ButtonComponent width='100px' children={"Run"} onClick={handleRunClick}/>
                     </div>
                 </div>
                 <div>
@@ -132,7 +168,7 @@ return (
                 <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>
                
          
-                <ConsoleEditor />
+                <ConsoleEditor outputValue={outputValue}/>
             </div>
     </div>
   )

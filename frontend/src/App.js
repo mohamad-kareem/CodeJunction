@@ -10,6 +10,7 @@ import ProfilePage from './Pages/ProfilePage/ProfilePage';
 import HomePage from './Pages/HomePage/HomePage';
 import RankingPage from './Pages/RankingPage/RankingPage';
 import AdminPage from './Pages/AdminPage/AdminPage';
+import ForgetPassword from './Pages/ForgetPasswordPage/ForgetPassword';
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
       <Route path="/landing" element={<LandingPage/>}/>
       <Route path="/register" element={<RegisterPage/>}/>
       <Route path="/login" element={<LoginPage/>}/>
+      <Route path="/forget-password" element={<ForgetPassword/>}/>
       <Route path="/ranking" element={<RankingPage/>}/>
       <Route path="/profile" element={<ProfilePage/>}/>
       <Route path="/admin" element={<AdminPage/>}/>

@@ -65,7 +65,7 @@ return (
                 icon={faKey}
             />
             <ButtonComponent color="yellow"size="15px"onClick={HandleSubmit}>Sign in</ButtonComponent> 
-            <div className="forget-password"><Link to="/forgot-password">Forget Password</Link></div>
+            <div className="forget-password"><Link to="/forget-password">Forget Password</Link></div>
         </form>
       </div>
     </div>

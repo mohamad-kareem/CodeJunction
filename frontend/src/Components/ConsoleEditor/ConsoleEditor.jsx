@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import './consoleeditor.css';
 
-const ConsoleEditor = ({ output }) => {
+const ConsoleEditor = ({ outputValue }) => {
   const [isVisible, setIsVisible] = useState(true);
-
+console.log( "why",outputValue)
   const handleHideClick = () => {
     setIsVisible(false);
+
   };
+
+  
+
 
   return (
     <div className={`wrapper-console ${isVisible ? 'visible' : 'hidden'}`}>
@@ -22,7 +26,7 @@ const ConsoleEditor = ({ output }) => {
         </div>
       </div>
       <div className="result">
-        <textarea className="output-result" value={output}></textarea>
+        <textarea className="output-result" value={outputValue}></textarea>
       </div>
     </div>
   );
