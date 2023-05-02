@@ -26,7 +26,7 @@ console.log( "why",outputValue)
         </div>
       </div>
       <div className="result">
-        <textarea className="output-result" value={outputValue}></textarea>
+        <textarea className="output-result" defaultValue={outputValue}></textarea>
       </div>
     </div>
   );
