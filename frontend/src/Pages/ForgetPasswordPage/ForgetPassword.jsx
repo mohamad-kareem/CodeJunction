@@ -36,7 +36,7 @@ const ForgetPassword = () => {
         </div>
         <div className='sign-in-up-container'>
             <form className='inner-form'>
-                <h2 className='header'>Sign In</h2>
+                <h2 className='header'>Forgot Password</h2><br />
                 <InputForm
                     label="email address"
                     name="email"
