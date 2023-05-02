@@ -1,5 +1,5 @@
 const Statistics=require("../models/adminStatistics")
-
+const User = require("../models/userModel");
 exports.getDailyUsageValue=async (req,res)=>{
     try {
 
@@ -18,3 +18,13 @@ exports.getDailyUsageValue=async (req,res)=>{
         res.status(500).json({ error: 'Server error' });
       }
 };
+
+exports.getAllUsersNumber = async (req,res)=>{
+    try {
+        const count = await User.countDocuments();
+        res.status(200).json({ count });
+    }catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+}
