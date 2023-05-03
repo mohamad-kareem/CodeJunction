@@ -100,6 +100,7 @@ const CodeEditorPage = () => {
                 setClients((prev)=>{
                     return prev.filter((client) => client.sockedtId!==sockedtId)
                 })
+                window.location.reload();
             })
 
         }

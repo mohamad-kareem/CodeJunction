@@ -3,7 +3,7 @@
     height:100%;
     color: wheat;
     margin: 10px;
-    border: 2px solid #2d2254;
+    border: 1px solid #2d2254;
     border-radius: 10px;
     box-shadow: -5px -5px 15px rgba(176, 175, 175, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.35),
@@ -39,4 +39,5 @@
 }
 .delete-container{
     width: fit-content;
+    padding-bottom: 10px;
 }

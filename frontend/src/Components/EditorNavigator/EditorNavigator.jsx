@@ -61,7 +61,6 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
             const points=response.data.answer
             setEvaluation(points)
             setShowEvaluation(true)
-            toast.success(points);
         }catch(error){
             console.error(error);
             toast.success("try agian");
