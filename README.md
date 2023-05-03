@@ -14,16 +14,18 @@
 > Code Junction makes learning to code more engaging and fun through gamification elements like points, and leaderboards.
 
 ### User Stories
-- As a user, I want to browse the menu, so I can find my favorite coffee drinks.
-- As a user, I want to customize my order, so I can add or remove ingredients according to my preferences.
-- As a user, I want to pay for my order through the app, so I can avoid waiting in line at the store.
+
+- As a user, I want to code and compile my code and see result online
+- As a user, I want to code online with my friends while live sharing code editor
+- As a developer, I want to be able to track my progress and earn rewards for improving my coding skills,
+- As a user, I want to be able to ask for ai advice to get rapid feedback on my code.
 
 <br><br>
 
 <!-- Prototyping -->
 <img src="./readme/title3.svg"/>
 
-> We designed Coffee Express using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
+> We designed Code Junction using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
 ### Wireframes
 | Login screen  | Register screen |  Landing screen |
