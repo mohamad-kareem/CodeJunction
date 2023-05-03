@@ -5,9 +5,13 @@
 <!-- project philosophy -->
 <img src="./readme/title2.svg"/>
 
-> A mobile app for ordering coffee on-the-go, making it easier for coffee lovers to get their favorite beverages without waiting in line.
->
-> Coffee Express aims to streamline the coffee-ordering process by providing a user-friendly platform for customers to place orders and pick up their coffee at their convenience. We believe in enhancing the coffee experience by saving time and ensuring customer satisfaction.
+> Code Junction is a code collaboration platform designed to help developers improve their coding skills and work together more efficiently.
+
+> Code Junction aims allows developers to collaborate on code in real-time, share their expertise, and solve problems together.
+
+> Code Junction includes AI-powered code quality analysis tools that provide developers with feedback on their code, suggest improvements based on    best practices, and help them improve their skills over time.
+
+> Code Junction makes learning to code more engaging and fun through gamification elements like points, and leaderboards.
 
 ### User Stories
 - As a user, I want to browse the menu, so I can find my favorite coffee drinks.
