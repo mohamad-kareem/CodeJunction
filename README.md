@@ -42,7 +42,7 @@
 <!-- Implementation -->
 <img src="./readme/title4.svg"/>
 
-> Using the wireframes and mockups as a guide, we implemented the Coffee Express app with the following features:
+> Using the wireframes and mockups as a guide, we implemented the Code Junction app with the following features:
 
 ### User Screens (Mobile)
 | Login screen  | Register screen | Landing screen | Loading screen |
@@ -63,20 +63,20 @@
 <!-- Tech stack -->
 <img src="./readme/title5.svg"/>
 
-###  Coffee Express is built using the following technologies:
+###  Code Junction is built using the following technologies:
 
-- This project uses the [Flutter app development framework](https://flutter.dev/). Flutter is a cross-platform hybrid app development platform which allows us to use a single codebase for apps on mobile, desktop, and the web.
-- For persistent storage (database), the app uses the [Hive](https://hivedb.dev/) package which allows the app to create a custom storage schema and save it to a local database.
-- To send local push notifications, the app uses the [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) package which supports Android, iOS, and macOS.
-  - 🚨 Currently, notifications aren't working on macOS. This is a known issue that we are working to resolve!
-- The app uses the font ["Work Sans"](https://fonts.google.com/specimen/Work+Sans) as its main font, and the design of the app adheres to the material design guidelines.
+- This project uses the [React JS development framework](https://reactjs.org/). React is a declarative, efficient, and flexible JavaScript library for building SPA (single web application) and user interfaces or UI components. It lets you compose complex UIs from small and isolated pieces of code called “components”.
+-For persistent storage (database), the app uses the mongodb which allows the app to store all data in different schema and handler the big data insid the app
+
+- 🚨 Currently, AI advice are not the best guide to rely on but hopefully very soon that will not be the case. This is a known issue that we are working to resolve!
+- The app uses the font ["Audio wide"](https://fonts.googleapis.com/css2?family=Audiowide&display=swap) as its main font, and the design of the app adheres to the material design guidelines.
 
 <br><br>
 
 <!-- How to run -->
 <img src="./readme/title6.svg"/>
 
-> To set up Coffee Express locally, follow these steps:
+> To set up Code Junction locally, follow these steps:
 
 ### Prerequisites
 
@@ -104,4 +104,4 @@ _Below is an example of how you can instruct your audience on installing and set
    const API_KEY = 'ENTER YOUR API';
    ```
 
-Now, you should be able to run Coffee Express locally and explore its features.
+Now, you should be able to run Code Junction Express locally and explore its features.
