@@ -9,7 +9,7 @@
 } */
 
 .cm-s-blackboard.CodeMirror{
-    height: 440px;
+    height: 100vh;
     background: #2d2254 !important;
 }
 .CodeMirror.cm-s-blackboard .CodeMirror-gutters {

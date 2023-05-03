@@ -66,6 +66,8 @@ h3{
   
 .rightside{
 overflow-y: hidden;
+height: 100vh;
+position: relative;
  
 }
 .options{

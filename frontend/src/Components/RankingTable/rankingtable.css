@@ -37,6 +37,7 @@
 .my-column{
     color: yellow;
     font-size: 20px;
+    /* background-color: #0F0A36; */
     
 }
 .custom-row-class{
@@ -45,4 +46,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  
 }

@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './consoleeditor.css';
 
-const ConsoleEditor = ({ outputValue }) => {
-  const [isVisible, setIsVisible] = useState(true);
+const ConsoleEditor = ({ outputValue ,setShowConsole,showConsole }) => {
+  
 console.log( "why",outputValue)
   const handleHideClick = () => {
-    setIsVisible(false);
+    setShowConsole(false);
 
   };
-
-  
-
-
   return (
-    <div className={`wrapper-console ${isVisible ? 'visible' : 'hidden'}`}>
+    <div className={`wrapper-console ${showConsole ? 'visible' : 'hidden'}`}>
       <div className="output-tabs output-tabs-horizontal">
         <div className="left-output">
           <div className="output-tab">Terminal</div>

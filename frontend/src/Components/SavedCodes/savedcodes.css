@@ -1,6 +1,6 @@
 .flex-box{
     width: 300px;
-    height: 150px;
+    height:100%;
     color: wheat;
     margin: 10px;
     border: 2px solid #2d2254;
@@ -17,7 +17,7 @@
     transition: all 0.3s ease;
 }
 .inner-box{
-    padding: 20px;
+    padding: 10px 10px 0px 10px;
 }
 .code-title{
    margin-bottom: 10px;
@@ -25,12 +25,18 @@
 }
 .code-description{
     margin-bottom: 30px;
+    color: rgb(154, 152, 148);
+    font-size: 12px;
 }
 .code-delete{
    margin-left: 180px;
    color: yellow;
    cursor:pointer;
+   width: 100%;
 }
 .code-delete:hover{
     scale: 1.1;
+}
+.delete-container{
+    width: fit-content;
 }

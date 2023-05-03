@@ -31,7 +31,8 @@ const CodeEditorPage = () => {
     const [evaluation,setEvaluation]=useState("")
     const [showEvaluation,setShowEvaluation]=useState(false)
 	const [outputValue, setOutputValue] = useState("");
-
+    const [showConsole,setShowConsole]=useState(true)
+    
     const handleRunClick = async () => {
 		const encodedParams = new URLSearchParams();
 		encodedParams.append("LanguageChoice", "5");
@@ -56,10 +57,12 @@ const CodeEditorPage = () => {
 			);
 			console.log(response);
 			const output = response.data.Result;
-			if (output) {
+			if (output ) {
 				setOutputValue(output);
+                setShowConsole(true)
 			} else {
-				setOutputValue(response.data.Errors);
+				setOutputValue(response.data.Errors)
+                setShowConsole(true);
 			}
 		} catch (error) {
 			console.error(error);
@@ -155,7 +158,7 @@ return (
                     </div>
                     </div>
                     <div>
-                    <ButtonComponent width='100px' children={"Run"} onClick={handleRunClick}/>
+                    <ButtonComponent width='100px' children={"Run"} onClick={handleRunClick} />
                     </div>
                 </div>
                 <div>
@@ -168,7 +171,7 @@ return (
                 <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>
                
          
-                <ConsoleEditor outputValue={outputValue}/>
+                <ConsoleEditor outputValue={outputValue} showConsole={showConsole} setShowConsole={setShowConsole}/>
             </div>
     </div>
   )

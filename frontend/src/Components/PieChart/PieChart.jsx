@@ -26,8 +26,8 @@ const PieChart = () => {
         text={`${usersCount}%`}
         strokeWidth={3} 
         styles={buildStyles({
-        pathColor: "yellow",
-        textColor: "wheat",
+            pathColor: "yellow",
+            textColor: "wheat",
         })}
       />
     </div>
