@@ -3,6 +3,7 @@ import './sidebar.css';
 import Logo from '../Logo/Logo';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
+import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -22,14 +23,14 @@ const SideBar = () => {
      
       <div className="SideBarList"> 
 
-        <div className="row" onClick={handleHelloClick}>
+        <div className="row row1" onClick={handleHelloClick}>
          <div id='icon'><GridViewIcon/></div>
          <div id="title">{showTitle && "Dash Board"}</div>
         </div>
 
         <Link to="/landing" className="row">
           <div id="icon">{<HomeIcon />}</div>
-          <div id="title">{showTitle && "Landing page"}</div>
+          <div id="title">{showTitle && "Home"}</div>
         </Link>
 
         <Link to="/ranking" className="row">
@@ -37,9 +38,9 @@ const SideBar = () => {
           <div id="title">{showTitle && "ranking"}</div>
         </Link>
 
-        <Link to="/home" className="row">
-          <div id="icon">{<HomeIcon />}</div>
-          <div id="title">{showTitle && "home"}</div>
+        <Link to="/activities" className="row">
+          <div id="icon">{<WorkHistoryIcon />}</div>
+          <div id="title">{showTitle && "Activities"}</div>
         </Link>
 
         <Link to="/profile" className="row">

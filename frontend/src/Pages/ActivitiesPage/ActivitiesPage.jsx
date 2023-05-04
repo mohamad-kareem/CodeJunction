@@ -1,15 +1,15 @@
 import React from 'react'
-import "./homepage.css"
+import "./activitiespage.css"
 import SideBar from '../../Components/SideBar/SideBar'
 import Chart from '../../Components/Chart/Chart'
 import PersonalInfo from '../../Components/PersonalInfo/PersonalInfo'
 import SavedCodes from '../../Components/SavedCodes/SavedCodes'
 
-const HomePage = () => {
+const ActivitiesPage = () => {
   return (
-    <div className='home-page-wrapper'>
+    <div className='activities-page-wrapper'>
          <SideBar />
-        <div className="inner-home-container">
+        <div className="inner-activities-container">
             <PersonalInfo/>
             <h3 className='codes-header'>Favorate Codes</h3>
             <div className="flex-wrapper">
@@ -17,6 +17,7 @@ const HomePage = () => {
                  <SavedCodes/>
               </div>
             </div>
+            <h3 className='codes-header'>Programming Activities</h3>
              <div className="statistics">
              <Chart/>
              </div>
@@ -25,4 +26,4 @@ const HomePage = () => {
     
   )
 }
-export default HomePage
+export default ActivitiesPage

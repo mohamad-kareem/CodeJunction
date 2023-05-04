@@ -31,7 +31,7 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
      const handleSaveCode = async () => {
         try{
             const token = localStorage.getItem("token");
-            const response = await axios.put(
+            await axios.put(
               "http://localhost:8000/updateCode/",
               { roomId, code },
               { headers: { Authorization: `Bearer ${token}` } }
@@ -99,7 +99,7 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
      const advice=response.data.answer
       setAdvice(advice)
       setShowAdvice(true)
-      const valueResponse = await axios.put(
+     await axios.put(
         'http://localhost:8000/updateDailyValue',
         { value: 0.25 },
         { 

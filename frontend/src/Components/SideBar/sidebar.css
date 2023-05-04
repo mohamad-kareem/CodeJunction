@@ -27,6 +27,9 @@
     cursor: pointer;
     background-color:  #494064;
 }
+/* .row1{
+    margin-left: 15px !important ;
+} */
 .row #icon{
     flex:30%;
     display: grid;

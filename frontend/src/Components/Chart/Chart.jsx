@@ -1,6 +1,7 @@
 import React , {useState,useEffect}from 'react'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import axios from 'axios';
+import "./chart.css"
 const Chart = () => {
 
   const [data, setData] = useState([])
@@ -27,7 +28,7 @@ const Chart = () => {
   
   return (
     <div className='chart'>
-        <div className="title">Last Time Coded</div>
+        <div className="chart-title">coded per month</div>
         <ResponsiveContainer width="100%" aspect={4/1}>
 
           <AreaChart 

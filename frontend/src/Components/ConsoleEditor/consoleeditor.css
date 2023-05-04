@@ -7,15 +7,16 @@
     bottom: 0px; 
     border-top: 1px solid yellowgreen;
     position: absolute;
+    border-bottom: 1px solid yellowgreen;
     
 }
 .wrapper-console.visible {
     display: block;
-  }
+}
   
-  .wrapper-console.hidden {
+.wrapper-console.hidden {
     display: none;
-  }
+}
 .output-tabs-horizontal {
    justify-content: space-between;
     padding-left: 30px;
@@ -48,6 +49,6 @@
     resize: none;
     background-color: #2d2254 ;
     width: 95%;
-    height: 100vh;
+    height: 100%;
     color: wheat;
 }

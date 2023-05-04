@@ -7,7 +7,7 @@ import CodeEditorPage from './Pages/CodeEditorPage/CodeEditorPage';
 import SessionForm from './Pages/SessionForm/SessionForm';
 import { Toaster } from 'react-hot-toast';
 import ProfilePage from './Pages/ProfilePage/ProfilePage';
-import HomePage from './Pages/HomePage/HomePage';
+import ActivitiesPage from './Pages/ActivitiesPage/ActivitiesPage';
 import RankingPage from './Pages/RankingPage/RankingPage';
 import AdminPage from './Pages/AdminPage/AdminPage';
 import ForgetPassword from './Pages/ForgetPasswordPage/ForgetPassword';
@@ -24,7 +24,7 @@ function App() {
       <Route path="/ranking" element={<RankingPage/>}/>
       <Route path="/profile" element={<ProfilePage/>}/>
       <Route path="/admin" element={<AdminPage/>}/>
-      <Route path="/home" element={<HomePage/>}/>
+      <Route path="/activities" element={<ActivitiesPage/>}/>
       <Route path="/editor/:roomId" element={<CodeEditorPage/>}/>
       <Route path="/session" element={<SessionForm/>}/>
       </Routes>

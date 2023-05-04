@@ -1,8 +1,7 @@
 import React from 'react'
-import Facbook from "../../icons/fb.png";
-import  GitHub from "../../icons/git.png";
-import Instagram from "../../icons/twit.png";
-import Twitter from  "../../icons/twit.png";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import "./footer.css"
 import CopyRight from '../CopyRight/CopyRight';
 const Footer = () => {
@@ -18,10 +17,9 @@ const Footer = () => {
     </div>
     <div className="connect">
         <div className="icons-container">
-            <img className="icons" src={Facbook} alt="facebook.png" />
-            <img className="icons" src={Instagram} alt="instagram.png"/>
-            <img className="icons" src={Twitter} alt="twitter.png"/>
-            <img className="icons" src={GitHub} alt="github.png"/>
+            <FacebookIcon className='icons'/>
+            <GitHubIcon className='icons'/>
+            <TwitterIcon className='icons'/>
             <CopyRight/>
         </div>
     </div>
