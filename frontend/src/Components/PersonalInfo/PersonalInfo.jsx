@@ -1,11 +1,12 @@
 import React,{useState,useEffect} from 'react'
+import { useNavigate } from 'react-router-dom';
 import EditIcon from '@mui/icons-material/Edit';
 import "./personal.css"
 import axios from 'axios';
 import UserImage from '../UserImage/UserImage';
 const PersonalInfo = () => {
   const [userInfo, setUserInfo] = useState({});
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
@@ -21,6 +22,11 @@ const PersonalInfo = () => {
     };
     fetchUserInfo();
   }, []);
+
+  const handleEditClick = () => {
+    navigate('/profile');
+  };
+  
   return (
     <div className="personal-info">
               <div className="inner-personal-info">
@@ -33,8 +39,8 @@ const PersonalInfo = () => {
                       <h3 className='Profession'>{userInfo.profession}</h3>
                   </div>
               </div>
-              <div className="edit-icon-container">
-                <EditIcon className="edit-icon" />
+              <div className="edit-icon-container" onClick={handleEditClick}>
+                <EditIcon className="edit-icon"/>
               </div>
     </div>
   )
