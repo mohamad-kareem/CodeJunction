@@ -10,7 +10,8 @@ import GridViewIcon from '@mui/icons-material/GridView';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
 import { NavLink } from 'react-router-dom';
 import ButtonComponent from '../Button/ButtonComponent';
-const SideBar = () => {
+
+ const SideBar = () => {
   const [showTitle, setShowTitle] = useState(true);
   const [showLogo, setShowLogo] = useState(true);
 
