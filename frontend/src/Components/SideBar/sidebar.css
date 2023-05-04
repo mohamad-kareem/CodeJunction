@@ -4,10 +4,16 @@
      height: 100vh;
      position: relative;
 }
+/* .sidebar-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85%;
+} */
 .SideBarList{
     height: auto;
     padding: 0;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 .icon{
     color: wheat;
@@ -41,4 +47,7 @@
 }
 .active {
     background-color:#494064;
-  }
+}
+.logout-sidebar{
+  /* padding-left: 20px; */
+}

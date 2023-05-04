@@ -5,24 +5,22 @@ import ButtonComponent from '../Button/ButtonComponent';
 import Logo from '../Logo/Logo';
 const Navbar = () => {
 
+  const handleLogOut = () => {
+	
+		localStorage.removeItem('token');
+
+		};
 
   return (
     <div className="navbar">
 			<Logo/>
 			<div className="links">
-				<Link to="/home" className="linking">
-					Home
-				</Link>
+
 				<Link to="/session" className="linking">
-					Code Editor
+					Try now
 				</Link>
-                <Link to="/codes" className="linking">
-					Codes
-				</Link>
-                <Link to="/ranking" className="linking">
-					DashBoard
-				</Link>
-			    <ButtonComponent id="logout" className="linking" width='80px'> LogOut</ButtonComponent>
+
+			    <ButtonComponent id="logout" className="linking" width='80px' onClick={handleLogOut}> LogOut</ButtonComponent>
 			</div>
 	</div>
   )

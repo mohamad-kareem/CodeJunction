@@ -8,6 +8,7 @@ import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import GridViewIcon from '@mui/icons-material/GridView';
 import { NavLink } from 'react-router-dom';
+import ButtonComponent from '../Button/ButtonComponent';
 const SideBar = () => {
   const [showTitle, setShowTitle] = useState(true);
   const [showLogo, setShowLogo] = useState(true);
@@ -20,7 +21,9 @@ const SideBar = () => {
   return (
     <div className="sidebar">
       {showLogo && <Logo borderBottom="1px solid wheat" padding="10px" />}
-     
+     <div className="sidebar-content">
+
+    
       <div className="SideBarList"> 
 
         <div className="row row1" onClick={handleHelloClick}>
@@ -37,6 +40,7 @@ const SideBar = () => {
           <div id="icon">{<EmojiEventsIcon />}</div>
           <div id="title">{showTitle && "ranking"}</div>
         </NavLink>
+        
 
         <NavLink to="/activities" className="row"activeClassName="active">
           <div id="icon">{<WorkHistoryIcon />}</div>
@@ -53,7 +57,8 @@ const SideBar = () => {
           <div id="title">{showTitle && "Statistics"}</div>
         </NavLink>
       </div>
-    </div>
+     </div>
+   </div>
   );
 };
 
