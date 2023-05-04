@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import "./navbar.css"
 import ButtonComponent from '../Button/ButtonComponent';
 import Logo from '../Logo/Logo';
 const Navbar = () => {
-
+  const navigate = useNavigate();
   const [token, setToken] = useState(localStorage.getItem('token'));
   const handleLogOut = () => {
 		localStorage.removeItem('token');
 		setToken(null)
+		navigate('/login');
+
   };
 
   return (
