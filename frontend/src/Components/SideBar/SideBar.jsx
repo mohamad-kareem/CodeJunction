@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './sidebar.css';
 import Logo from '../Logo/Logo';
-import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import GridViewIcon from '@mui/icons-material/GridView';
+import { NavLink } from 'react-router-dom';
 const SideBar = () => {
   const [showTitle, setShowTitle] = useState(true);
   const [showLogo, setShowLogo] = useState(true);
@@ -28,30 +28,30 @@ const SideBar = () => {
          <div id="title">{showTitle && "Dash Board"}</div>
         </div>
 
-        <Link to="/landing" className="row">
+        <NavLink to="/landing" className="row">
           <div id="icon">{<HomeIcon />}</div>
           <div id="title">{showTitle && "Home"}</div>
-        </Link>
+        </NavLink>
 
-        <Link to="/ranking" className="row">
+        <NavLink to="/ranking" className="row"activeClassName="active">
           <div id="icon">{<EmojiEventsIcon />}</div>
           <div id="title">{showTitle && "ranking"}</div>
-        </Link>
+        </NavLink>
 
-        <Link to="/activities" className="row">
+        <NavLink to="/activities" className="row"activeClassName="active">
           <div id="icon">{<WorkHistoryIcon />}</div>
           <div id="title">{showTitle && "Activities"}</div>
-        </Link>
+        </NavLink>
 
-        <Link to="/profile" className="row">
+        <NavLink to="/profile" className="row"activeClassName="active">
           <div id="icon">{<AccountCircleIcon />}</div>
           <div id="title">{showTitle && "Profile"}</div>
-        </Link>
+        </NavLink>
 
-        <Link to="/admin" className="row">
+        <NavLink to="/admin" className="row"activeClassName="active">
           <div id="icon">{<SupervisorAccountIcon />}</div>
           <div id="title">{showTitle && "Statistics"}</div>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

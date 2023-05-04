@@ -25,7 +25,7 @@
 }
 .SideBarList .row:hover{
     cursor: pointer;
-    background-color:  #494064;
+    background-color: transparent;
 }
 /* .row1{
     margin-left: 15px !important ;
@@ -39,3 +39,6 @@
 .row #title{
     flex: 70%;
 }
+.active {
+    background-color:#494064;
+  }
