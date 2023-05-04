@@ -27,8 +27,6 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
     function leaveRoom (){
         connectionNavigator("/");
     }
-
-    /// axios requests:
     
      const handleSaveCode = async () => {
         try{
@@ -38,7 +36,6 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
               { roomId, code },
               { headers: { Authorization: `Bearer ${token}` } }
             );
-            console.log(response.data);
             toast.success("code saved successfully");        
         }catch(error){
             console.error(error);
@@ -47,26 +44,45 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
      }
      
      const handleAnalyzeCode = async () => {
-        try{
+        try {
             const token = localStorage.getItem("token");
             const response = await axios.post(
                 'http://localhost:8000/analyze',
                 { code },
-                { headers: { 
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                } 
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    }
                 }
-            )
-            const points=response.data.answer
-            setEvaluation(points)
-            setShowEvaluation(true)
-        }catch(error){
+            );
+            const score = response.data.answer;
+            let message = `You got ${score} points. `;
+    
+            if (score === 0) {
+                message += "you got zero points.Please try again.";
+            } else if (score === 1) {
+                message += "You can do better.";
+            } else if (score === 2) {
+                message += "You can just practice more.";
+            } else if (score === 3) {
+                message += "Good job!";
+            } else if (score === 4) {
+                message += "Great job!";
+            } else if (score === 5) {
+                message += "Excellent work!";
+            } else {
+                message += "Congrats!";
+            }
+            setEvaluation(message);
+            setShowEvaluation(true);
+        } catch (error) {
             console.error(error);
-            toast.success("try agian");
-        };
-     };
-
+            toast.success("Try again");
+        }
+    };
+    
+    
      const handleAdviceCode = async () => {
         try{
             const token = localStorage.getItem("token");
@@ -79,8 +95,6 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
                 } 
                 }
             );
-            // console.log(response.data.answer);
-            // toast.success(response.data.answer);
             console.log(response.data.answer);
      const advice=response.data.answer
       setAdvice(advice)
@@ -95,7 +109,6 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
           } 
         }
       );
-      console.log(valueResponse.data);
     } catch (error) {
       console.error(error);
       toast.success("try again");
