@@ -35,26 +35,21 @@ const CodeEditorPage = () => {
     
     const handleRunClick = async () => {
 		const encodedParams = new URLSearchParams();
-		encodedParams.append("LanguageChoice", "5");
-		encodedParams.append("Program", code);
-
+        encodedParams.set('LanguageChoice', '8');
+        encodedParams.set('Program', code);
 		const options = {
-			method: "POST",
-			url: "https://code-compiler.p.rapidapi.com/v2",
-			headers: {
-				"content-type": "application/x-www-form-urlencoded",
-				"X-RapidAPI-Key": "cbdc674ff1msh892f29bf6a57b00p184d9ejsn36e5f91cc1ff",
-				"X-RapidAPI-Host": "code-compiler.p.rapidapi.com",
-			},
-			data: encodedParams,
-		};
+            method: 'POST',
+            url: 'https://code-compiler.p.rapidapi.com/v2',
+            headers: {
+              'content-type': 'application/x-www-form-urlencoded',
+              'X-RapidAPI-Key': 'f7a0f6300bmsh11332db38f5807ep1fc052jsn7ad184d0acda',
+              'X-RapidAPI-Host': 'code-compiler.p.rapidapi.com'
+            },
+            data: encodedParams,
+          };
 
 		try {
-			const response = await axios.post(
-				"https://code-compiler.p.rapidapi.com/v2",
-				encodedParams,
-				options
-			);
+			const response = await axios.request(options);
 			console.log(response);
 			const output = response.data.Result;
 			if (output ) {

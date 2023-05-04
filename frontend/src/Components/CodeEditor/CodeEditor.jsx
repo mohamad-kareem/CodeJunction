@@ -3,7 +3,7 @@ import "./codeeditor.css"
 import Codemirror from 'codemirror';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/blackboard.css';
-import 'codemirror/mode/javascript/javascript';
+import 'codemirror/mode/php/php';
 import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
 import DoList from '../../SocketConnections/DoList';
@@ -17,7 +17,7 @@ const CodeEditor = ({socketRef,roomId,setCode}) => {
     async function init() {
 
      editorRef.current=Codemirror.fromTextArea(document.getElementById('codeEditorCollaboration'), {
-      mode: { name: 'javascript', json: true },
+      mode: { name: 'php', json: true },
       autoCloseTags: true,
       autoCloseBrackets: true,
       theme:"blackboard",
