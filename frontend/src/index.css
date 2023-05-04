@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 
 *{
-    
-    font-family: "Audiowide";
+    font-family: 'Space Mono', monospace;
+  
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
     overflow: -moz-scrollbars-none; /* Firefox */

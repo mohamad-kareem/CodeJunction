@@ -21,7 +21,7 @@ const Navbar = () => {
 				</Link>
 
 				{token && (
-					<Link to="/dashboard" className="linking">
+					<Link to="/activities" className="linking">
 						Dashboard
 					</Link>
        			)}
