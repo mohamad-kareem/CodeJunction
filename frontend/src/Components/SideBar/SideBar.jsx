@@ -7,6 +7,7 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import GridViewIcon from '@mui/icons-material/GridView';
+import KeyboardIcon from '@mui/icons-material/Keyboard';
 import { NavLink } from 'react-router-dom';
 import ButtonComponent from '../Button/ButtonComponent';
 const SideBar = () => {
@@ -36,23 +37,28 @@ const SideBar = () => {
           <div id="title">{showTitle && "Home"}</div>
         </NavLink>
 
-        <NavLink to="/ranking" className="row"activeClassName="active">
+        <NavLink to="/ranking" className="row" activeClassName="active">
           <div id="icon">{<EmojiEventsIcon />}</div>
-          <div id="title">{showTitle && "ranking"}</div>
+          <div id="title">{showTitle && "Ranking"}</div>
         </NavLink>
-        
 
-        <NavLink to="/activities" className="row"activeClassName="active">
+        <NavLink to="/session" className="row" activeClassName="active">
+          <div id="icon">{<KeyboardIcon />}</div>
+          <div id="title">{showTitle && "Start session"}</div>
+        </NavLink>
+
+
+        <NavLink to="/activities" className="row" activeClassName="active">
           <div id="icon">{<WorkHistoryIcon />}</div>
           <div id="title">{showTitle && "Activities"}</div>
         </NavLink>
 
-        <NavLink to="/profile" className="row"activeClassName="active">
+        <NavLink to="/profile" className="row" activeClassName="active">
           <div id="icon">{<AccountCircleIcon />}</div>
           <div id="title">{showTitle && "Profile"}</div>
         </NavLink>
 
-        <NavLink to="/admin" className="row"activeClassName="active">
+        <NavLink to="/admin" className="row" activeClassName="active">
           <div id="icon">{<SupervisorAccountIcon />}</div>
           <div id="title">{showTitle && "Statistics"}</div>
         </NavLink>
