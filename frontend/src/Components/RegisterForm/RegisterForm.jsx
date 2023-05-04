@@ -66,7 +66,7 @@ const Register = () => {
         </div>
      <div className='sign-in-up-container'>
         <form className='inner-form'>
-            <h2 className='header'>Create account</h2>
+            <h2 className='header'>Create an account</h2>
             <InputForm
                 label="username"
                 name="username"

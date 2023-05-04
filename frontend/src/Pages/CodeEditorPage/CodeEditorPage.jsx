@@ -114,7 +114,7 @@ const CodeEditorPage = () => {
 
    
     function handleBackClick() {
-        navigate('/');
+        navigate(-1);
     }
 
     const showfolder = () => {
