@@ -33,33 +33,33 @@ import ButtonComponent from '../Button/ButtonComponent';
          <div id="title">{showTitle && "Dash Board"}</div>
         </div>
 
-        <NavLink to="/landing" className="row">
+        <NavLink to="/home" className="row">
           <div id="icon">{<HomeIcon />}</div>
           <div id="title">{showTitle && "Home"}</div>
         </NavLink>
 
-        <NavLink to="/ranking" className="row" activeClassName="active">
+        <NavLink to="/ranking" className="row" activeclassname="active">
           <div id="icon">{<EmojiEventsIcon />}</div>
           <div id="title">{showTitle && "Ranking"}</div>
         </NavLink>
 
-        <NavLink to="/session" className="row" activeClassName="active">
+        <NavLink to="/session" className="row" activeclassname="active">
           <div id="icon">{<KeyboardIcon />}</div>
           <div id="title">{showTitle && "Start session"}</div>
         </NavLink>
 
 
-        <NavLink to="/activities" className="row" activeClassName="active">
+        <NavLink to="/activities" className="row" activeclassname="active">
           <div id="icon">{<WorkHistoryIcon />}</div>
           <div id="title">{showTitle && "Activities"}</div>
         </NavLink>
 
-        <NavLink to="/profile" className="row" activeClassName="active">
+        <NavLink to="/profile" className="row" activeclassname="active">
           <div id="icon">{<AccountCircleIcon />}</div>
           <div id="title">{showTitle && "Profile"}</div>
         </NavLink>
 
-        <NavLink to="/admin" className="row" activeClassName="active">
+        <NavLink to="/admin" className="row" activeclassname="active">
           <div id="icon">{<SupervisorAccountIcon />}</div>
           <div id="title">{showTitle && "Statistics"}</div>
         </NavLink>

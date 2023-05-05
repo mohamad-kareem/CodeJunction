@@ -1,6 +1,7 @@
 import React ,{useEffect,useState}from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import axios from 'axios';
+import ApiConfig from '../../ApiConfig/ApiConfig';
 const BarGrapgh = () => {
    
     const [dailyValue, setDailyValue] = useState(null);
@@ -9,14 +10,12 @@ const BarGrapgh = () => {
       const token = localStorage.getItem("token");
       if (token) {
         axios
-          .get("http://127.0.0.1:8000/getAiDailyUsageValue", {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          })
+        .get("/getAiDailyUsageValue", {
+          baseURL: ApiConfig.baseURL,
+          headers: ApiConfig.headers,
+        })
           .then((res) => {
             setDailyValue(res.data);
-            console.log("heee",res.data)
           })
           .catch((err) => {
             console.log(err);

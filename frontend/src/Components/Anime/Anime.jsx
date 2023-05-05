@@ -5,10 +5,10 @@ import rightPerson from "../../assets/right.png"
 import {motion} from "framer-motion"
 import "./anime.css"
 
+const transition = { duration: 2, ease: "easeInOut" };
+
 const Anime = () => {
     const [move,setMove]=useState(false);
-    const transition = { duration: 2, ease: "easeInOut" };
-
   return (
     <div className='anime-container'>
       <div className='anime'>

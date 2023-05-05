@@ -6,7 +6,7 @@
     padding-bottom: 40px;
 }
 .personal-text{
-    color: wheat;
+    color: white;
 }
 .inner-personal-info{
     display: flex;
@@ -16,7 +16,7 @@
 }
 .edit-icon-container {
     display: inline-block;
-    border: 2px solid wheat;
+    border: 2px solid white;
     border-radius: 50%;
     padding: 5px;
     margin-right: 40px;
