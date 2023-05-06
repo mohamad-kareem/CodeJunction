@@ -10,7 +10,7 @@
 }
 .btn-intro{
     display: flex;
-    justify-content:end;
+    justify-content:flex-end;
     margin-right: 80px;
     margin-top: 10px;
 }
