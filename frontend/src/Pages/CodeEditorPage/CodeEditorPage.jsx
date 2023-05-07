@@ -32,7 +32,7 @@ const CodeEditorPage = () => {
     const [showEvaluation,setShowEvaluation]=useState(false)
 	const [outputValue, setOutputValue] = useState("");
     const [showConsole,setShowConsole]=useState(true)
-    
+    const [isChatOpen, setIsChatOpen] = useState(false);
     const handleRunClick = async () => {
 		const encodedParams = new URLSearchParams();
         encodedParams.set('LanguageChoice', '8');
@@ -130,7 +130,7 @@ return (
     <div className='editor-wrapper'>
         <div className="leftside">
            <Logo padding="10px" borderBottom={"1px solid rgb(122, 175, 16)"}/>
-           <EditorNavigator  setShowAdvice={setShowAdvice} code={code} setAdvice={setadvice} setEvaluation={setEvaluation} setShowEvaluation={setShowEvaluation}/>
+           <EditorNavigator  setShowAdvice={setShowAdvice} code={code} setAdvice={setadvice} setEvaluation={setEvaluation} setShowEvaluation={setShowEvaluation} setIsChatOpen={setIsChatOpen} isChatOpen={isChatOpen}/>
            <div>
            </div>
            <div className="buttom">
@@ -164,13 +164,14 @@ return (
                     
                 {showAdvice? <Advice advice={advice}  HideAdvice={HideAdvice }/> : null}
                 </div>
+                {isChatOpen && (
                 <div className="chat-wrapper">
                     <div className="chat-container">
                         <textarea name="messages" id="messages" cols="4" rows="10" ></textarea>
                         <span><input type="text" /></span>
                         <button>send</button>
                     </div>
-                </div>
+                </div>)}
                 <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>
                
          
