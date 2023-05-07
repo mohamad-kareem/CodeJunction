@@ -4,12 +4,13 @@ import Codemirror from 'codemirror';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/blackboard.css';
 import 'codemirror/mode/php/php';
+import 'codemirror/mode/python/python';
 import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
 import DoList from '../../SocketConnections/DoList';
 import { useLocation } from 'react-router-dom';
 /* eslint-disable react-hooks/exhaustive-deps */
-const CodeEditor = ({socketRef,roomId,setCode}) => {
+const CodeEditor = ({socketRef,roomId,setCode,language}) => {
   const location=useLocation()
   const editorRef=useRef(null);
 
@@ -17,7 +18,7 @@ const CodeEditor = ({socketRef,roomId,setCode}) => {
     async function init() {
 
      editorRef.current=Codemirror.fromTextArea(document.getElementById('codeEditorCollaboration'), {
-      mode: { name: 'php', json: true },
+      mode: { name: language },
       autoCloseTags: true,
       autoCloseBrackets: true,
       theme:"blackboard",
@@ -44,7 +45,7 @@ const CodeEditor = ({socketRef,roomId,setCode}) => {
     })
     }
     init()
-  }, []);
+  }, [language]);
   useEffect(()=>{
     if (socketRef.current){
       socketRef.current.on(DoList.CODE_CHANGE,({code})=>{

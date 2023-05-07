@@ -95,10 +95,18 @@ position: relative;
     justify-content: flex-end;
     height: 400px;
 }
-/* .chat-button{
+.chat-button{
     display: none;
-} */
+}
 .chat-input{
     background-color:transparent;
     color: yellow;
 }
+ select{
+    background-color: transparent;
+    border:none;
+    background: #2d2254;
+    color: yellow;
+    font-size: 15px;
+}
+

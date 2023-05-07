@@ -35,10 +35,17 @@ const CodeEditorPage = () => {
     const [isChatOpen, setIsChatOpen] = useState(false);
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
+    const [language, setLanguage] = useState('Language');
 
-    const handleRunClick = async () => {
+
+    const languageChoices = {
+        python: '5',
+        php: '8'
+      };
+
+    const handleRunClick = async (language) => {
 		const encodedParams = new URLSearchParams();
-        encodedParams.set('LanguageChoice', '8');
+        encodedParams.set('LanguageChoice', languageChoices[language]);
         encodedParams.set('Program', code);
 		const options = {
             method: 'POST',
@@ -152,7 +159,9 @@ const CodeEditorPage = () => {
             handleSendMessage();
         }
     };
-    
+    const handleLanguageChange = (event) => {
+        setLanguage(event.target.value);
+      };
 return (
     <div className='editor-wrapper'>
         <div className="leftside">
@@ -179,9 +188,16 @@ return (
                         {<CreateNewFolderIcon className='add-folder' onClick={showfolder} />}
                         {ShowFolder ? (<CreateFolder HideFolder={showfolder} />) : null}
                     </div>
+                    <div className="choose-lan" > 
+                        <select value={language} onChange={handleLanguageChange} >
+                            <option  disabled>Language</option>
+                            <option value="php" >PHP</option>
+                            <option value="python">Python</option>
+                        </select>
+                    </div>
                     </div>
                     <div>
-                    <ButtonComponent width='100px' children={"Run"} onClick={handleRunClick} />
+                    <ButtonComponent width='100px' children={"Run"}  onClick={() => handleRunClick(language)} />
                     </div>
                 </div>
                 <div>
@@ -199,7 +215,7 @@ return (
                         <button className='chat-button' onClick={handleSendMessage}>send</button>
                     </div>
                 </div>)}
-                <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>
+                <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode} language={language}/>
                
          
                 <ConsoleEditor outputValue={outputValue} showConsole={showConsole} setShowConsole={setShowConsole}/>
