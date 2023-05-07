@@ -33,6 +33,9 @@ const CodeEditorPage = () => {
 	const [outputValue, setOutputValue] = useState("");
     const [showConsole,setShowConsole]=useState(true)
     const [isChatOpen, setIsChatOpen] = useState(false);
+    const [message, setMessage] = useState("");
+    const [messages, setMessages] = useState([]);
+
     const handleRunClick = async () => {
 		const encodedParams = new URLSearchParams();
         encodedParams.set('LanguageChoice', '8');
@@ -98,6 +101,12 @@ const CodeEditorPage = () => {
                 window.location.reload();
             })
 
+            socketRef.current.on(DoList.RECEIVE_MESSAGE, ({ username, message }) => {
+                setMessages((prev) => [...prev, { username, message }]);
+                {isChatOpen && (
+                toast.success(` send a message`))}
+            });
+
         }
         webSocket();
         return () =>{
@@ -107,6 +116,18 @@ const CodeEditorPage = () => {
         }
     },[location.state?.username, connectionNavigator, roomId])
 
+    
+    const handleSendMessage = () => {
+        if (message.trim() !== "") {
+            socketRef.current.emit(DoList.SEND_MESSAGE, {
+                roomId,
+                username: location.state?.username,
+                message,
+            });
+            setMessages((prev) => [...prev, { username: "You", message }]);
+            setMessage("");
+        }
+    };
    
     function handleBackClick() {
         navigate(-1);
@@ -167,9 +188,9 @@ return (
                 {isChatOpen && (
                 <div className="chat-wrapper">
                     <div className="chat-container">
-                        <textarea name="messages" id="messages" cols="4" rows="10" ></textarea>
-                        <span><input type="text" className='chat-input' /></span>
-                        <button className='chat-button'>send</button>
+                        <textarea name="messages" id="messages" cols="1" rows="1" value={messages.map((m) => `${m.username}: ${m.message}`).join("\n")} readOnly ></textarea>
+                        <span><input type="text" className='chat-input'  value={message} onChange={(e) => setMessage(e.target.value)}  /></span>
+                        <button className='chat-button' onClick={handleSendMessage}>send</button>
                     </div>
                 </div>)}
                 <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>

@@ -95,9 +95,9 @@ position: relative;
     justify-content: flex-end;
     height: 400px;
 }
-.chat-button{
+/* .chat-button{
     display: none;
-}
+} */
 .chat-input{
     background-color:transparent;
     color: yellow;
