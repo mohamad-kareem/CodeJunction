@@ -8,7 +8,7 @@ import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
 import DoList from '../../SocketConnections/DoList';
 import { useLocation } from 'react-router-dom';
-
+/* eslint-disable react-hooks/exhaustive-deps */
 const CodeEditor = ({socketRef,roomId,setCode}) => {
   const location=useLocation()
   const editorRef=useRef(null);
