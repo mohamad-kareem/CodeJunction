@@ -168,8 +168,8 @@ return (
                 <div className="chat-wrapper">
                     <div className="chat-container">
                         <textarea name="messages" id="messages" cols="4" rows="10" ></textarea>
-                        <span><input type="text" /></span>
-                        <button>send</button>
+                        <span><input type="text" className='chat-input' /></span>
+                        <button className='chat-button'>send</button>
                     </div>
                 </div>)}
                 <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode}/>

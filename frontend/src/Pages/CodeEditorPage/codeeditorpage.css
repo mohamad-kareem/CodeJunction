@@ -86,3 +86,19 @@ position: relative;
     flex-direction:column;
     position: absolute; 
 }
+#messages{
+    background-color:transparent;
+    color: rgb(99, 99, 99);
+    resize: none;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    height: 400px;
+}
+.chat-button{
+    display: none;
+}
+.chat-input{
+    background-color:transparent;
+    color: yellow;
+}
