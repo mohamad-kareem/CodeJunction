@@ -116,7 +116,7 @@ const CodeEditorPage = () => {
         }
     },[location.state?.username, connectionNavigator, roomId])
 
-    
+
     const handleSendMessage = () => {
         if (message.trim() !== "") {
             socketRef.current.emit(DoList.SEND_MESSAGE, {
@@ -147,6 +147,12 @@ const CodeEditorPage = () => {
     if (!location.state){
         return   <Navigate to="/"/>
        }  
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+            handleSendMessage();
+        }
+    };
+    
 return (
     <div className='editor-wrapper'>
         <div className="leftside">
@@ -189,7 +195,7 @@ return (
                 <div className="chat-wrapper">
                     <div className="chat-container">
                         <textarea name="messages" id="messages" cols="1" rows="1" value={messages.map((m) => `${m.username}: ${m.message}`).join("\n")} readOnly ></textarea>
-                        <span><input type="text" className='chat-input'  value={message} onChange={(e) => setMessage(e.target.value)}  /></span>
+                        <span><input type="text" className='chat-input'  value={message} onChange={(e) => setMessage(e.target.value)} onKeyDown={handleKeyDown} /></span>
                         <button className='chat-button' onClick={handleSendMessage}>send</button>
                     </div>
                 </div>)}
