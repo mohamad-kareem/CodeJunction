@@ -1,17 +1,16 @@
 import React from 'react'
-import {useNavigate,useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import toast from "react-hot-toast";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import SaveIcon from '@mui/icons-material/Save';
 import GavelIcon from '@mui/icons-material/Gavel';
+import ChatIcon from '@mui/icons-material/Chat';
 import axios from 'axios'
 
-const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEvaluation}) => {
+const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEvaluation,isChatOpen={isChatOpen},setIsChatOpen={setIsChatOpen}}) => {
 
     const {roomId}=useParams();
-    const connectionNavigator=useNavigate();
 
     async function copyRoomId() {
         console.log('Copying room ID...');
@@ -23,9 +22,6 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
                 toast.error("could not copy ID");
                 console.error(err)
             }
-    }
-    function leaveRoom (){
-        connectionNavigator("/");
     }
     
      const handleSaveCode = async () => {
@@ -114,6 +110,9 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
       toast.success("try again");
     };
      };
+    const handleChatClick = () => {
+        setIsChatOpen(!isChatOpen);
+      };
      
   return (
     <div className="rows">
@@ -121,9 +120,9 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
             <div id='icon' className='copy'>{< ContentCopyIcon/>}</div>
             <div id='title'>Share Room ID</div>
         </div>
-        <div className="row" onClick={leaveRoom}>
-            <div id='icon'>{<DoNotDisturbIcon/>}</div>
-            <div id='title'>Stop Session</div>
+        <div className="row" onClick={handleChatClick}>
+            <div id='icon'>{<ChatIcon/>}</div>
+            <div id='title'>chat</div>
         </div>
         <div className="row"onClick={handleSaveCode}>
             <div id='icon'>{<SaveIcon/>}</div>

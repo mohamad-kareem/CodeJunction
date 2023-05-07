@@ -166,7 +166,7 @@ return (
                 </div>
                 <div className="chat-wrapper">
                     <div className="chat-container">
-                        <textarea name="messages" id="messages" cols="4" rows="10"></textarea>
+                        <textarea name="messages" id="messages" cols="4" rows="10" ></textarea>
                         <span><input type="text" /></span>
                         <button>send</button>
                     </div>
