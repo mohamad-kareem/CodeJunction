@@ -73,3 +73,16 @@ position: relative;
    display: flex; 
    color: yellow;
 }
+.chat-wrapper{
+    display: flex;
+    justify-content: flex-end;
+     width: 100%;
+     position: absolute;
+     z-index: 20;
+     padding: 10px;
+}
+.chat-container{
+    display: flex;
+    flex-direction:column;
+    position: absolute; 
+}
