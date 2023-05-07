@@ -37,6 +37,10 @@ function socketServer(server) {
       socket.in(roomId).emit(DoList.CODE_CHANGE, { code });
     });
 
+    socket.on(DoList.SEND_MESSAGE, ({ roomId, username, message }) => {
+      socket.in(roomId).emit(DoList.RECEIVE_MESSAGE, { username, message });
+    });
+    
     socket.on('disconnecting', () => {
       const rooms = [...socket.rooms];
       rooms.forEach((roomId) => {
