@@ -13,7 +13,6 @@ exports.getAllUsers=async (req,res)=>{
 exports.getUserCodes = async (req, res) => {
   try {
     const user = await User.findById(req.user._id).select('username codes');
-    console.log("testttt",user)
     res.status(200).json({user});
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -23,17 +22,18 @@ exports.getUserCodes = async (req, res) => {
 exports.addCode = async (req,res) =>{
 
     const userId= req.user._id;
-    const {title,description,roomId} = req.body;
+    const {title,description,language,roomId} = req.body;
 
     try {
         const user = await User.findById(userId);
-        console.log(user)
+  
         if (!user){
             return res.status(404).json({message:"user not found"})
         }
         const Code={
             title:title,
             description:description,
+            language:language,
             createdAt: Date.now(),
             roomId:roomId,
         };
@@ -64,7 +64,6 @@ exports.updateCode = async (req,res) =>{
     await user.save();
 
     res.status(200).json(updatedCode);
-    console.log(updatedCode)
 
   }catch(error){
     console.error(error);
@@ -119,7 +118,7 @@ exports.getCodeCountsByMonth = async (req, res) => {
         }
       ]);
       res.json(countsByMonth);
-      console.log(countsByMonth)
+
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
@@ -192,7 +191,7 @@ exports.getUserImage = async (req, res) => {
     const imageUrl = user.imageUrl;
 
     res.json({ imageUrl });
-    console.log(imageUrl)
+  
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: 'Server error' });
