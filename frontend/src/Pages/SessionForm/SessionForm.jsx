@@ -41,7 +41,7 @@ const SessionForm = () => {
             <Navbar/>
         <div className='session-wrapper'>
             <div className="inner-form">
-            <h1>War Room</h1>
+            <h1>Create Room</h1>
               <InputForm
                     label="username"
                     name="username"

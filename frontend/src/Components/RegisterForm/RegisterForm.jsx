@@ -61,8 +61,13 @@ const Register = () => {
 
   return (
     <div className='wrapper'>
-       <div className='image-container'>
-                <img src={registerImage} alt='registration' />
+       <div className='greet-container'>
+               <h1>Welcome to  Code Junction </h1>
+               <br />
+               <div className='register-description'>
+               <h4>Experience our real time collabration<br/>code editor AI based.</h4>
+               </div>
+             
         </div>
      <div className='sign-in-up-container'>
         <form className='inner-form'>

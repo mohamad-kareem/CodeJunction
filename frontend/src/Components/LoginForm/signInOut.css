@@ -9,6 +9,25 @@
     align-items: center;
     margin-top: 60px;
 }
+.greet-container{
+    display: flex;
+    flex-direction: column;
+}
+.greet-container h1{
+    color:white;
+    font-weight: normal;
+    font-size: 35px;
+}
+.greet-container h4{
+    color: rgb(154, 149, 149);
+    font-size: 18px;
+    font-weight: normal;
+}
+.register-description{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 .header{
     color:wheat
 }
