@@ -1,7 +1,7 @@
 exports.analyzeCodePrompt = (code) => {
     return `
 
-      Please assign a score between 0 and 4 points for the this code   ${code} php code where 0 indicates poor quality and 4 indicates excellent quality 
+      Please assign a score between 0 and 4 points for the this code   ${code} code where 0 indicates poor quality and 4 indicates excellent quality 
       depending on the following criteria:
          
           error:if any error in the code then the score is equal 0.
@@ -22,7 +22,7 @@ exports.analyzeCodePrompt = (code) => {
   
   exports.adviceCodePrompt = (code) => {
     return `
-    Please provide advice to improve the following PHP code  ${code} based on the criteria below:
+    Please provide advice to improve the following code  ${code} based on the criteria below:
 
     Error: If there are any errors in the code, suggest improvements.
 
@@ -37,5 +37,11 @@ exports.analyzeCodePrompt = (code) => {
     Please limit your response to no more than 20 words.
       \
     `;
+  };
+  exports.autoCorrectPrompt = (code,outputValue) =>{
+    return `
+      please check ${code} and ${outputValue} and return 
+       corrected version of the code so that it can be excuted (you can add constants or any thing needed) so that the result have no error.
+      `
   };
   
