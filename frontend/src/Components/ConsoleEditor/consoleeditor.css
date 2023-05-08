@@ -31,13 +31,18 @@
     flex-direction: row;
 }
 .output-tab {
-    border-radius: 5px;
     margin-right: 35px;
     cursor: pointer;
     color: wheat;
-    
+    font-size: 15px;
 }
-.output-tab:hover{
+.output-tab-end{
+    cursor: pointer;
+    color: wheat;
+    font-size: 15px; 
+}
+.output-tab:hover ,
+.output-tab-end:hover{
     color: yellow;
 }
 .result{

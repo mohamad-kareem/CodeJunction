@@ -115,3 +115,14 @@ position: relative;
 }
 
 
+@media only screen and  (max-height: 656px){
+    #messages{
+        background-color:transparent;
+        color: rgb(99, 99, 99);
+        resize: none;
+        border: none;
+        display: flex;
+        justify-content: flex-end;
+        height: 380px;
+    }
+}

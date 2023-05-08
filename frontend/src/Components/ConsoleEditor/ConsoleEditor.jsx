@@ -1,5 +1,6 @@
 import React from 'react';
 import './consoleeditor.css';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import axios from 'axios';
 import toast from "react-hot-toast";
 const ConsoleEditor = ({ outputValue ,setShowConsole,showConsole,code,setFixedCode }) => {
@@ -37,8 +38,8 @@ const ConsoleEditor = ({ outputValue ,setShowConsole,showConsole,code,setFixedCo
           <div className="output-tab" onClick={AutoCorrect}>AI</div>
         </div>
         <div className="right-output">
-          <div className="output-tab" onClick={handleHideClick}>
-            Hide
+          <div className="output-tab-end" onClick={handleHideClick}>
+         <KeyboardArrowDownIcon/>
           </div>
         </div>
       </div>
