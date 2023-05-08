@@ -6,5 +6,12 @@
 .trigger-content{
     font-size: 40px;
     color: yellow;
-    margin-top: 120px;
+    margin-top: 200px;
+}
+@media only screen and (min-width: 300px) and (max-width: 800px){
+    .trigger-content{
+        font-size: 20px;
+        color: yellow;
+        margin-top: 100px;
+    }
 }
