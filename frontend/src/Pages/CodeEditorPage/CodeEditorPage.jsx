@@ -160,7 +160,10 @@ const CodeEditorPage = () => {
         }
     };
     const handleLanguageChange = (event) => {
+        const selectedLanguage = event.target.value;
         setLanguage(event.target.value);
+        localStorage.setItem("language", selectedLanguage);
+        
       };
 
 return (

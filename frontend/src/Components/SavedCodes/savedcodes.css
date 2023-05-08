@@ -39,5 +39,8 @@
 }
 .delete-container{
     width: fit-content;
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 10px 010px;
 }

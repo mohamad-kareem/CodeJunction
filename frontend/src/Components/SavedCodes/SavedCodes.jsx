@@ -2,6 +2,9 @@ import React,{useState,useEffect} from 'react'
 import "./savedcodes.css"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import { faPython } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const SavedCodes = () => {
 
     const [codes, setCodes] = useState([]);
@@ -60,6 +63,9 @@ const SavedCodes = () => {
           <div className="code-description">{code.description}</div>
         </div>
         <div className="delete-container">
+  
+          <FontAwesomeIcon icon={faPython} style={{ color: 'violet' ,fontSize: '2em' }}/>
+      
         <div className="code-delete" onClick={(e) => {
           e.stopPropagation()
           handleRemoveCode(code._id)}}>remove</div>
