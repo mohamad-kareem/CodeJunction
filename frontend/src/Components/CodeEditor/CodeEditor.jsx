@@ -1,16 +1,18 @@
-import React, { useEffect,useRef, useState } from 'react';
+import React, { useEffect,useRef } from 'react';
 import "./codeeditor.css"
 import Codemirror from 'codemirror';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/blackboard.css';
 import 'codemirror/mode/php/php';
 import 'codemirror/mode/python/python';
+import 'codemirror/mode/javascript/javascript';
+import 'codemirror/mode/ruby/ruby';
 import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
 import DoList from '../../SocketConnections/DoList';
 import { useLocation } from 'react-router-dom';
 /* eslint-disable react-hooks/exhaustive-deps */
-const CodeEditor = ({socketRef,roomId,setCode,language,fixedCode ,setFixedCode}) => {
+const CodeEditor = ({socketRef,roomId,setCode,language,fixedCode}) => {
   const location=useLocation()
   const editorRef=useRef(null);
   console.log("corrected codeeee:  ",fixedCode)

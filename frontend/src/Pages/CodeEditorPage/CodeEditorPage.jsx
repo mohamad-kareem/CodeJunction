@@ -40,7 +40,9 @@ const CodeEditorPage = () => {
     
     const languageChoices = {
         python: '5',
-        php: '8'
+        php: '8',
+        javascript: '17',
+        ruby:'12',
       };
 
     const handleRunClick = async (language) => {
@@ -110,8 +112,6 @@ const CodeEditorPage = () => {
 
             socketRef.current.on(DoList.RECEIVE_MESSAGE, ({ username, message }) => {
                 setMessages((prev) => [...prev, { username, message }]);
-                {isChatOpen && (
-                toast.success(` send a message`))}
             });
 
         }
@@ -195,8 +195,10 @@ return (
                     <div className="choose-lan" > 
                         <select value={language} onChange={handleLanguageChange} >
                             <option  disabled>Lan</option>
-                            <option value="php" >PHP</option>
-                            <option value="python">Python</option>
+                            <option value="php" >php</option>
+                            <option value="python">python</option>
+                            <option value="javascript">javascript</option>
+                            <option value="ruby">ruby</option>
                         </select>
                     </div>
                     </div>

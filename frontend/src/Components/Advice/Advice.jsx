@@ -24,7 +24,7 @@ return (
             initial="hidden"
             animate="visible">
               <div className="advice-flex">
-              <img src={robot} className='robot' />
+              <img src={robot} alt='robot' className='robot' />
               <br />{ advice} 
               </div>
           </motion.div>

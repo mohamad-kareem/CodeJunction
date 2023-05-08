@@ -9,7 +9,6 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import GridViewIcon from '@mui/icons-material/GridView';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
 import { NavLink } from 'react-router-dom';
-import ButtonComponent from '../Button/ButtonComponent';
 
  const SideBar = () => {
   const [showTitle, setShowTitle] = useState(true);

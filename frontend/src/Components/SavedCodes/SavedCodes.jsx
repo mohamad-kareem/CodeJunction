@@ -2,10 +2,8 @@ import React,{useState,useEffect} from 'react'
 import "./savedcodes.css"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-import { faPython} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJs } from '@fortawesome/free-brands-svg-icons';
-import { faPhp } from '@fortawesome/free-brands-svg-icons';
+import { faJs ,faPhp,faPython} from '@fortawesome/free-brands-svg-icons';
 import { faGem } from '@fortawesome/free-solid-svg-icons';
 const SavedCodes = () => {
 
@@ -77,7 +75,7 @@ const SavedCodes = () => {
   };
   
   const getIconForLanguage = (language) => {
-    return languageIcons[language] ; 
+    return languageIcons[language] || {icon: faJs} ; 
   };
   return (
     <>

@@ -60,7 +60,7 @@ const SessionForm = () => {
                     onKeyUp={HandleEnter}
                 />
                 <ButtonComponent children={"Join"} width='100px' className="join-btn"  onClick={Join}/>
-                <span className='generate-container'>Generate room ID  <a href="" className='generate' onClick={generateNewId}>Click Here</a> </span>
+                <span className='generate-container'>Generate room ID  <a href="##" className='generate' onClick={generateNewId}>Click Here</a> </span>
             </div>
         </div>
         <CopyRights/>
