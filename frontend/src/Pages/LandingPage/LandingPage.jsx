@@ -21,7 +21,7 @@ const LandingPage = () => {
         <div className="parallax-image" ><Parallax backgroundImage={parallaxImage}>
           <div className='trigger'>
             <div className='trigger-content'>
-              <h1>Soon... CopilotX <br/>Intergration</h1> 
+              <h1>CopilotX Intergration <h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coming soon...</h5></h1> 
             </div>
           </div>
           </Parallax>

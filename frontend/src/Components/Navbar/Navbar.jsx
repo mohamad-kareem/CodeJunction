@@ -17,17 +17,14 @@ const Navbar = () => {
     <div className="navbar">
 			<Logo/>
 			<div className="links">
-
 				<Link to="/session" className="linking">
 					Try now
 				</Link>
-
 				{token && (
 					<Link to="/activities" className="linking">
 						Dashboard
 					</Link>
        			)}
-
 			    <ButtonComponent id="logout" className="linking" width='80px' onClick={handleLogOut}> LogOut</ButtonComponent>
 			</div>
 	</div>

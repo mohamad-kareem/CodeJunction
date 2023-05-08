@@ -4,7 +4,7 @@ import Logo from '../Logo/Logo';
 import HomeIcon from '@mui/icons-material/Home';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+import BarChartIcon from '@mui/icons-material/BarChart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import GridViewIcon from '@mui/icons-material/GridView';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
@@ -29,7 +29,7 @@ import { NavLink } from 'react-router-dom';
 
         <div className="row row1" onClick={handleHelloClick}>
          <div id='icon'><GridViewIcon/></div>
-         <div id="title">{showTitle && "Dash Board"}</div>
+         <div id="title">{showTitle && "DashBoard"}</div>
         </div>
 
         <NavLink to="/home" className="row">
@@ -44,7 +44,7 @@ import { NavLink } from 'react-router-dom';
 
         <NavLink to="/session" className="row" activeclassname="active">
           <div id="icon">{<KeyboardIcon />}</div>
-          <div id="title">{showTitle && "Start session"}</div>
+          <div id="title">{showTitle && "Start Session"}</div>
         </NavLink>
 
 
@@ -59,7 +59,7 @@ import { NavLink } from 'react-router-dom';
         </NavLink>
 
         <NavLink to="/admin" className="row" activeclassname="active">
-          <div id="icon">{<SupervisorAccountIcon />}</div>
+          <div id="icon">{<BarChartIcon />}</div>
           <div id="title">{showTitle && "Statistics"}</div>
         </NavLink>
       </div>

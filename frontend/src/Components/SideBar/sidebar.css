@@ -28,20 +28,18 @@
     flex-direction: row;
     color: wheat;
     align-items: center;
+    font-size: 15px;
 }
 .SideBarList .row:hover{
     cursor: pointer;
     background-color: transparent;
 }
-/* .row1{
-    margin-left: 15px !important ;
-} */
 .row #icon{
     flex:30%;
     display: grid;
     place-items: center;
     padding: 20px;
-    color: yellow;
+    color: white;
 }
 .row #title{
     flex: 70%;

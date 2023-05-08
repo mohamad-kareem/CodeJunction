@@ -16,3 +16,20 @@
 }
 
 
+@media only screen and (min-width: 300px) and (max-width: 800px){
+    .intro-container{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+       
+    }
+    .btn-intro{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .intro-content{
+        font-size: 10px;
+        color: white;
+    }
+}

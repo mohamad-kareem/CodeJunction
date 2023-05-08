@@ -32,7 +32,7 @@ const Anime = () => {
         onClick={()=>{setMove(!move);}}
         transition={transition}
         >
-          <img src={leftPerson} alt='left-person' />
+          <img src={leftPerson} alt='left-person' className='left-person'/>
         </motion.div>
       </div>
 

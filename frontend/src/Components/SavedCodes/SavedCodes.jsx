@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJs ,faPhp,faPython} from '@fortawesome/free-brands-svg-icons';
 import { faGem } from '@fortawesome/free-solid-svg-icons';
+import RemoveIcon from '@mui/icons-material/Remove';
+import ClearIcon from '@mui/icons-material/Clear';
 const SavedCodes = () => {
 
     const [codes, setCodes] = useState([]);
@@ -82,19 +84,21 @@ const SavedCodes = () => {
     {codes?.user?.codes.map((code) => (
       <div className="flex-box"key={code._id} onClick={() => handleCodeClick(code.roomId, codes.user.username, code.code)} >
         <div className="inner-box">
-          <div className="code-title">
-            {code.title}
+          <div className='top-flex-box'>
+            <div className="code-title">
+              {code.title}
+            </div>
+            <div className="code-delete" onClick={(e) => {
+            e.stopPropagation()
+            handleRemoveCode(code._id)}}>< ClearIcon fontSize='10px' />
+            </div>
           </div>
           <div className="code-description">
             {code.description}
           </div>
         </div>
         <div className="buttom-flex-container">
-          <FontAwesomeIcon icon={getIconForLanguage(code.language).icon} className={getIconForLanguage(code.language).className} />
-          <div className="code-delete" onClick={(e) => {
-            e.stopPropagation()
-            handleRemoveCode(code._id)}}>remove
-          </div>
+            <FontAwesomeIcon icon={getIconForLanguage(code.language).icon} className={getIconForLanguage(code.language).className} />
         </div>
       </div>
         

@@ -7,3 +7,6 @@
     display: flex;
     justify-content: space-between;
 }
+.left-person{
+    margin-top: 6px;
+}

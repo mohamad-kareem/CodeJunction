@@ -29,35 +29,32 @@
     font-size: 12px;
 }
 .code-delete{
-   margin-left: 180px;
-   color: yellow;
    cursor:pointer;
-   width: 100%;
 }
 .code-delete:hover{
     scale: 1.1;
 }
 .buttom-flex-container{
-    width: fit-content;
+    padding: 10px 0px 10px 10px;
+}
+.top-flex-box{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 0px 10px 010px;
+    justify-content: space-between;
 }
 .python-icon{
     color: rgb(199, 129, 199);
-    font-size:25px;
+    font-size:22px;
 }
 .php-icon{
-    font-size: 25px;
+    font-size: 22px;
     color: white;
 
 }
 .ruby-icon{
     color: red;
-    font-size: 25px;
+    font-size: 22px;
 }
 .javascript-icon{
     color: yellow;
-    font-size: 25px;
+    font-size: 22px;
 }
