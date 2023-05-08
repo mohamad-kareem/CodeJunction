@@ -1,4 +1,4 @@
-import React, { useEffect,useRef } from 'react';
+import React, { useEffect,useRef, useState } from 'react';
 import "./codeeditor.css"
 import Codemirror from 'codemirror';
 import 'codemirror/lib/codemirror.css';
@@ -10,10 +10,11 @@ import 'codemirror/addon/edit/closebrackets';
 import DoList from '../../SocketConnections/DoList';
 import { useLocation } from 'react-router-dom';
 /* eslint-disable react-hooks/exhaustive-deps */
-const CodeEditor = ({socketRef,roomId,setCode,language}) => {
+const CodeEditor = ({socketRef,roomId,setCode,language,fixedCode ,setFixedCode}) => {
   const location=useLocation()
   const editorRef=useRef(null);
-
+  console.log("corrected codeeee:  ",fixedCode)
+  console.log(editorRef.current)
   useEffect(() => {
     async function init() {
 
@@ -41,7 +42,6 @@ const CodeEditor = ({socketRef,roomId,setCode,language}) => {
           });
       }
       setCode(code)
-      console.log("here",code)
     })
     }
     init()
@@ -49,7 +49,6 @@ const CodeEditor = ({socketRef,roomId,setCode,language}) => {
   useEffect(()=>{
     if (socketRef.current){
       socketRef.current.on(DoList.CODE_CHANGE,({code})=>{
-        // console.log("rec",code)
         if (code!==null){
           editorRef.current.setValue(code);
         }
@@ -58,9 +57,14 @@ const CodeEditor = ({socketRef,roomId,setCode,language}) => {
    
   
   },[socketRef.current])
+
+  useEffect(() => {
+    if (editorRef.current) {
+      editorRef.current.setValue(fixedCode);
+    }
+  }, [fixedCode]);
   return (
-    <textarea id='codeEditorCollaboration' defaultValue={location.state?.code}></textarea>
+    <textarea id='codeEditorCollaboration' defaultValue={location.state?.code }></textarea>
   )
 }
-
 export default CodeEditor;

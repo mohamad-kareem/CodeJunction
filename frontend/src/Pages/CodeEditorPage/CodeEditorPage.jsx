@@ -35,9 +35,9 @@ const CodeEditorPage = () => {
     const [isChatOpen, setIsChatOpen] = useState(false);
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
-    const [language, setLanguage] = useState('Language');
-
-
+    const [language, setLanguage] = useState('Lan');
+    const [fixedCode,setFixedCode]=useState("")
+    
     const languageChoices = {
         python: '5',
         php: '8'
@@ -52,7 +52,7 @@ const CodeEditorPage = () => {
             url: 'https://code-compiler.p.rapidapi.com/v2',
             headers: {
               'content-type': 'application/x-www-form-urlencoded',
-              'X-RapidAPI-Key': 'f7a0f6300bmsh11332db38f5807ep1fc052jsn7ad184d0acda',
+              'X-RapidAPI-Key': '27592b9488msh6c58c67cbb4a1f7p1607b5jsn364d129f6813',
               'X-RapidAPI-Host': 'code-compiler.p.rapidapi.com'
             },
             data: encodedParams,
@@ -162,6 +162,7 @@ const CodeEditorPage = () => {
     const handleLanguageChange = (event) => {
         setLanguage(event.target.value);
       };
+
 return (
     <div className='editor-wrapper'>
         <div className="leftside">
@@ -190,7 +191,7 @@ return (
                     </div>
                     <div className="choose-lan" > 
                         <select value={language} onChange={handleLanguageChange} >
-                            <option  disabled>Language</option>
+                            <option  disabled>Lan</option>
                             <option value="php" >PHP</option>
                             <option value="python">Python</option>
                         </select>
@@ -215,10 +216,10 @@ return (
                         <button className='chat-button' onClick={handleSendMessage}>send</button>
                     </div>
                 </div>)}
-                <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode} language={language}/>
+                <CodeEditor socketRef={socketRef} roomId={roomId} setCode={setCode} language={language} fixedCode={fixedCode} setFixedCode={setFixedCode}/>
                
          
-                <ConsoleEditor outputValue={outputValue} showConsole={showConsole} setShowConsole={setShowConsole}/>
+                <ConsoleEditor outputValue={outputValue} showConsole={showConsole} setShowConsole={setShowConsole} code={code} setFixedCode={setFixedCode}/>
             </div>
     </div>
   )

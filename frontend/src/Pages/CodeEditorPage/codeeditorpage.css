@@ -102,11 +102,16 @@ position: relative;
     background-color:transparent;
     color: yellow;
 }
+.choose-lan{
+    width: 1px;
+}
  select{
     background-color: transparent;
     border:none;
     background: #2d2254;
     color: yellow;
     font-size: 15px;
+    width: 73px;
 }
+
 
