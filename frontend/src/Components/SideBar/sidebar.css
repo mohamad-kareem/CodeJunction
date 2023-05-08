@@ -41,6 +41,7 @@
     display: grid;
     place-items: center;
     padding: 20px;
+    color: yellow;
 }
 .row #title{
     flex: 70%;

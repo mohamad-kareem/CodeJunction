@@ -28,7 +28,7 @@ const Chart = () => {
   
   return (
     <div className='chart'>
-        <div className="chart-title">coded per month</div>
+        <div className="chart-title">coded</div>
         <ResponsiveContainer width="100%" aspect={4/1}>
 
           <AreaChart 
