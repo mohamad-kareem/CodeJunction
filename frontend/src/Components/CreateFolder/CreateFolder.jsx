@@ -14,9 +14,10 @@ const CreateFolder = ({HideFolder}) => {
   const handleCreateFolder = async () => {
     try {
       const token = localStorage.getItem("token");
+      const language = localStorage.getItem("language");
       const response = await axios.post(
         "http://localhost:8000/createfolder/",
-        { title, description, roomId }, 
+        { title, description, roomId, language }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
       console.log(response.data);

@@ -37,10 +37,27 @@
 .code-delete:hover{
     scale: 1.1;
 }
-.delete-container{
+.buttom-flex-container{
     width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px 0px 10px 010px;
+}
+.python-icon{
+    color: rgb(199, 129, 199);
+    font-size:25px;
+}
+.php-icon{
+    font-size: 25px;
+    color: white;
+
+}
+.ruby-icon{
+    color: red;
+    font-size: 25px;
+}
+.javascript-icon{
+    color: yellow;
+    font-size: 25px;
 }

@@ -2,14 +2,17 @@ import React,{useState,useEffect} from 'react'
 import "./savedcodes.css"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-import { faPython } from '@fortawesome/free-brands-svg-icons';
+import { faPython} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { faJs } from '@fortawesome/free-brands-svg-icons';
+import { faPhp } from '@fortawesome/free-brands-svg-icons';
+import { faGem } from '@fortawesome/free-solid-svg-icons';
 const SavedCodes = () => {
 
     const [codes, setCodes] = useState([]);
     const [isUpdated, setIsUpdated] = useState(false);
     const navigate=useNavigate()
+
     useEffect(() => {
       const fetchCodes = async () => {
         const response = await axios.get('http://localhost:8000/usercodes', {
@@ -54,23 +57,48 @@ const SavedCodes = () => {
     }
   };
 
+  const languageIcons = {
+    'python': {
+      icon: faPython,
+      className: 'python-icon',
+    },
+    'php': {
+      icon: faPhp,
+      className: 'php-icon',
+    },
+    'ruby': {
+      icon: faGem,
+      className: 'ruby-icon',
+    },
+    'javascript': {
+      icon: faJs,
+      className: 'javascript-icon',
+    },
+  };
+  
+  const getIconForLanguage = (language) => {
+    return languageIcons[language] ; 
+  };
   return (
     <>
     {codes?.user?.codes.map((code) => (
       <div className="flex-box"key={code._id} onClick={() => handleCodeClick(code.roomId, codes.user.username, code.code)} >
         <div className="inner-box">
-          <div className="code-title">{code.title}</div>
-          <div className="code-description">{code.description}</div>
+          <div className="code-title">
+            {code.title}
+          </div>
+          <div className="code-description">
+            {code.description}
+          </div>
         </div>
-        <div className="delete-container">
-  
-          <FontAwesomeIcon icon={faPython} style={{ color: 'violet' ,fontSize: '2em' }}/>
-      
-        <div className="code-delete" onClick={(e) => {
-          e.stopPropagation()
-          handleRemoveCode(code._id)}}>remove</div>
+        <div className="buttom-flex-container">
+          <FontAwesomeIcon icon={getIconForLanguage(code.language).icon} className={getIconForLanguage(code.language).className} />
+          <div className="code-delete" onClick={(e) => {
+            e.stopPropagation()
+            handleRemoveCode(code._id)}}>remove
+          </div>
+        </div>
       </div>
-        </div>
         
     ))}
     </>
