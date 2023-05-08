@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     padding: 5px;
-    border-right:1px solid rgb(122, 175, 16);
+    border-right: 1px solid rgb(78, 91, 53);
 }
 .buttom{
     flex: 1;
@@ -58,9 +58,15 @@ h3{
    display: flex;
    justify-content: space-between;
    align-items: center;
-   border-bottom: 1px solid yellowgreen;
+   border-bottom: 1px solid rgb(78, 91, 53);
    padding: 5px;
    background-color:#2d2254;
+}
+.back-icon{
+    margin-right: 8px;
+}
+.back-icon:hover{
+    color: yellow;
 }
   
 .rightside{
@@ -71,7 +77,8 @@ position: relative;
 }
 .options{
    display: flex; 
-   color: yellow;
+   color: white;
+   cursor: pointer;
 }
 .chat-wrapper{
     display: flex;
@@ -102,18 +109,24 @@ position: relative;
     background-color:transparent;
     color: yellow;
 }
-.choose-lan{
-    width: 1px;
-}
+
  select{
     background-color: transparent;
     border:none;
     background: #2d2254;
-    color: yellow;
+    color: white;
     font-size: 15px;
-    width: 73px;
+    max-width: 110px;
+    margin-left: 8px;
 }
-
+.run-button{
+    color: white;
+    cursor: pointer;
+}
+.run-buttom-container{
+    display: flex;
+    justify-content: center;
+}
 
 @media only screen and  (max-height: 656px){
     #messages{

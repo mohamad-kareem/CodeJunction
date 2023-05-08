@@ -4,8 +4,9 @@ import "./codeeditorpage.css"
 import Client from '../../Components/Client/Client'
 import CodeEditor from '../../Components/CodeEditor/CodeEditor'
 import EditorNavigator from '../../Components/EditorNavigator/EditorNavigator'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import ButtonComponent from '../../Components/Button/ButtonComponent'
+import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
 import { initSocket } from '../../SocketConnections/socket'
 import DoList from  "../../SocketConnections/DoList.js"
 import { useLocation,useNavigate,Navigate ,useParams} from 'react-router-dom'
@@ -35,7 +36,7 @@ const CodeEditorPage = () => {
     const [isChatOpen, setIsChatOpen] = useState(false);
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
-    const [language, setLanguage] = useState('Lan');
+    const [language, setLanguage] = useState('Language');
     const [fixedCode,setFixedCode]=useState("")
     
     const languageChoices = {
@@ -187,23 +188,23 @@ return (
             <div className="rightside">
                 <div className='code-header'>
                     <div className="options" >
-                    <div >{<ArrowBackIcon  className='back-icon' onClick={handleBackClick} />}</div>
+                    <div >{<KeyboardBackspaceIcon  className='back-icon' onClick={handleBackClick} />}</div>
                     <div >
                         {<CreateNewFolderIcon className='add-folder' onClick={showfolder} />}
                         {ShowFolder ? (<CreateFolder HideFolder={showfolder} />) : null}
                     </div>
                     <div className="choose-lan" > 
                         <select value={language} onChange={handleLanguageChange} >
-                            <option  disabled>Lan</option>
-                            <option value="php" >php</option>
-                            <option value="python">python</option>
+                            <option  disabled>Language</option>
+                            <option value="php" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;php</option>
+                            <option value="python">&nbsp;&nbsp;&nbsp;python</option>
                             <option value="javascript">javascript</option>
-                            <option value="ruby">ruby</option>
+                            <option value="ruby">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ruby</option>
                         </select>
                     </div>
                     </div>
-                    <div>
-                    <ButtonComponent width='100px' children={"Run"}  onClick={() => handleRunClick(language)} />
+                    <div className='run-buttom-container'>
+                    <PlayCircleFilledWhiteIcon  className='run-button'  onClick={() => handleRunClick(language)} />
                     </div>
                 </div>
                 <div>
