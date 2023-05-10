@@ -15,7 +15,7 @@ const AdminPage = () => {
     <div className='admin-wrapper'>
         <SideBar/>
         <div className="admin">
-          <TopNav title={"Admin"}/>
+          <TopNav title={lan.admin}/>
         <div className="buttom-section">
          <div className="website-info">
             <div className="grapgh">

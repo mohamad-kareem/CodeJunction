@@ -1,10 +1,15 @@
-import React ,{useEffect,useState}from 'react';
+import React ,{useEffect,useState,useContext}from 'react';
+import { UserContext } from '../../Context/Context';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import axios from 'axios';
 import ApiConfig from '../../ApiConfig/ApiConfig';
+import { BarTranslation } from '../Languages/Lang';
 const BarGrapgh = () => {
    
     const [dailyValue, setDailyValue] = useState(null);
+
+    const userlang=useContext(UserContext)
+    const lan = BarTranslation[userlang.language]
 
     useEffect(() => {
       const token = localStorage.getItem("token");
@@ -25,7 +30,7 @@ const BarGrapgh = () => {
     
   return (
     <div className='bargrapgh'>
-      <div className='bar-grapgh title'>Daily usage (USD) </div>
+      <div className='bar-grapgh title'>{lan.title}</div>
 
       <ResponsiveContainer width="100%" height={400}>
         <BarChart

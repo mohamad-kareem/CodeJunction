@@ -140,7 +140,7 @@ const EditorNavTranslation = {
         chat:"聊天",
         savecode:"保存代码",
         evaluate:"评估",
-        AiAdvice:"AI建议",
+        AiAdvice:"建议",
         msg1:"你获得了",
         msg2:"分",
         score0:"请再试一次。",
@@ -213,6 +213,7 @@ const ActivitiesTranslation = {
 }
 const AdminTranslation = {
     en:{
+        admin:"Admin",
         usage:"Usage",
         active:"Active Users",
         text1:"Find a summary of API usage for your organization.",
@@ -224,6 +225,7 @@ const AdminTranslation = {
 
     },
     ch:{
+        admin:"管理员",
         usage:"使用情况",
         active:"活跃用户",
         text1:"查找您的组织的API使用情况摘要。",
@@ -267,4 +269,34 @@ const CodeEditorTranslation = {
         language:"选择语言"
     }
 }
-export { Nav, LogoTranslate,Intro,ParallaxText,WaterDrops,FooterTranslation,CopyRightsTranslation,UserAuthTranslation,EditorNavTranslation,SideBarTranslation,ConsoleTranslation,SessionTranslation,ActivitiesTranslation,AdminTranslation,ProfileTranslation,CodeEditorTranslation};
+
+const ForgotPasswordTranslation = {
+    en:{
+        forgotpassword:"Forgot Password",
+        email:"Email Address",
+        resetpassword:"Reset Password"
+
+    },
+    ch:{
+        forgotpassword:"忘記密碼",
+        email:"電子郵件地址",
+        resetpassword:"重設密碼"
+        }
+}
+const BarTranslation = {
+    en:{
+        title:"Daily usage (USD)",
+    },
+    ch:{
+        title:"每日使用金额（美元）",
+    }
+}
+const ChartTransltaion = {
+    en:{
+        title:"coded"
+    },
+    ch:{
+        title:"编码"
+    }
+}
+export { Nav, LogoTranslate,Intro,ParallaxText,WaterDrops,FooterTranslation,CopyRightsTranslation,UserAuthTranslation,EditorNavTranslation,SideBarTranslation,ConsoleTranslation,SessionTranslation,ActivitiesTranslation,AdminTranslation,ProfileTranslation,CodeEditorTranslation,ForgotPasswordTranslation,BarTranslation,ChartTransltaion};

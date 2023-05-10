@@ -1,10 +1,15 @@
-import React , {useState,useEffect}from 'react'
+import React , {useState,useEffect,useContext}from 'react'
+import { UserContext } from '../../Context/Context';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import axios from 'axios';
 import "./chart.css"
+import { ChartTransltaion } from '../Languages/Lang';
 const Chart = () => {
 
   const [data, setData] = useState([])
+
+  const userlang=useContext(UserContext)
+  const lan = ChartTransltaion[userlang.language]
 
   useEffect(() => {
     const token = localStorage.getItem('token')
@@ -28,7 +33,7 @@ const Chart = () => {
   
   return (
     <div className='chart'>
-        <div className="chart-title">coded</div>
+        <div className="chart-title">{lan.title}</div>
         <ResponsiveContainer width="100%" aspect={4/1}>
 
           <AreaChart 
