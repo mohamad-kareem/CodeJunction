@@ -8,9 +8,8 @@ import { Intro } from '../Languages/Lang';
 const LandingIntro = () => {    
 
   const userlang=useContext(UserContext)
-  const navigate = useNavigate()
   const lan = Intro[userlang.language]
-
+  const navigate = useNavigate()
   return (
     <div className='intro-container'>
       <div className='intro-content'>

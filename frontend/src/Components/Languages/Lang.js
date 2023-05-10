@@ -32,4 +32,14 @@ const Intro = {
         getstart:"开始"
     }
 }
-export { Nav, LogoTranslate,Intro };
+const Parallaxtext ={
+    en:{
+        text1:"CopilotX Intergration",
+        text2:"Coming soon..."
+    },
+    ch:{
+        text1: "CopilotX 整合",
+        text2: "即将推出..."
+    }
+}
+export { Nav, LogoTranslate,Intro,Parallaxtext};

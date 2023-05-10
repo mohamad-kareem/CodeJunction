@@ -7,10 +7,11 @@ import Logo from '../Logo/Logo';
 import {Nav} from "../Languages/Lang"
 const Navbar = () => {
   const userlang=useContext(UserContext)
+  const lan =Nav[userlang.language]
 
   const navigate = useNavigate();
   const [token, setToken] = useState(localStorage.getItem('token'));
-  const lan =Nav[userlang.language]
+
   const handleLogOut = () => {
 		localStorage.removeItem('token');
 		setToken(null)

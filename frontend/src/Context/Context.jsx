@@ -1,6 +1,6 @@
 import {useState,createContext} from 'react'
 
-export const UserContext = createContext()
+
 
 const Context = ({children}) => {
     const [language, setLanguage] = useState(localStorage.getItem('lang') || 'en');
@@ -10,5 +10,6 @@ const Context = ({children}) => {
     </UserContext.Provider>
   )
 }
+export const UserContext = createContext()
 
 export default Context
