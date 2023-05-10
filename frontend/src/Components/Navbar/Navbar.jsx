@@ -37,6 +37,7 @@ const Navbar = () => {
 				<select className="language-dropdown" value={userlang.language} onChange={handleLanguageChange}>
 					<option value="en">en</option>
 					<option value="ch">ch</option>
+					<option value="de">de</option>
        			 </select>
 			    <ButtonComponent id="logout" className="linking" width='80px' onClick={handleLogOut}>{lan.Logout}</ButtonComponent>
 			</div>
