@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { UserContext } from '../../Context/Context';
 import {useParams} from 'react-router-dom'
 import toast from "react-hot-toast";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
@@ -7,10 +8,14 @@ import SaveIcon from '@mui/icons-material/Save';
 import GavelIcon from '@mui/icons-material/Gavel';
 import ChatIcon from '@mui/icons-material/Chat';
 import axios from 'axios'
+import { EditorNavTranslation } from '../Languages/Lang';
 
 const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEvaluation,isChatOpen={isChatOpen},setIsChatOpen={setIsChatOpen}}) => {
 
     const {roomId}=useParams();
+
+    const userlang=useContext(UserContext)
+    const lan = EditorNavTranslation[userlang.language]
 
     async function copyRoomId() {
         console.log('Copying room ID...');
@@ -120,23 +125,23 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
     <div className="rows">
         <div className="row" onClick={copyRoomId}>
             <div id='icon' className='copy'>{< ContentCopyIcon/>}</div>
-            <div id='title'>Share Room ID</div>
+            <div id='title'>{lan.shareroomid}</div>
         </div>
         <div className="row" onClick={handleChatClick}>
             <div id='icon'>{<ChatIcon/>}</div>
-            <div id='title'>chat</div>
+            <div id='title'>{lan.chat}</div>
         </div>
         <div className="row"onClick={handleSaveCode}>
             <div id='icon'>{<SaveIcon/>}</div>
-            <div id='title'>Save Code</div>
+            <div id='title'>{lan.savecode}</div>
         </div>
         <div className="row" onClick={handleAnalyzeCode}>
             <div id='icon'>{<GavelIcon />}</div>
-            <div id='title'>Evaluate</div>
+            <div id='title'>{lan.evaluate}</div>
         </div>
         <div className="row"onClick={handleAdviceCode}>
             <div id='icon'>{<SmartToyIcon/>}</div>
-            <div id='title'>AI Advice</div>
+            <div id='title'>{lan.AiAdvice}</div>
         </div>
     </div>
   )

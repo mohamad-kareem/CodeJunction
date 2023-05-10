@@ -1,9 +1,14 @@
-import React from 'react';
+import React,{useContext} from 'react';
+import { UserContext } from '../../Context/Context';
 import './consoleeditor.css';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import axios from 'axios';
 import toast from "react-hot-toast";
+import { ConsoleTranslation } from '../Languages/Lang';
 const ConsoleEditor = ({ outputValue ,setShowConsole,showConsole,code,setFixedCode }) => {
+  
+  const userlang=useContext(UserContext)
+  const lan = ConsoleTranslation[userlang.language]
   
   const handleHideClick = () => {
     setShowConsole(false);
@@ -34,8 +39,8 @@ const ConsoleEditor = ({ outputValue ,setShowConsole,showConsole,code,setFixedCo
     <div className={`wrapper-console ${showConsole ? 'visible' : 'hidden'}`}>
       <div className="output-tabs output-tabs-horizontal">
         <div className="left-output">
-          <div className="output-tab">Terminal</div>
-          <div className="output-tab" onClick={AutoCorrect}>AutoCorrect</div>
+          <div className="output-tab">{lan.terminal}</div>
+          <div className="output-tab" onClick={AutoCorrect}>{lan.autocorrect}</div>
         </div>
         <div className="right-output">
           <div className="output-tab-end" onClick={handleHideClick}>

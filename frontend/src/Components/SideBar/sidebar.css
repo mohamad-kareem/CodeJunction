@@ -1,19 +1,13 @@
 .sidebar{
     background-color: #0F0A36;
-     width: fit-content;
      height: 100vh;
      position: relative;
+     width: 250px;
 }
-/* .sidebar-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 85%;
-} */
 .SideBarList{
     height: auto;
     padding: 0;
-    /* margin-top: 10px; */
+    margin-top: 10px;
 }
 .icon{
     color: wheat;

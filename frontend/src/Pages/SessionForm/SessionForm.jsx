@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
+import { UserContext } from '../../Context/Context'
 import InputForm from '../../Components/InputForm/InputForm'
 import ButtonComponent from '../../Components/Button/ButtonComponent'
 import "./sessionform.css"
@@ -8,8 +9,12 @@ import toast from "react-hot-toast";
 import { faUserSecret,faKey} from '@fortawesome/free-solid-svg-icons';
 import {v4 as uuidV4} from "uuid";
 import { useNavigate } from 'react-router-dom'
+import { SessionTranslation } from '../../Components/Languages/Lang'
 const SessionForm = () => {
-    
+
+    const userlang=useContext(UserContext)
+    const lan = SessionTranslation[userlang.language]
+
     const [roomId,setRoomId]=useState("");
     const [username,setUserName]=useState("")
     const navigate=useNavigate()
@@ -41,9 +46,9 @@ const SessionForm = () => {
             <Navbar/>
         <div className='session-wrapper'>
             <div className="inner-form">
-            <h1>Create Room</h1>
+            <h1>{lan.create}</h1>
               <InputForm
-                    label="username"
+                    label={lan.username}
                     name="username"
                     icon={faUserSecret}
                     value={username}
@@ -52,15 +57,15 @@ const SessionForm = () => {
                    
                 />
                 <InputForm
-                    label="Room ID"
+                    label={lan.roomid}
                     name="Room ID"
                     icon={faKey}
                     value={roomId}
                     onChange={(e)=>setRoomId(e.target.value)}
                     onKeyUp={HandleEnter}
                 />
-                <ButtonComponent children={"Join"} width='100px' className="join-btn"  onClick={Join}/>
-                <span className='generate-container'>Generate room ID  <a href="##" className='generate' onClick={generateNewId}>Click Here</a> </span>
+                <ButtonComponent children={lan.join} width='100px' className="join-btn"  onClick={Join}/>
+                <span className='generate-container'>{lan.text} <a href="##" className='generate' onClick={generateNewId}>{lan.click}</a> </span>
             </div>
         </div>
         <CopyRights/>

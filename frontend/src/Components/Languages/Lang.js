@@ -116,4 +116,69 @@ const UserAuthTranslation = {
         info2:"基于AI的代码编辑器。"
         }
 }
-export { Nav, LogoTranslate,Intro,ParallaxText,WaterDrops,FooterTranslation,CopyRightsTranslation,UserAuthTranslation};
+
+const EditorNavTranslation = {
+    en:{
+        shareroomid:"Share Room ID",
+        chat:"Chat",
+        savecode:"Save Code",
+        evaluate:"Evaluate",
+        AiAdvice:"AI Advice"
+    },
+    ch:{
+        shareroomid:"分享房间ID",
+        chat:"聊天",
+        savecode:"保存代码",
+        evaluate:"评估",
+        AiAdvice:"AI建议"
+        }
+}
+const SideBarTranslation={
+    en:{
+        dashboard:"DashBoard",
+        home:"Home",
+        ranking:"Ranking",
+        startsession:"Start Session",
+        activities:"Activities",
+        profile:"Profile",
+        statistics:"Statistics"
+    },
+    ch:{
+        dashboard:"仪表盘",
+        home:"主页",
+        ranking:"排名",
+        startsession:"开始会话",
+        activities:"活动",
+        profile:"个人资料",
+        statistics:"统计信息"
+        }
+}
+const ConsoleTranslation = {
+    en:{
+        terminal:"Terminal",
+        autocorrect:"AutoCorrect"
+    },
+    ch:{
+        terminal:"终端",
+        autocorrect:"自动校正"
+    }
+}
+const SessionTranslation = {
+    en:{
+        create:"Create Room",
+        username:"Username",
+        roomid:"Room ID",
+        join:"Join",
+        text:"Generate room ID",
+        click:"Click Here"
+    },
+    ch:{
+        create:"创建房间",
+        username:"用户名",
+        roomid:"房间 ID",
+        join:"加入",
+        text:"生成房间 ID",
+        click:"点击这里"
+    }
+}
+export { Nav, LogoTranslate,Intro,ParallaxText,WaterDrops,FooterTranslation,CopyRightsTranslation,UserAuthTranslation,EditorNavTranslation,SideBarTranslation,ConsoleTranslation,SessionTranslation};
