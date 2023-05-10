@@ -18,7 +18,8 @@ const analyzeCode = async (req, res) => {
         model: 'text-davinci-003',
         prompt: prompt,
         max_tokens: 3000,
-        temperature: 1,
+        temperature: 0.6,
+        n:1
         });
 
         const answer = response.data.choices[0].text.trim();
@@ -49,8 +50,8 @@ const adviceCode = async (req, res) => {
       const response = await openai.createCompletion({
         model: 'text-davinci-003',
         prompt: prompt,
-        max_tokens: 2000,
-        temperature: 0.8,
+        max_tokens: 3000,
+        temperature: 0.6,
       });
   
       const answer = response.data.choices[0].text.trim();
@@ -74,7 +75,7 @@ const autoCorrect = async (req,res)=>{
       model: 'text-davinci-003',
       prompt: prompt,
       max_tokens: 3000,
-      temperature: 0.7,
+      temperature: 0.6,
     })
     const correctedCode = response.data.choices[0].text.trim();
     res.json({correctedCode})
