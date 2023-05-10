@@ -30,7 +30,9 @@
 ### Wireframes
 | Login screen  | Register screen |  Landing screen |
 | ---| ---| ---|
-| ![Landing](./readme/demo/Login.png) | ![fsdaf](./readme/demo/Signup.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![LogIn](./readme/demo/LogIn.png) | ![SignUp](./readme/demo/Signup.png) | ![ForegetPassword](./readme/demo/ForgetPassword.png) |
+
+| ![Landing](./readme/demo/LandingPage.png) |
 
 ### Mockups
 | Home screen  | Menu Screen | Order Screen |

@@ -9,6 +9,7 @@ import axios from 'axios';
 import UserImage from '../../Components/UserImage/UserImage';
 import TopNav from '../../Components/TopNav/TopNav';
 import { ProfileTranslation } from '../../Components/Languages/Lang';
+import { toast } from 'react-hot-toast';
 const ProfilePage = () => {
 
   const userlang=useContext(UserContext)
@@ -46,6 +47,7 @@ const ProfilePage = () => {
         },
       })
       .then((res) => {
+        toast.success('Profile has been updated.');
         console.log(res);
       })
       .catch((err) => {
