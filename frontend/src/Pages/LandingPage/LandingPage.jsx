@@ -7,12 +7,12 @@ import Parallax from '../../Components/Parallax/Parallax'
 import parallaxImage from "../../assets/community.png"
 import WebsiteDrops from '../../Components/WebsiteDrops/WebsiteDrops'
 import { UserContext } from '../../Context/Context'
-import {Parallaxtext} from '../../Components/Languages/Lang'
+import {ParallaxText} from '../../Components/Languages/Lang'
 import "./landingpage.css"
 const LandingPage = () => {
 
   const userlang=useContext(UserContext)
-  const lan = Parallaxtext[userlang.language]
+  const lan = ParallaxText[userlang.language]
   return (
     <div>
         <Navbar/>
