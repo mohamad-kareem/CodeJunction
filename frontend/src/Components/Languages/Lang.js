@@ -85,4 +85,35 @@ const CopyRightsTranslation={
         text:"Code Junction B.V.版权所有。"
     }
 }
-export { Nav, LogoTranslate,Intro,ParallaxText,WaterDrops,FooterTranslation,CopyRightsTranslation};
+
+const UserAuthTranslation = {
+    en:{
+        signin:"Sign In",
+        account:"Create an account",
+        submit:"Submit",
+        username:"Username",
+        emailaddress:"Email Adress",
+        password:"Password",
+        forgotpassword:"Forgot Password",
+        already:"Already have an account",
+        login:"Log In",
+        welcome:"Welcome to  Code Junction",
+        info1:"Experience our real time collabration",
+        info2:"code editor AI based."
+    },
+    ch:{
+        signin:"登录",
+        account:"创建账户",
+        submit:"提交",
+        username:"用户名",
+        emailaddress:"电子邮件地址",
+        password:"密码",
+        forgotpassword:"忘记密码",
+        already:"已经有一个账户",
+        login:"登录",
+        welcome:"欢迎来到 Code Junction",
+        info1:"体验我们的实时协作",
+        info2:"基于AI的代码编辑器。"
+        }
+}
+export { Nav, LogoTranslate,Intro,ParallaxText,WaterDrops,FooterTranslation,CopyRightsTranslation,UserAuthTranslation};

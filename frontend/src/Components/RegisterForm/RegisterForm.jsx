@@ -1,4 +1,5 @@
-import React, {useState}  from 'react'
+import React, {useState,useContext}  from 'react'
+import { UserContext } from '../../Context/Context';
 import InputForm from '../InputForm/InputForm'
 import ButtonComponent from '../Button/ButtonComponent';
 import { Link } from 'react-router-dom';
@@ -6,10 +7,14 @@ import { faUserSecret,faEnvelope,faKey} from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 import registerImage from "../../assets/gif.gif" ;
 import { useNavigate } from "react-router-dom";
-
+import { UserAuthTranslation } from '../Languages/Lang';
 const Register = () => {
 
     const navigate = useNavigate();
+
+    const userlang=useContext(UserContext)
+    const lan = UserAuthTranslation[userlang.language]
+
     const [username,setUserName]=useState("");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
@@ -62,31 +67,31 @@ const Register = () => {
   return (
     <div className='wrapper'>
        <div className='greet-container'>
-               <h1>Welcome to  Code Junction </h1>
+               <h1>{lan.welcome}</h1>
                <br />
                <div className='register-description'>
-               <h4>Experience our real time collabration<br/>code editor AI based.</h4>
+               <h4>{lan.info1}<br/>{lan.info2}</h4>
                </div>
              
         </div>
      <div className='sign-in-up-container'>
         <form className='inner-form'>
-            <h2 className='header'>Create an account</h2>
+            <h2 className='header'>{lan.account}</h2>
             <InputForm
-                label="username"
+                label={lan.username}
                 name="username"
                 value={username}
                 icon={faUserSecret}
                 onChange={HandleUserNameChange}/>
             <InputForm
-                label="email"
+                label={lan.emailaddress}
                 name="email"
                 value={email}
                 icon={faEnvelope}
                 onChange={HandleEmailChange}
                 />
             <InputForm
-                label="password"
+                label={lan.password}
                 name="password"
                 value={password}
                 icon={faKey}
@@ -94,8 +99,8 @@ const Register = () => {
                 onChange={HandlePasswordChange}/>
 
             <div className = "error">{error}</div>
-            <ButtonComponent color="yellow"size="15px" onClick={HandleSubmit}>Register</ButtonComponent> 
-            <div className="register-direct">Already have an account?  <Link to="/login">Log in</Link></div>
+            <ButtonComponent color="yellow"size="15px" onClick={HandleSubmit}>{lan.submit}</ButtonComponent> 
+            <div className="register-direct">{lan.already}?  <Link to="/login">{lan.login}</Link></div>
         </form>
      </div>
     </div>
