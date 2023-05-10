@@ -2,7 +2,7 @@
     background-color: #0F0A36;
      height: 100vh;
      position: relative;
-     width: 250px;
+     width:fit-content;
 }
 .SideBarList{
     height: auto;

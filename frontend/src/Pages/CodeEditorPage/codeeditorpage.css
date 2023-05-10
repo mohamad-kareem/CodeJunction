@@ -116,7 +116,8 @@ position: relative;
     background: #2d2254;
     color: white;
     font-size: 15px;
-    max-width: 110px;
+    width: fit-content;
+    /* width: 110px; */
     margin-left: 8px;
 }
 .run-button{

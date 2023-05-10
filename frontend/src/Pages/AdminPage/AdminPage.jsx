@@ -1,10 +1,16 @@
-import React from 'react'
+import React ,{useContext}from 'react'
+import { UserContext } from '../../Context/Context'
 import "./adminpage.css"
 import SideBar from '../../Components/SideBar/SideBar'
 import BarGrapgh from '../../Components/BarGrapgh/BarGrapgh'
 import TopNav from '../../Components/TopNav/TopNav'
 import PieChart from '../../Components/PieChart/PieChart'
+import { AdminTranslation } from '../../Components/Languages/Lang'
 const AdminPage = () => {
+
+  const userlang=useContext(UserContext)
+  const lan = AdminTranslation[userlang.language]
+
   return (
     <div className='admin-wrapper'>
         <SideBar/>
@@ -14,8 +20,8 @@ const AdminPage = () => {
          <div className="website-info">
             <div className="grapgh">
                 <div className="left-part">
-                  <h1 className='statistics-title'>Usage</h1><br />
-                  <p className='statistics-info'> find a summary of API usage for your organization.<br/><br /> All dates and times are UTC-based, and data may <br/> be delayed up to 5 minutes.</p>
+                  <h1 className='statistics-title'>{lan.usage}</h1><br />
+                  <p className='statistics-info'> {lan.text1}<br/><br /> {lan.text2} <br/> {lan.text3}</p>
                 </div>
                 <div className="right-bargrapah">
                 <BarGrapgh/>
@@ -23,8 +29,8 @@ const AdminPage = () => {
             </div>
             <div className="piechart">
                 <div className="left-part">
-                    <h1 className='statistics-title'>Active Users</h1><br />
-                    <p className='statistics-info'>An active user is defined as someone who has logged <br/> into their account and interacted with our platform <br /> within the last 30 days.</p>
+                    <h1 className='statistics-title'>{lan.active}</h1><br />
+                    <p className='statistics-info'>{lan.text4} <br/> {lan.text5} <br />{lan.text6}</p>
                 </div>
                 <div className="right-piechart">
                    <PieChart/>

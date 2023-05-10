@@ -58,24 +58,24 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
                 }
             );
             const score = response.data.answer;
-            let message = `You got ${score} points. `;
+            let message = `${lan.msg1} ${score} ${lan.msg2}. `;
     
             if (score === 0) {
-                message += "Please try again.";
+                message += `${lan.score0}`;
             } else if (score === 1) {
-                message += "You can do better.";
+                message += `${lan.score1}`;
             } else if (score === 2) {
-                message += "practice more.";
+                message += `${lan.score2}`;
             } else if (score === 3) {
-                message += "Good job!";
+                message += `${lan.score3}`;
             } else if (score === 4) {
-                message += "Great job!";
+                message += `${lan.score4}`;
             } else if (score === 5) {
-                message += "Excellent work!";
+                message += `${lan.score5}`;
             } else if (score === -1) {
-                message += "check for errors.Please try again.";
+                message += `${lan.score6}`;
             } else if (score === -2) {
-                message += "Check for errors.Please try again.";
+                message += `${lan.score7}`;
             } 
             setEvaluation(message);
             setShowEvaluation(true);

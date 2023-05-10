@@ -17,7 +17,7 @@ const LogoTranslate = {
     },
     ch:{
         code:"代码",
-        Junction:"交叉口"
+        Junction:"交叉口交叉"
     }
 }
 const Intro = {
@@ -82,7 +82,7 @@ const CopyRightsTranslation={
         text:"Code Junction B.V. All rights reserved."
     },
     ch:{
-        text:"Code Junction B.V.版权所有。"
+        text:"代码 交叉口交  版权所有。"
     }
 }
 
@@ -123,14 +123,34 @@ const EditorNavTranslation = {
         chat:"Chat",
         savecode:"Save Code",
         evaluate:"Evaluate",
-        AiAdvice:"AI Advice"
+        AiAdvice:"AI Advice",
+        msg1:"You got",
+        msg2:"points",
+        score0:"Please try again.",
+        score1:"You can do better.",
+        score2:"practice more.",
+        score3:"Good job!",
+        score4:"Great job!",
+        score5:"Excellent work!",
+        score6:"check for errors.Please try again.",
+        score7:"check for errors.Please try again."
     },
     ch:{
         shareroomid:"分享房间ID",
         chat:"聊天",
         savecode:"保存代码",
         evaluate:"评估",
-        AiAdvice:"AI建议"
+        AiAdvice:"AI建议",
+        msg1:"你获得了",
+        msg2:"分",
+        score0:"请再试一次。",
+        score1:"你可以做得更好。",
+        score2:"需要更多练习。",
+        score3:"干得好！",
+        score4:"干得很棒！",
+        score5:"做得非常好！",
+        score6:"请检查错误。请再试一次。",
+        score7:"请检查错误。请再试一次。"
         }
 }
 const SideBarTranslation={
@@ -181,4 +201,70 @@ const SessionTranslation = {
         click:"点击这里"
     }
 }
-export { Nav, LogoTranslate,Intro,ParallaxText,WaterDrops,FooterTranslation,CopyRightsTranslation,UserAuthTranslation,EditorNavTranslation,SideBarTranslation,ConsoleTranslation,SessionTranslation};
+const ActivitiesTranslation = {
+    en:{
+        favorite:"Favorite Codes",
+        coding:"Programming Activities"
+    },
+    ch:{
+        favorite:"收藏代码",
+        coding:"编程活动"
+    }
+}
+const AdminTranslation = {
+    en:{
+        usage:"Usage",
+        active:"Active Users",
+        text1:"Find a summary of API usage for your organization.",
+        text2:" All dates and times are UTC-based, and data may",
+        text3:"be delayed up to 5 minutes.",
+        text4:"An active user is defined as someone who has logged",
+        text5:" into their account and interacted with our platform",
+        text6:"within the last 30 days."
+
+    },
+    ch:{
+        usage:"使用情况",
+        active:"活跃用户",
+        text1:"查找您的组织的API使用情况摘要。",
+        text2:"所有日期和时间均基于UTC，并且数据可能并且数据可能",
+        text3:"最多延迟5分钟。",
+        text4:"活跃用户定义为最近30天登录并与我们的平台进行互动的用户。",
+        text5:"已登录到他们的帐户并与我们的平台进行互动的人员",
+        text6:"在过去的30天内。"
+    }
+}
+const ProfileTranslation = {
+    en:{
+        profile:"Profile",
+        animetext:"\"Your profile is your digital handshake with the world.\" - Amy Jo Martin",
+        username:"Username",
+        email:"Email Address",
+        job:"Job",
+        profession:"Profession",
+        update:"Update Profile"
+
+    },
+    ch:{
+        profile:"个人资料",
+        animetext:"\"你的个人资料是你与世界的数字握手。\" - Amy Jo Martin",
+        username:"用户名",
+        email:"电子邮件地址",
+        job:"工作",
+        profession:"职业",
+        update:"更新个人资料"
+    }
+}
+
+const CodeEditorTranslation = {
+    en:{
+        connect:"Connected",
+        language:"Language"
+
+    },
+    ch:{
+        connect:"已连接",
+        language:"选择语言"
+    }
+}
+export { Nav, LogoTranslate,Intro,ParallaxText,WaterDrops,FooterTranslation,CopyRightsTranslation,UserAuthTranslation,EditorNavTranslation,SideBarTranslation,ConsoleTranslation,SessionTranslation,ActivitiesTranslation,AdminTranslation,ProfileTranslation,CodeEditorTranslation};

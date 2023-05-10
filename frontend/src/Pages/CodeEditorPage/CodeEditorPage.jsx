@@ -1,4 +1,5 @@
-import React,{useEffect, useRef, useState} from 'react'
+import React,{useEffect, useRef, useState,useContext} from 'react'
+import { UserContext } from '../../Context/Context';
 import Logo from '../../Components/Logo/Logo'
 import "./codeeditorpage.css"
 import Client from '../../Components/Client/Client'
@@ -17,8 +18,11 @@ import ConsoleEditor from '../../Components/ConsoleEditor/ConsoleEditor'
 import Advice from '../../Components/Advice/Advice'
 import Evaluation from '../../Components/Evaluation/Evaluation'
 import axios from 'axios'
+import { CodeEditorTranslation } from '../../Components/Languages/Lang';
 
 const CodeEditorPage = () => {
+    const userlang=useContext(UserContext)
+    const lan = CodeEditorTranslation[userlang.language]
     const [code,setCode]=useState("");
     const socketRef= useRef(null);
     const location=useLocation()
@@ -36,8 +40,10 @@ const CodeEditorPage = () => {
     const [isChatOpen, setIsChatOpen] = useState(false);
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
-    const [language, setLanguage] = useState('Language');
+    const [language, setLanguage] = useState(lan.language);
     const [fixedCode,setFixedCode]=useState("")
+
+    
     
     const languageChoices = {
         python: '5',
@@ -175,7 +181,7 @@ return (
            <div>
            </div>
            <div className="buttom">
-                <h3>Connected</h3>
+                <h3>{lan.connect}</h3>
                 <div className="connections">
                     {clients && clients.map((client) => (
                         <Client key={client.socketId} username={client.username} />
@@ -195,7 +201,7 @@ return (
                     </div>
                     <div className="choose-lan" > 
                         <select value={language} onChange={handleLanguageChange} >
-                            <option  disabled>Language</option>
+                            <option  disabled>{lan.language}</option>
                             <option id='php' value="php" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;php</option>
                             <option value="python">&nbsp;&nbsp;&nbsp;python</option>
                             <option value="javascript">javascript</option>

@@ -1,4 +1,5 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
+import { UserContext } from '../../Context/Context';
 import SideBar from '../../Components/SideBar/SideBar'
 import "./profilepage.css"
 import {faEnvelope,faUserSecret,faBriefcase, faUserTie} from '@fortawesome/free-solid-svg-icons';
@@ -7,7 +8,11 @@ import ButtonComponent from '../../Components/Button/ButtonComponent';
 import axios from 'axios';
 import UserImage from '../../Components/UserImage/UserImage';
 import TopNav from '../../Components/TopNav/TopNav';
+import { ProfileTranslation } from '../../Components/Languages/Lang';
 const ProfilePage = () => {
+
+  const userlang=useContext(UserContext)
+  const lan = ProfileTranslation[userlang.language]
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -53,8 +58,8 @@ const ProfilePage = () => {
     <div className='profile-wrapper'>
         <SideBar/>
       <div className="profile">
-       <TopNav title={"profile"}/>
-        <p className='text-anime'>"Your profile is your digital handshake with the world." - Amy Jo Martin</p>
+       <TopNav title={lan.profile}/>
+        <p className='text-anime'>{lan.animetext}</p>
         <div className="profile-buttom">
           <div className="left-profile">
           <UserImage/>
@@ -64,7 +69,7 @@ const ProfilePage = () => {
             <div className="inner-form">
               
                   <InputForm
-                    label="username"
+                    label={lan.username}
                     name="username"
                     type='text'
                     icon={faUserSecret}
@@ -72,27 +77,27 @@ const ProfilePage = () => {
                     onChange={handleUsernameChange}
                 />
                   <InputForm
-                    label="email address"
+                    label={lan.email}
                     name="email"
                     icon={faEnvelope}
                     value={email} 
                     onChange={handleEmailChange}
                 />
                 <InputForm
-                    label="Job"
+                    label={lan.job}
                     name="Job"
                     icon={faBriefcase}
                     value={job} 
                     onChange={handleJobChange}
                 />
                 <InputForm
-                    label="profession"
+                    label={lan.profession}
                     name="profession"
                     icon={faUserTie}
                     value={profession} 
                     onChange={handleProfessionChange}
                 />
-                <ButtonComponent color="yellow"size="15px" onClick={handleSubmit}>Update Profile</ButtonComponent> 
+                <ButtonComponent color="yellow"size="15px" onClick={handleSubmit}>{lan.update}</ButtonComponent> 
             </div>
             </div>
           </div>
