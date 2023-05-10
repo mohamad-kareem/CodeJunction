@@ -7,7 +7,7 @@ const RegisterPage = () => {
     <div>
      <Navbar/>
      <Register/>
-     <CopyRights marginTop={30}/>
+     <CopyRights marginTop={30} paddingBottom={30}/>
     </div>
   )
 }

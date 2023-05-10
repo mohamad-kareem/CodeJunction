@@ -95,7 +95,7 @@ position: relative;
 }
 #messages{
     background-color:transparent;
-    color: rgb(99, 99, 99);
+    color: yellow;
     resize: none;
     border: none;
     display: flex;
@@ -127,11 +127,8 @@ position: relative;
     display: flex;
     justify-content: center;
 }
-
 @media only screen and  (max-height: 656px){
     #messages{
-        background-color:transparent;
-        color: rgb(99, 99, 99);
         resize: none;
         border: none;
         display: flex;

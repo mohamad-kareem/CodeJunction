@@ -35,7 +35,7 @@ const ConsoleEditor = ({ outputValue ,setShowConsole,showConsole,code,setFixedCo
       <div className="output-tabs output-tabs-horizontal">
         <div className="left-output">
           <div className="output-tab">Terminal</div>
-          <div className="output-tab" onClick={AutoCorrect}>AI</div>
+          <div className="output-tab" onClick={AutoCorrect}>AutoCorrect</div>
         </div>
         <div className="right-output">
           <div className="output-tab-end" onClick={handleHideClick}>

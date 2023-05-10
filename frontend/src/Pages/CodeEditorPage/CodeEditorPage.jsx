@@ -55,7 +55,7 @@ const CodeEditorPage = () => {
             url: 'https://code-compiler.p.rapidapi.com/v2',
             headers: {
               'content-type': 'application/x-www-form-urlencoded',
-              'X-RapidAPI-Key': '27592b9488msh6c58c67cbb4a1f7p1607b5jsn364d129f6813',
+              'X-RapidAPI-Key': '5111037c32msheba029d1eb12c36p14c91bjsnd7629791d31d',
               'X-RapidAPI-Host': 'code-compiler.p.rapidapi.com'
             },
             data: encodedParams,
@@ -196,7 +196,7 @@ return (
                     <div className="choose-lan" > 
                         <select value={language} onChange={handleLanguageChange} >
                             <option  disabled>Language</option>
-                            <option value="php" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;php</option>
+                            <option id='php' value="php" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;php</option>
                             <option value="python">&nbsp;&nbsp;&nbsp;python</option>
                             <option value="javascript">javascript</option>
                             <option value="ruby">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ruby</option>

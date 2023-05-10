@@ -56,20 +56,22 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
             let message = `You got ${score} points. `;
     
             if (score === 0) {
-                message += "you got zero points.Please try again.";
+                message += "Please try again.";
             } else if (score === 1) {
                 message += "You can do better.";
             } else if (score === 2) {
-                message += "You can just practice more.";
+                message += "practice more.";
             } else if (score === 3) {
                 message += "Good job!";
             } else if (score === 4) {
                 message += "Great job!";
             } else if (score === 5) {
                 message += "Excellent work!";
-            } else {
-                message += "Congrats!";
-            }
+            } else if (score === -1) {
+                message += "check for errors.Please try again.";
+            } else if (score === -2) {
+                message += "Check for errors.Please try again.";
+            } 
             setEvaluation(message);
             setShowEvaluation(true);
         } catch (error) {
