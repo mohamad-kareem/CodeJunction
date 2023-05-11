@@ -81,9 +81,17 @@
 | ---| ---| ---|
 | ![Sign Up ](./readme/demo/implementation/SignUp.png) | ![Sign In](./readme/demo/implementation/SignIn.png) | ![Forget Password](./readme/demo/implementation/ForgetPassword.png) |
 
-| translation deutch | reset password |  gmail |
+| Translation deutch | reset password |  gmail |
 | ---| ---| ---|
-| ![translation deutch  ](./readme/demo/implementation/translation1.png) | ![reset password ](./readme/demo/implementation/resetpassword.png) | ![gmail](./readme/demo/implementation/gmail.png) |
+| ![Translation deutch  ](./readme/demo/implementation/translation1.png) | ![reset password ](./readme/demo/implementation/resetpassword.png) | ![gmail](./readme/demo/implementation/gmail.png) |
+
+| Activities part1 | Activities part2|  Session |
+| ---| ---| ---|
+| ![Activities part1](./readme/demo/implementation/activities.png) | ![Activities part2](./readme/demo/implementation/activities2.png) | ![Session ](./readme/demo/implementation/session.png) |
+
+| Statistics1 | Statistics2|  Profile |
+| ---| ---| ---|
+| ![Statistics1](./readme/demo/implementation/statistics1.png) | ![Statistics2](./readme/demo/implementation/statistics2.png) | ![Profile ](./readme/demo/implementation/profile.png) |
 
 
 
