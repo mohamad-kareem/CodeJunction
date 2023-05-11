@@ -89,13 +89,13 @@
 | ---| ---| ---|
 | ![Translation deutch  ](./readme/demo/implementation/translation1.png) | ![reset password ](./readme/demo/implementation/resetpassword.png) | ![gmail](./readme/demo/implementation/gmail.png) |
 
-| Activities part1 | Activities part2|  Session |
+| Users Saved Codes | User Activities |  Session |
 | ---| ---| ---|
-| ![Activities part1](./readme/demo/implementation/activities.png) | ![Activities part2](./readme/demo/implementation/activities2.png) | ![Session ](./readme/demo/implementation/session.png) |
+| ![Users Saved Codes](./readme/demo/implementation/activities.png) | ![User Activities](./readme/demo/implementation/activities2.png) | ![Session ](./readme/demo/implementation/session.png) |
 
-| Statistics1 | Statistics2|  Profile |
+| API daily usage | Active Users | Chinies Profile |
 | ---| ---| ---|
-| ![Statistics1](./readme/demo/implementation/statistics1.png) | ![Statistics2](./readme/demo/implementation/statistics2.png) | ![Profile ](./readme/demo/implementation/profile.png) |
+| ![API daily usage](./readme/demo/implementation/statistics1.png) | ![Active Users](./readme/demo/implementation/statistics2.png) | ![Chinies Profile ](./readme/demo/implementation/profile.png) |
 
 | Code Editor | code1 |  create |
 | ---| ---| ---|
@@ -113,6 +113,10 @@
 | ---| ---| ---|
 | ![Users Chatting](./readme/demo/implementation/chatting.png) | ![Dynamic Chat](./readme/demo/implementation/expandChat.png) | ![Save Code](./readme/demo/implementation/save.png) |
 
+| Errors | Auto Correct | Ranking |
+| ---| ---| ---|
+| ![Errors](./readme/demo/implementation/errors.png) | ![Auto Correct](./readme/demo/implementation/autoCorrect.png) | ![Ranking](./readme/demo/implementation/ranking.png) |
+
 
 
 <br><br>
@@ -126,7 +130,7 @@
 -For persistent storage (database), the app uses the mongodb which allows the app to store all data in different schema and handler the big data insid the app
 
 - 🚨 Currently, AI advice are not the best guide to rely on but hopefully very soon that will not be the case. This is a known issue that we are working to resolve!
-- The app uses the font ["Audio wide"](https://fonts.googleapis.com/css2?family=Audiowide&display=swap) as its main font, and the design of the app adheres to the material design guidelines.
+- The app uses the font ["mono space"](https://fonts.googleapis.com/css2?family=Audiowide&display=swap) as its main font, and the design of the app adheres to the material design guidelines.
 
 <br><br>
 
@@ -147,7 +151,7 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [https://Rapidapi.com](https://rapidapi.com/abdheshnayak/api/code-compiler/)
 2. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
