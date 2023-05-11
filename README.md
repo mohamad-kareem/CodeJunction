@@ -49,9 +49,9 @@
 | ![Admin](./readme/demo/Admin.png) | ![Ranking](./readme/demo/Ranking.png) |
 
 ### Mockups
-| Home screen  | Menu Screen | Order Screen |
-| ---| ---| ---|
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| Sign In | Sign up | 
+| ------ | ------ |
+| ![Sign In](./readme/demo/mockups/Login.png) | ![Sign Up](./readme/demo/mockups/SignUp.png) | 
 
 <br><br>
 
