@@ -1,5 +1,9 @@
 <img src="./readme/title1.svg"/>
 
+> Hello, world! This is the project’s summary that describes the project plain and simple, limited to the space available.  
+
+**[PROJECT PHILOSOPHY](#project-philosophy) • [WIREFRAMES](#wireframes) • [TECH STACK](#tech-stack) • [IMPLEMENTATION](#implementation) • [HOW TO RUN?](#how-to-run)**
+
 <br><br>
 
 <!-- project philosophy -->
@@ -28,13 +32,13 @@
 > We designed Code Junction using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
 ### Wireframes
-| Log In | Sign Up |
+| Sign In | Sign Up | 
 | ------ | ------ | 
-| ![Log In](./readme/demo/LogIn.png) | ![Sign Up](./readme/demo/SignUp.png) | 
+| ![Sign In](./readme/demo/SignIn.png) | ![Sign Up](./readme/demo/SignUp.png) | 
 
-| Forget Password | Session |
-| ---- | ----|
-|![Forget Password](./readme/demo/ForgetPassword.png) | |![Session](./readme/demo/Session.png) |
+| Session | Forget Password |
+| ------ | ------ | 
+| ![Session](./readme/demo/Session.png) | ![Forget Password](./readme/demo/ForgetPassword.png) |
 
 ### Mockups
 | Home screen  | Menu Screen | Order Screen |
@@ -47,13 +51,6 @@
 <img src="./readme/title4.svg"/>
 
 > Using the wireframes and mockups as a guide, we implemented the Code Junction app with the following features:
-
-### User Screens (Mobile)
-| Login screen  | Register screen | Landing screen | Loading screen |
-| ---| ---| ---| ---|
-| ![Landing](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) |
-| Home screen  | Menu Screen | Order Screen | Checkout Screen |
-| ![Landing](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) | ![fsdaf](https://placehold.co/900x1600) |
 
 ### Admin Screens (Web)
 | Login screen  | Register screen |  Landing screen |
