@@ -44,6 +44,10 @@
 | ------ | ------ | 
 | ![Code Editor](./readme/demo/CodeEditor.png) | ![Activities](./readme/demo/Home.png) |
 
+| Admin | Ranking |
+| ------ | ------ | 
+| ![Admin](./readme/demo/Admin.png) | ![Ranking](./readme/demo/Ranking.png) |
+
 ### Mockups
 | Home screen  | Menu Screen | Order Screen |
 | ---| ---| ---|
