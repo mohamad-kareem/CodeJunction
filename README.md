@@ -81,6 +81,10 @@
 | ---| ---| ---|
 | ![Sign Up ](./readme/demo/implementation/SignUp.png) | ![Sign In](./readme/demo/implementation/SignIn.png) | ![Forget Password](./readme/demo/implementation/ForgetPassword.png) |
 
+| translation deutch | reset password |  gmail |
+| ---| ---| ---|
+| ![translation deutch  ](./readme/demo/implementation/translation1.png) | ![reset password ](./readme/demo/implementation/resetpassword.png) | ![gmail](./readme/demo/implementation/gmail.png) |
+
 
 
 <br><br>
