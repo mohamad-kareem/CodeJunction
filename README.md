@@ -73,12 +73,9 @@
 
 > Using the wireframes and mockups as a guide, we implemented the Code Junction app with the following features:
 
-### Admin Screens (Web)
-| Login screen  | Register screen |  Landing screen |
+| Sign Up  | Sign In |  Forget Password |
 | ---| ---| ---|
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
-| Home screen  | Menu Screen | Order Screen |
-| ![Landing](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) | ![fsdaf](./readme/demo/1440x1024.png) |
+| ![Sign Up ](./readme/demo/implementation/SignUp.png) | ![Sign In](./readme/demo/implementation/SignIn.png) | ![Forget Password](./readme/demo/implementation/ForgetPassword.png) |
 
 <br><br>
 

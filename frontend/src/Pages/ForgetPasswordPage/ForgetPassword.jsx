@@ -7,6 +7,7 @@ import ButtonComponent from '../../Components/Button/ButtonComponent';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import loginImage from "../../assets/ezgif.com-resize.gif"
 import { ForgotPasswordTranslation } from '../../Components/Languages/Lang';
+import { toast } from 'react-hot-toast';
 const ForgetPassword = () => {
 
     const userlang=useContext(UserContext)
@@ -25,6 +26,7 @@ const ForgetPassword = () => {
             },
           })
           .then((res) => {
+            toast.success('Reset form has been sent to your email.');
             console.log(res);
           })
           .catch((err) => {
