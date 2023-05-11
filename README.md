@@ -32,7 +32,6 @@
 | ---| ---| ---|
 | ![LogIn](./readme/demo/LogIn.png) | ![SignUp](./readme/demo/Signup.png) | ![ForegetPassword](./readme/demo/ForgetPassword.png) |
 
-| ![Landing](./readme/demo/LandingPage.png) |
 
 ### Mockups
 | Home screen  | Menu Screen | Order Screen |
