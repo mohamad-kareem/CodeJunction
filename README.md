@@ -61,6 +61,10 @@
 | ------ | ------ |
 | ![Code Editor](./readme/demo/mockups/CodeEditor.png) | ![Activities](./readme/demo/mockups/Home.png) |
 
+| Admin | Ranking | 
+| ------ | ------ |
+| ![Admin](./readme/demo/mockups/Admin.png) | ![Ranking](./readme/demo/mockups/Ranking.png) |
+
 <br><br>
 
 <!-- Implementation -->
