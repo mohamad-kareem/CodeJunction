@@ -44,14 +44,13 @@ const RankingTable = () => {
   return (
     <div className="table-wrapper">
       <div className="widgets-container">
-        <Widget title="Users" activeUsers={1234} widgetLink="Active coders" percentage="75%" icon={PersonIcon} />
-        <Widget title="Points" activeUsers={155} widgetLink="Boost your skills" icon={ScoreboardIcon} />
-        <Widget title="Badges" activeUsers="Gold" widgetLink="Boost your skills" icon={MilitaryTechIcon} />
+        <Widget title="Python Users" activeUsers={1234} widgetLink="Active coders" percentage="75%" icon={PersonIcon} />
+        <Widget title="Boost your skills" activeUsers="Asyncio" widgetLink="Boost your skills" icon={ScoreboardIcon} />
+        <Widget title="Python Rank" activeUsers="#3" widgetLink="Future view" icon={MilitaryTechIcon} />
       </div>
       <div className="all-users">
         <div className='datatable'>
           <DataGrid
-          // style={{ backgroundColor: '#f5f5f5' }}
             rows={users}
             columns={columns}
             getRowId={(row) => row.rank}

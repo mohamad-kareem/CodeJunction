@@ -12,9 +12,6 @@ const Widget = ({ title, activeUsers, widgetLink ,icon}) => {
             <span className='widget-link'>{widgetLink}</span>
         </div>
         <div className='right'>
-            <div className='percentage'>
-               <KeyboardArrowUpIcon/> Hide
-            </div>
            <Icon className='person-icon'/>
         </div>
          
