@@ -73,9 +73,15 @@
 
 > Using the wireframes and mockups as a guide, we implemented the Code Junction app with the following features:
 
+| Landing1  | Landing2 |  Landing3 |
+| ---| ---| ---|
+| ![Landing1 ](./readme/demo/implementation/landing1.png) | ![Landing2](./readme/demo/implementation/landing2.png) | ![Landing3](./readme/demo/implementation/landing3.png) |
+
 | Sign Up  | Sign In |  Forget Password |
 | ---| ---| ---|
 | ![Sign Up ](./readme/demo/implementation/SignUp.png) | ![Sign In](./readme/demo/implementation/SignIn.png) | ![Forget Password](./readme/demo/implementation/ForgetPassword.png) |
+
+
 
 <br><br>
 
