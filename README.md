@@ -28,10 +28,13 @@
 > We designed Code Junction using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
 ### Wireframes
-| Login screen  | Register screen |  Landing screen |
-| ---| ---| ---|
-| ![LogIn](./readme/demo/LogIn.png) | ![SignUp](./readme/demo/Signup.png) | ![ForegetPassword](./readme/demo/ForgetPassword.png) |
+| Login screen  | Register screen |
+| -----| -----| 
+| ![LogIn](./readme/demo/LogIn.png) | ![SignUp](./readme/demo/Signup.png) | 
 
+| Forget Password |
+|----|
+|![ForgetPassword](./readme/demo/ForgetPassword.png) |
 
 ### Mockups
 | Home screen  | Menu Screen | Order Screen |
