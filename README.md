@@ -51,11 +51,11 @@
 ### Mockups
 | Sign In | Sign up | 
 | ----- | ----- |
-| ![Sign In](./readme/demo/mockups/Login.png) | ![Sign Up](./readme/demo/mockups/SignUp.png) | 
+| ![Sign In](./readme/demo/mockups/Login.png) | ![Sign Up](./readme/demo/mockups/SIGNUP.png) | 
 
 | Session | Forget Password | 
 | ----- | ----- |
-| ![Session](./readme/demo/mockups/Session.png) | ![Forget Password](./readme/demo/mockups/ForgetPassword.png) | 
+| ![Session](./readme/demo/mockups/Session.png) | ![Forget Password](./readme/demo/mockups/Forgetpassword.png) | 
 
 | Code Editor | Activities | 
 | ------ | ------ |
@@ -65,9 +65,6 @@
 | ------ | ------ |
 | ![Admin](./readme/demo/mockups/Admin.png) | ![Ranking](./readme/demo/mockups/Ranking.png) |
 
-| Landing Page | 
-| -------- | 
-| ![Landing Page](./readme/demo/mockups/LandingPage.png) |
 
 <br><br>
 
