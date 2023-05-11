@@ -53,6 +53,14 @@
 | ------ | ------ |
 | ![Sign In](./readme/demo/mockups/Login.png) | ![Sign Up](./readme/demo/mockups/SignUp.png) | 
 
+| Session | Forget Password | 
+| ------ | ------ |
+| ![Session](./readme/demo/mockups/Session.png) | ![Forget Password](./readme/demo/mockups/ForgetPassword.png) | 
+
+| Code Editor | Activities | 
+| ------ | ------ |
+| ![Code Editor](./readme/demo/mockups/CodeEditor.png) | ![Activities](./readme/demo/mockups/Home.png) |
+
 <br><br>
 
 <!-- Implementation -->
