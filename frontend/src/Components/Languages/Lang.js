@@ -425,4 +425,23 @@ const ChartTransltaion = {
         title:"Programmiert"
     }
 }
-export { Nav, LogoTranslate,Intro,ParallaxText,WaterDrops,FooterTranslation,CopyRightsTranslation,UserAuthTranslation,EditorNavTranslation,SideBarTranslation,ConsoleTranslation,SessionTranslation,ActivitiesTranslation,AdminTranslation,ProfileTranslation,CodeEditorTranslation,ForgotPasswordTranslation,BarTranslation,ChartTransltaion};
+
+const CreateFolderTranslation={
+    en:{
+        header:"Create Folder",
+        title:"title",
+        description:"description"
+    },
+    ch:{
+        header:"创建文件夹",
+        title:"标题",
+        description:"描述"
+    },
+    de:{
+        header:"Ordner erstellen",
+        title:"Titel",
+        description:"Beschreibung"
+    }
+}
+
+export { Nav, LogoTranslate,Intro,ParallaxText,WaterDrops,FooterTranslation,CopyRightsTranslation,UserAuthTranslation,EditorNavTranslation,SideBarTranslation,ConsoleTranslation,SessionTranslation,ActivitiesTranslation,AdminTranslation,ProfileTranslation,CodeEditorTranslation,ForgotPasswordTranslation,BarTranslation,ChartTransltaion,CreateFolderTranslation};
