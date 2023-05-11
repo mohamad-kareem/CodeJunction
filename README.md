@@ -40,6 +40,10 @@
 | ------ | ------ | 
 | ![Session](./readme/demo/Session.png) | ![Forget Password](./readme/demo/ForgetPassword.png) |
 
+| Code Editor | Activities |
+| ------ | ------ | 
+| ![Code Editor](./readme/demo/CodeEditor.png) | ![Activities](./readme/demo/Home.png) |
+
 ### Mockups
 | Home screen  | Menu Screen | Order Screen |
 | ---| ---| ---|
