@@ -61,7 +61,6 @@ exports.forgetPasswordNotification = async (req,res) =>{
     });
     
     var mailOptions = {
-      from: 'youremail@gmail.com',
       to: 'mohamadkareemeng@gmail.com',
       subject: 'Reset Password',
       text:link
