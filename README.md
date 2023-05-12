@@ -78,12 +78,12 @@
 > Using the wireframes and mockups as a guide, we implemented the Code Junction app with the following features:
 
 | landing Page  | Responsiveness |  
-| ---| ---| ---|
+| ------ | ------ |
 | ![Landing Page ](./readme/demo/gifs/LandingPage.gif) | ![Responsiveness](./readme/demo/gifs/landingResponsive.gif) | 
 
-| Sign Up  | Sign In |  Forget Password |
-| ---| ---| ---|
-| ![Sign Up ](./readme/demo/implementation/SignUp.png) | ![Sign In](./readme/demo/implementation/SignIn.png) | ![Forget Password](./readme/demo/implementation/ForgetPassword.png) |
+| Sign Up  | Sign In |
+| ------ | ------ |
+| ![Sign Up ](./readme/demo/gifs/register.gif) | ![Sign In](./readme/demo/gifs/Login.gif) |
 
 | Translation deutch | reset password |  gmail |
 | ---| ---| ---|
