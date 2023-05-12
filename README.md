@@ -85,13 +85,13 @@
 | ------ | ------ |
 | ![Sign Up ](./readme/demo/gifs/register.gif) | ![Sign In](./readme/demo/gifs/Login.gif) |
 
-| Translation deutch | reset password |  gmail |
-| ---| ---| ---|
-| ![Translation deutch  ](./readme/demo/implementation/translation1.png) | ![reset password ](./readme/demo/implementation/resetpassword.png) | ![gmail](./readme/demo/implementation/gmail.png) |
+| Forget Password | Create Session |
+| ------ | ------ |
+| ![Forget Password  ](./readme/demo/gifs/forgetpassword.gif) |  ![Sign In](./readme/demo/gifs/session.gif) |
 
-| Users Saved Codes | User Activities |  Session |
-| ---| ---| ---|
-| ![Users Saved Codes](./readme/demo/implementation/activities.png) | ![User Activities](./readme/demo/implementation/activities2.png) | ![Session ](./readme/demo/implementation/session.png) |
+| Run Code | Save Code |
+| ------ | ------ |
+| ![Run Code](./readme/demo/gifs/runcode.gif) | ![Save Code](./readme/demo/gifs/savingcode.gif) |
 
 | API daily usage | Active Users | Chinies Profile |
 | ---| ---| ---|

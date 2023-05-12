@@ -49,7 +49,6 @@ const CreateFolder = ({HideFolder}) => {
               name="Description"
               color=' #0F0A36'
               isTextarea={true}
-              height={150}
               onChange={(e) => setDescription(e.target.value)}
             />
             <div className="folder-buttom">
