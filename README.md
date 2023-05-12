@@ -111,7 +111,7 @@
 
 | Ranking Page | Admin Page (Chinese) | 
 | ------ | ------ |
-| ![Ranking Page ](./readme/demo/gifs/ranking.gif) | ![Admin Page](./readme/demo/gifs/admin.gif) | 
+| ![Ranking Page ](./readme/demo/gifs/ranking.gif) | ![Admin Page](./readme/demo/gifs/chineseAdmin.gif) | 
 
 
 
