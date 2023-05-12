@@ -1,12 +1,7 @@
-const { Configuration, OpenAIApi } = require('openai');
+const {openai} =require('../configs/ai.config');
 const User = require("../models/userModel");
 const { analyzeCodePrompt, adviceCodePrompt ,autoCorrectPrompt} = require("../AiPromt/AiPromt")
 
-const config = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(config);
 
 const analyzeCode = async (req, res) => {
     try {
