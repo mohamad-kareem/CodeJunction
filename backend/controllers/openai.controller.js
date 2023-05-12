@@ -18,7 +18,7 @@ const analyzeCode = async (req, res) => {
         model: 'text-davinci-003',
         prompt: prompt,
         max_tokens: 3000,
-        temperature: 0.6,
+        temperature: 0.5,
         n:1
         });
 
