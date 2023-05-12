@@ -94,27 +94,27 @@
 | ![Run Code](./readme/demo/gifs/runcode.gif) | ![Save Code](./readme/demo/gifs/savingcode.gif) |
 
 | AI Advice | AI Evaluation | 
-| ---| ---| ---|
+| ------ | ------ |
 | ![AI Advice](./readme/demo/gifs/aiadvice.gif) | ![AI Evaluation](./readme/demo/gifs/evaluate.gif) | 
 
 | Real time code collaboration | Artificial intelligence (AI) autocorrect |  
-| ---| ---| ---|
+| ------ | ------ |
 | ![Real time code collaboration](./readme/demo/gifs/realtime.gif) | ![code1](./readme/demo/gifs/autocorrect.gif) | 
 
 | Run Code | AI Advice | Evaluate code |
-| ---| ---| ---|
+| ------ | ------ |
 | ![Run Code](./readme/demo/implementation/run.png) | ![AI Advice](./readme/demo/implementation/advice.png) | ![Evaluate code](./readme/demo/implementation/evaluate.png) |
 
 | Real time code editor | Connecting | Copy roomId |
-| ---| ---| ---|
+| ------ | ------ |
 | ![Real time code editor](./readme/demo/implementation/realTimeEditor.png) | ![Connecting](./readme/demo/implementation/connect.png) | ![Copy roomID](./readme/demo/implementation/copy.png) |
 
 | Users Chatting | Dynamic Chat | Save Code |
-| ---| ---| ---|
+| ------ | ------ |
 | ![Users Chatting](./readme/demo/implementation/chatting.png) | ![Dynamic Chat](./readme/demo/implementation/expandChat.png) | ![Save Code](./readme/demo/implementation/save.png) |
 
 | Errors | Auto Correct | Ranking |
-| ---| ---| ---|
+| ------ | ------ |
 | ![Errors](./readme/demo/implementation/errors.png) | ![Auto Correct](./readme/demo/implementation/autoCorrect.png) | ![Ranking](./readme/demo/implementation/ranking.png) |
 
 
