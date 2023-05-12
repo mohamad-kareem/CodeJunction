@@ -1,6 +1,6 @@
 <img src="./readme/title1.svg"/>
 
-> Hello, world! This is the project’s summary that describes the project plain and simple, limited to the space available.  
+> Hello, world! This is the project’s summary that describes the project plain and simple, limited to the space available. 
 
 **[PROJECT PHILOSOPHY](#project-philosophy) • [WIREFRAMES](#wireframes) • [TECH STACK](#tech-stack) • [IMPLEMENTATION](#implementation) • [HOW TO RUN?](#how-to-run)**
 
@@ -77,9 +77,9 @@
 
 > Using the wireframes and mockups as a guide, we implemented the Code Junction app with the following features:
 
-| Landing1  | Landing2 |  Landing3 |
+| landing Page  | Responsiveness |  
 | ---| ---| ---|
-| ![Landing1 ](./readme/demo/implementation/landing1.png) | ![Landing2](./readme/demo/implementation/landing2.png) | ![Landing3](./readme/demo/implementation/landing3.png) |
+| ![Landing Page ](./readme/demo/gifs/LandingPage.gif) | ![Responsiveness](./readme/demo/gifs/landingResponsive.gif) | 
 
 | Sign Up  | Sign In |  Forget Password |
 | ---| ---| ---|
@@ -127,7 +127,10 @@
 ###  Code Junction is built using the following technologies:
 
 - This project uses the [React JS development framework](https://reactjs.org/). React is a declarative, efficient, and flexible JavaScript library for building SPA (single web application) and user interfaces or UI components. It lets you compose complex UIs from small and isolated pieces of code called “components”.
--For persistent storage (database), the app uses the mongodb which allows the app to store all data in different schema and handler the big data insid the app
+
+-For persistent storage (database), the app uses the [mongodb] which allows the app to store all data in different schema and handler the big data insid the app
+
+-This project also uses [Framer-Motion] in order to animate components and add fun transitions between pages.
 
 - 🚨 Currently, AI advice are not the best guide to rely on but hopefully very soon that will not be the case. This is a known issue that we are working to resolve!
 - The app uses the font ["mono space"](https://fonts.googleapis.com/css2?family=Audiowide&display=swap) as its main font, and the design of the app adheres to the material design guidelines.
@@ -152,6 +155,8 @@ This is an example of how to list things you need to use the software and how to
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Get a free API Key at [https://Rapidapi.com](https://rapidapi.com/abdheshnayak/api/code-compiler/)
+
+2. Get a free API Key at [https://openai.com]
 2. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
