@@ -23,7 +23,7 @@ const LogoTranslate = {
     },
     ch:{
         code:"代码",
-        Junction:"交叉口交叉"
+        Junction:"交叉口交"
     },
     de:{
         code:"Code",
@@ -177,7 +177,7 @@ const EditorNavTranslation = {
         msg2:"points",
         score0:"Please try again.",
         score1:"You can do better.",
-        score2:"practice more.",
+        score2:"Good job.",
         score3:"Good job!",
         score4:"Great job!",
         score5:"Excellent work!",

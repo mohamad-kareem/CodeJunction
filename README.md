@@ -93,13 +93,13 @@
 | ------ | ------ |
 | ![Run Code](./readme/demo/gifs/runcode.gif) | ![Save Code](./readme/demo/gifs/savingcode.gif) |
 
-| API daily usage | Active Users | Chinies Profile |
+| AI Advice | AI Evaluation | 
 | ---| ---| ---|
-| ![API daily usage](./readme/demo/implementation/statistics1.png) | ![Active Users](./readme/demo/implementation/statistics2.png) | ![Chinies Profile ](./readme/demo/implementation/profile.png) |
+| ![AI Advice](./readme/demo/gifs/aiadvice.gif) | ![AI Evaluation](./readme/demo/gifs/evaluate.gif) | 
 
-| Code Editor | code1 |  create |
+| Real time code collaboration | Artificial intelligence (AI) autocorrect |  
 | ---| ---| ---|
-| ![Code Editor](./readme/demo/implementation/codeeditor.png) | ![code1](./readme/demo/implementation/code1.png) | ![create](./readme/demo/implementation/create.png) |
+| ![Real time code collaboration](./readme/demo/gifs/realtime.gif) | ![code1](./readme/demo/gifs/autocorrect.gif) | 
 
 | Run Code | AI Advice | Evaluate code |
 | ---| ---| ---|
