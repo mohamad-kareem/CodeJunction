@@ -105,17 +105,13 @@
 | ------ | ------ |
 | ![Chatting](./readme/demo/gifs/chat.gif) | ![Compiler Suggestions](./readme/demo/gifs/errors.gif) | 
 
-| Real time code editor | Connecting | Copy roomId |
-| ---| ---| ---|
-| ![Real time code editor](./readme/demo/implementation/realTimeEditor.png) | ![Connecting](./readme/demo/implementation/connect.png) | ![Copy roomID](./readme/demo/implementation/copy.png) |
+| User Activities | User's Profile | 
+| ------ | ------ |
+| ![User Activities](./readme/demo/gifs/activities.gif) | ![User's Profile](./readme/demo/gifs/profile.gif) | 
 
-| Users Chatting | Dynamic Chat | Save Code |
-| ---| ---| ---|
-| ![Users Chatting](./readme/demo/implementation/chatting.png) | ![Dynamic Chat](./readme/demo/implementation/expandChat.png) | ![Save Code](./readme/demo/implementation/save.png) |
-
-| Errors | Auto Correct | Ranking |
-| ---| ---| ---|
-| ![Errors](./readme/demo/implementation/errors.png) | ![Auto Correct](./readme/demo/implementation/autoCorrect.png) | ![Ranking](./readme/demo/implementation/ranking.png) |
+| Ranking Page | Admin Page (Chinese) | 
+| ------ | ------ |
+| ![Ranking Page ](./readme/demo/gifs/ranking.gif) | ![Admin Page](./readme/demo/gifs/admin.gif) | 
 
 
 

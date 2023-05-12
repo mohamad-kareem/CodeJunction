@@ -27,6 +27,7 @@ const ProfilePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    toast.success('Profile has been updated.');
     const updatedProfileData = {};
     if (username) {
       updatedProfileData.username = username;
@@ -47,7 +48,7 @@ const ProfilePage = () => {
         },
       })
       .then((res) => {
-        toast.success('Profile has been updated.');
+       
         console.log(res);
       })
       .catch((err) => {
