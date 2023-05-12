@@ -114,7 +114,7 @@ exports.getCodeCountsByMonth = async (req, res) => {
         }
       },
         {
-          $sort: { _id: 1 }
+          $sort: { month: 1 }
         }
       ]);
       res.json(countsByMonth);
