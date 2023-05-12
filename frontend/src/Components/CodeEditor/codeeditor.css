@@ -4,10 +4,6 @@
     height: 100vh;
     overflow-y: scroll;
 }
-/* .CodeMirror-linenumber {
-    color:yellow;
-} */
-
 .cm-s-blackboard.CodeMirror{
     height: 100vh;
     background: #2d2254 !important;

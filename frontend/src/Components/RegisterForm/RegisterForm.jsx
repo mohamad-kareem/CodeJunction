@@ -5,7 +5,6 @@ import ButtonComponent from '../Button/ButtonComponent';
 import { Link } from 'react-router-dom';
 import { faUserSecret,faEnvelope,faKey} from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
-import registerImage from "../../assets/gif.gif" ;
 import { useNavigate } from "react-router-dom";
 import { UserAuthTranslation } from '../Languages/Lang';
 const Register = () => {

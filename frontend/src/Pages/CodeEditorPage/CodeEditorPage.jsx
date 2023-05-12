@@ -6,7 +6,6 @@ import Client from '../../Components/Client/Client'
 import CodeEditor from '../../Components/CodeEditor/CodeEditor'
 import EditorNavigator from '../../Components/EditorNavigator/EditorNavigator'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-import ButtonComponent from '../../Components/Button/ButtonComponent'
 import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
 import { initSocket } from '../../SocketConnections/socket'
 import DoList from  "../../SocketConnections/DoList.js"

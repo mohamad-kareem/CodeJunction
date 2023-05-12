@@ -28,8 +28,7 @@ const ConsoleEditor = ({ outputValue ,setShowConsole,showConsole,code,setFixedCo
        }
       );
       const correctedCode=response.data.correctedCode;
-      
-       setFixedCode(correctedCode)
+      setFixedCode(correctedCode)
     }catch(error){
         console.log(error);
         toast.success("Try again")

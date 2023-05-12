@@ -24,7 +24,6 @@
 .output-tabs{
     display: flex;
     flex-direction: row;
-    /* width: 100%; */
 }
 .left-output{
     display: flex;
