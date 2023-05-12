@@ -2,13 +2,15 @@ import React, { useState,useContext } from 'react';
 import { UserContext } from '../../Context/Context';
 import './sidebar.css';
 import Logo from '../Logo/Logo';
-import HomeIcon from '@mui/icons-material/Home';
-import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import GridViewIcon from '@mui/icons-material/GridView';
-import KeyboardIcon from '@mui/icons-material/Keyboard';
+import layout from '../../icons/layout.png'
+import home from '../../icons/house.png'
+import rank from '../../icons/trophy.png'
+import session from '../../icons/presentation.png'
+import user from '../../icons/user.png'
+import statistics from '../../icons/analysis.png'
+import activity from '../../icons/sociology.png'
+
+
 import { NavLink } from 'react-router-dom';
 import { SideBarTranslation } from '../Languages/Lang';
 
@@ -34,38 +36,38 @@ import { SideBarTranslation } from '../Languages/Lang';
       <div className="SideBarList"> 
 
         <div className="row row1" onClick={handleHelloClick}>
-         <div id='icon'><GridViewIcon/></div>
+         <div id='icon'><img src={layout} alt="layout" /></div>
          <div id="title">{showTitle && lan.dashboard}</div>
         </div>
 
         <NavLink to="/home" className="row">
-          <div id="icon">{<HomeIcon />}</div>
+          <div id="icon"><img src={home} alt="home" /></div>
           <div id="title">{showTitle && lan.home}</div>
         </NavLink>
 
         <NavLink to="/ranking" className="row" activeclassname="active">
-          <div id="icon">{<EmojiEventsIcon />}</div>
+          <div id="icon"><img src={rank} alt="rank" /></div>
           <div id="title">{showTitle && lan.ranking}</div>
         </NavLink>
 
         <NavLink to="/session" className="row" activeclassname="active">
-          <div id="icon">{<KeyboardIcon />}</div>
+          <div id="icon"><img src={session} alt="session" /></div>
           <div id="title">{showTitle && lan.startsession}</div>
         </NavLink>
 
 
         <NavLink to="/activities" className="row" activeclassname="active">
-          <div id="icon">{<WorkHistoryIcon />}</div>
+          <div id="icon"><img src={activity} alt="activity" /></div>
           <div id="title">{showTitle && lan.activities}</div>
         </NavLink>
 
         <NavLink to="/profile" className="row" activeclassname="active">
-          <div id="icon">{<AccountCircleIcon />}</div>
+          <div id="icon"><img src={user} alt="user" /></div>
           <div id="title">{showTitle && lan.profile}</div>
         </NavLink>
 
         <NavLink to="/admin" className="row" activeclassname="active">
-          <div id="icon">{<BarChartIcon />}</div>
+          <div id="icon"><img src={statistics} alt="statistics" /></div>
           <div id="title">{showTitle && lan.statistics}</div>
         </NavLink>
       </div>

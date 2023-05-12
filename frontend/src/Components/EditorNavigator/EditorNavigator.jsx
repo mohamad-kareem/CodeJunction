@@ -2,13 +2,13 @@ import React,{useContext} from 'react'
 import { UserContext } from '../../Context/Context';
 import {useParams} from 'react-router-dom'
 import toast from "react-hot-toast";
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import SmartToyIcon from '@mui/icons-material/SmartToy';
-import SaveIcon from '@mui/icons-material/Save';
-import GavelIcon from '@mui/icons-material/Gavel';
-import ChatIcon from '@mui/icons-material/Chat';
 import axios from 'axios'
 import { EditorNavTranslation } from '../Languages/Lang';
+import copy from '../../icons/copy.png'
+import chat from '../../icons/chat.png'
+import save from '../../icons/floppy.png'
+import robot from '../../icons/robot.png'
+import evaluate from '../../icons/evaluate.png'
 
 const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEvaluation,isChatOpen={isChatOpen},setIsChatOpen={setIsChatOpen}}) => {
 
@@ -124,23 +124,23 @@ const EditorNavigator = ({ code,setShowAdvice,setAdvice,setEvaluation,setShowEva
   return (
     <div className="rows">
         <div className="row" onClick={copyRoomId}>
-            <div id='icon' className='copy'>{< ContentCopyIcon/>}</div>
+            <div id='icon' className='copy'><img src={copy} alt="copy" /></div>
             <div id='title'>{lan.shareroomid}</div>
         </div>
         <div className="row" onClick={handleChatClick}>
-            <div id='icon'>{<ChatIcon/>}</div>
+            <div id='icon'><img src={chat} alt="chat" /></div>
             <div id='title'>{lan.chat}</div>
         </div>
         <div className="row"onClick={handleSaveCode}>
-            <div id='icon'>{<SaveIcon/>}</div>
+            <div id='icon'><img src={save} alt="save" /></div>
             <div id='title'>{lan.savecode}</div>
         </div>
         <div className="row" onClick={handleAnalyzeCode}>
-            <div id='icon'>{<GavelIcon />}</div>
+            <div id='icon'><img src={evaluate} alt="save" /></div>
             <div id='title'>{lan.evaluate}</div>
         </div>
         <div className="row"onClick={handleAdviceCode}>
-            <div id='icon'>{<SmartToyIcon/>}</div>
+            <div id='icon'><img src={robot} alt="save" /></div>
             <div id='title'>{lan.AiAdvice}</div>
         </div>
     </div>
