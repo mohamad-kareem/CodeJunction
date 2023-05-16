@@ -145,6 +145,7 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
+-   Download and install from https://nodejs.org/en/download/
 
 ### Installation
 
@@ -153,17 +154,29 @@ _Below is an example of how you can instruct your audience on installing and set
 1. Get a free API Key at [https://Rapidapi.com](https://rapidapi.com/abdheshnayak/api/code-compiler/)
 
 2. Get a free API Key at [https://openai.com]
-2. Clone the repo
+
+3. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/mohamad-kareem/CodeJunction.git
    ```
-3. Install NPM packages
+4. Install NPM packages
    ```sh
-   npm install
+    cd /backend
+    npm install
+    cd /frontend
+    npm install
    ```
-4. Enter your API in `config.js`
+5. Enter your API in `configs/ai.config.js`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   const apikey = 'ENTER YOUR API';
    ```
+6.  initialize App
+
+    ````js
+    //mobile
+    npm start
+    //server
+    nodemon sever.js
+    ````
 
 Now, you should be able to run Code Junction Express locally and explore its features.
