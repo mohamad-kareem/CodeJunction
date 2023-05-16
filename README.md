@@ -19,14 +19,19 @@
 
 ### User Stories
 
+- As a user, I want to code online with my colleagues while live sharing code editor.
 - As a user, I want to code and compile my code and see result online.
-- As a user, I want to code online with my friends while live sharing code editor.
 - AS a user, I want to choose the programming language i prefer. 
 - As a user, I want to be able to ask for ai advice to get rapid feedback on my code.
 - As a user, I want to be able to save my codes.
 - As a user, I want to have the ability to choose the language i prefer to read and interact with.
 - As a developer, I want to chat with other programmers while coding.
 - As a developer, I want to be able to track my progress and earn rewards for improving my coding skills,
+
+### User Stories
+
+- As an admin, I want to be able to check daily openai api usage.
+- As an admin, I want to be able to have the exact number of active users. 
 
 <br><br>
 
