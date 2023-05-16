@@ -48,9 +48,6 @@ const LoginForm = () => {
     
 return (
     <div className='wrapper'>
-      <div className='image-container'>
-        <img src={loginImage} alt='registration' />
-      </div>
       <div className='sign-in-up-container'>
         <form className='inner-form'>
           <h2 className='header'>{lan.signin}</h2>

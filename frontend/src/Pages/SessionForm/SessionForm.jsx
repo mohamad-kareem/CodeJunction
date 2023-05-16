@@ -10,6 +10,7 @@ import { faUserSecret,faKey} from '@fortawesome/free-solid-svg-icons';
 import {v4 as uuidV4} from "uuid";
 import { useNavigate } from 'react-router-dom'
 import { SessionTranslation } from '../../Components/Languages/Lang'
+import Bubbles from '../../Components/bubbles/Bubbles'
 const SessionForm = () => {
 
     const userlang=useContext(UserContext)
@@ -69,6 +70,7 @@ const SessionForm = () => {
             </div>
         </div>
         <CopyRights/>
+        <Bubbles/>
     </div>
   )
 }

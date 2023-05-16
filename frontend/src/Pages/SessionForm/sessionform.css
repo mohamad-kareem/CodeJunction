@@ -5,6 +5,8 @@
     color: white;
     height: 100vh;
     margin-top: -90px;
+    position: relative;
+    z-index: 5;
 }
 .generate-container{
     font-size: 13px;
