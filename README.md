@@ -25,12 +25,13 @@
 - As a user, I want to be able to ask for ai advice to get rapid feedback on my code.
 - As a user, I want to be able to save my codes.
 - As a user, I want to have the ability to choose the language i prefer to read and interact with.
-- As a developer, I want to chat with other programmers while coding.
-- As a developer, I want to be able to track my progress and earn rewards for improving my coding skills,
+- As a user, I want to chat with other programmers while coding.
+- As a user, I want to be able to track my progress and earn rewards for improving my coding skills.
+- As a user, I want to check my programming activities through bar chart.
 
-### User Stories
+### Admin Stories
 
-- As an admin, I want to be able to check daily openai api usage.
+- As an admin, I want to be able to check openai api daily usage through bar chart and pie chart.
 - As an admin, I want to be able to have the exact number of active users. 
 
 <br><br>
