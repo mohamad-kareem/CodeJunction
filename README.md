@@ -52,11 +52,11 @@
 
 ### Mockups
 | Sign Up | Forget Password | Ranking | 
-| ----- | ----- |
+| ----- | ----- |  ----- |
 | ![Sign UP](./readme/demo/mockups/SignUp.png) | ![Forget Password](./readme/demo/mockups/Forgetpassword.png) | ![Ranking](./readme/demo/mockups/Ranking.png)
 
 | Code Editor | Activities | Admin  |
-| ------ | ------ |
+| ------ | ------ | ------ |
 | ![Code Editor](./readme/demo/mockups/CodeEditor.png) | ![Activities](./readme/demo/mockups/Home.png) | ![Admin](./readme/demo/mockups/Admin.png)
 
 
