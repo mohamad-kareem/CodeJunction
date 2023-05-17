@@ -42,17 +42,13 @@
 > We designed Code Junction using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
 ### Wireframes
-| Sign In | Sign Up | 
-| ------ | ------ | 
-| ![Sign In](./readme/demo/SignIn.png) | ![Sign Up](./readme/demo/SignUp.png) | 
+| Sign In | Sign Up | Forget Password |
+| ------ | ------ | ------ | 
+| ![Sign In](./readme/demo/Login.png) | ![Sign Up](./readme/demo/SignUp.png) | ![Forget Password](./readme/demo/ForgetPassword.png) |
 
-| Session | Forget Password |
-| ------ | ------ | 
-| ![Session](./readme/demo/Session.png) | ![Forget Password](./readme/demo/ForgetPassword.png) |
-
-| Code Editor | Activities |
-| ------ | ------ | 
-| ![Code Editor](./readme/demo/CodeEditor.png) | ![Activities](./readme/demo/Home.png) |
+| Code Editor | Activities | Session |
+| ------ | ------ | ------ | 
+| ![Code Editor](./readme/demo/CodeEditor.png) | ![Activities](./readme/demo/Home.png) | ![Session](./readme/demo/Session.png) | 
 
 | Admin | Ranking |
 | ------ | ------ | 
@@ -93,7 +89,7 @@
 
 | Forget Password | Create Session |
 | ------ | ------ |
-| ![Forget Password  ](./readme/demo/gifs/forgetpassword.gif) |  ![Sign In](./readme/demo/gifs/session.gif) |
+| ![Forget Password  ](./readme/demo/gifs/forgetpassword.gif) |  ![Create Session](./readme/demo/gifs/session.gif) |
 
 | Run Code | Save Code |
 | ------ | ------ |
