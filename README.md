@@ -42,34 +42,22 @@
 > We designed Code Junction using wireframes and mockups, iterating on the design until we reached the ideal layout for easy navigation and a seamless user experience.
 
 ### Wireframes
-| Sign In | Sign Up | Forget Password |
+| Sign Up | Forget Password | Ranking  | 
 | ------ | ------ | ------ | 
-| ![Sign In](./readme/demo/Login.png) | ![Sign Up](./readme/demo/SignUp.png) | ![Forget Password](./readme/demo/ForgetPassword.png) |
+| ![Sign Up](./readme/demo/SignUp.png) | ![Forget Password](./readme/demo/ForgetPassword.png) | ![Ranking](./readme/demo/Ranking.png) |
 
-| Code Editor | Activities | Session |
+| Code Editor | Activities | Admin |
 | ------ | ------ | ------ | 
-| ![Code Editor](./readme/demo/CodeEditor.png) | ![Activities](./readme/demo/Home.png) | ![Session](./readme/demo/Session.png) | 
-
-| Admin | Ranking |
-| ------ | ------ | 
-| ![Admin](./readme/demo/Admin.png) | ![Ranking](./readme/demo/Ranking.png) |
+| ![Code Editor](./readme/demo/CodeEditor.png) | ![Activities](./readme/demo/Home.png) | ![Admin](./readme/demo/Admin.png) | 
 
 ### Mockups
-| Sign In | Sign up | 
+| Sign Up | Forget Password | Ranking | 
 | ----- | ----- |
-| ![Sign In](./readme/demo/mockups/Login.png) | ![Sign Up](./readme/demo/mockups/SIGNUP.png) | 
+| ![Sign UP](./readme/demo/mockups/SignUp.png) | ![Forget Password](./readme/demo/mockups/Forgetpassword.png) | ![Ranking](./readme/demo/mockups/Ranking.png)
 
-| Session | Forget Password | 
-| ----- | ----- |
-| ![Session](./readme/demo/mockups/Session.png) | ![Forget Password](./readme/demo/mockups/Forgetpassword.png) | 
-
-| Code Editor | Activities | 
+| Code Editor | Activities | Admin  |
 | ------ | ------ |
-| ![Code Editor](./readme/demo/mockups/CodeEditor.png) | ![Activities](./readme/demo/mockups/Home.png) |
-
-| Admin | Ranking | 
-| ------ | ------ |
-| ![Admin](./readme/demo/mockups/Admin.png) | ![Ranking](./readme/demo/mockups/Ranking.png) |
+| ![Code Editor](./readme/demo/mockups/CodeEditor.png) | ![Activities](./readme/demo/mockups/Home.png) | ![Admin](./readme/demo/mockups/Admin.png)
 
 
 <br><br>
